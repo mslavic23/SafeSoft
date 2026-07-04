@@ -76,6 +76,12 @@
     <Compile Include="FrmSoftver.Designer.cs">
       <DependentUpon>FrmSoftver.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmZahtjev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmZahtjev.Designer.cs">
+      <DependentUpon>FrmZahtjev.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmKorisnik.resx">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUredaj.resx">
       <DependentUpon>FrmUredaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmZahtjev.resx">
+      <DependentUpon>FrmZahtjev.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
