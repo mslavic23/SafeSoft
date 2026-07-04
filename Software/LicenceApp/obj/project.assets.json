@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\LicenceApp.csproj",
-      "projectName": "LicenceApp",
-      "projectPath": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\LicenceApp.csproj",
+      "projectUniqueName": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\LicenceApp2.csproj",
+      "projectName": "LicenceApp2",
+      "projectPath": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\LicenceApp2.csproj",
       "packagesPath": "C:\\Users\\megis\\.nuget\\packages\\",
       "outputPath": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\obj\\",
       "projectStyle": "PackageReference",
