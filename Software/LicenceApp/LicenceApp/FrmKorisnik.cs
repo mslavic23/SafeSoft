@@ -25,7 +25,7 @@ namespace LicenceApp
 
         }
 
-        private void LstStudents_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstKorisnici_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -38,6 +38,11 @@ namespace LicenceApp
         }
 
         private void BtnMain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PbxLogo_Click(object sender, EventArgs e)
         {
 
         }

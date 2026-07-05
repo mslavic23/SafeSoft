@@ -147,5 +147,9 @@
     <Content Include="LicenceApp.Resources\user_icon.png" />
     <Content Include="LicenceApp.Resources\user_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LicenceApp.Data\" />
+    <Folder Include="LicenceApp.Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

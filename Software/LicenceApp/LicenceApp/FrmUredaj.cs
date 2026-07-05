@@ -45,7 +45,7 @@ namespace LicenceApp
 
         }
 
-        private void pbxLogo_Click(object sender, EventArgs e)
+        private void PbxLogo_Click(object sender, EventArgs e)
         {
 
         }

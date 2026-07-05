@@ -162,7 +162,7 @@
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 14;
             this.pbxLogo.TabStop = false;
-            this.pbxLogo.Click += new System.EventHandler(this.pbxLogo_Click);
+            this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
             // FrmUredaj
             // 
