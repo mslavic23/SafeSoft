@@ -12,32 +12,44 @@ namespace LicenceApp
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            FrmSoftver frmSoftver = new FrmSoftver();
+            frmSoftver.Show();
+            this.Hide();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-
+            FrmZahtjev frmZahtjev = new FrmZahtjev();
+            frmZahtjev.Show();
+            this.Hide();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-
+            FrmUredaj frmUredaj = new FrmUredaj();
+            frmUredaj.Show();
+            this.Hide();
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
-
+            FrmIzvjestaj frmIzvjestaj = new FrmIzvjestaj();
+            frmIzvjestaj.Show();
+            this.Hide();
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-
+            FrmKorisnik frmKorisnik = new FrmKorisnik();
+            frmKorisnik.Show();
+            this.Hide();
         }
 
         private void BtnOdjava_Click(object sender, EventArgs e)
         {
-
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+            this.Close();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
