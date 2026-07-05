@@ -29,6 +29,8 @@
             this.btnGlavni = new System.Windows.Forms.Button();
             this.btnNaprijed = new System.Windows.Forms.Button();
             this.lstSoftveri = new System.Windows.Forms.ListBox();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -159,11 +161,23 @@
             this.lstSoftveri.TabIndex = 15;
             this.lstSoftveri.SelectedIndexChanged += new System.EventHandler(this.LstSoftveri_SelectedIndexChanged_1);
             // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
+            this.pbxLogo.Location = new System.Drawing.Point(154, 39);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(172, 46);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogo.TabIndex = 16;
+            this.pbxLogo.TabStop = false;
+            this.pbxLogo.Click += new System.EventHandler(this.pbxLogo_Click);
+            // 
             // FrmSoftver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 450);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstSoftveri);
             this.Controls.Add(this.btnNaprijed);
             this.Controls.Add(this.btnGlavni);
@@ -180,6 +194,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmSoftver";
             this.Text = "Softveri";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +214,6 @@
         private System.Windows.Forms.Button btnGlavni;
         private System.Windows.Forms.Button btnNaprijed;
         private System.Windows.Forms.ListBox lstSoftveri;
+        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

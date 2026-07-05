@@ -31,6 +31,8 @@
             this.btnNaprijed = new System.Windows.Forms.Button();
             this.btnGlavni = new System.Windows.Forms.Button();
             this.lstZahtjevi = new System.Windows.Forms.ListBox();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbKorisnik
@@ -173,17 +175,29 @@
             // 
             this.lstZahtjevi.FormattingEnabled = true;
             this.lstZahtjevi.ItemHeight = 16;
-            this.lstZahtjevi.Location = new System.Drawing.Point(21, 50);
+            this.lstZahtjevi.Location = new System.Drawing.Point(21, 82);
             this.lstZahtjevi.Name = "lstZahtjevi";
-            this.lstZahtjevi.Size = new System.Drawing.Size(316, 196);
+            this.lstZahtjevi.Size = new System.Drawing.Size(316, 164);
             this.lstZahtjevi.TabIndex = 19;
             this.lstZahtjevi.SelectedIndexChanged += new System.EventHandler(this.LstZahtjevi_SelectedIndexChanged);
+            // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
+            this.pbxLogo.Location = new System.Drawing.Point(12, 39);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(335, 37);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogo.TabIndex = 20;
+            this.pbxLogo.TabStop = false;
+            this.pbxLogo.Click += new System.EventHandler(this.pbxLogo_Click);
             // 
             // FrmZahtjev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(786, 290);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstZahtjevi);
             this.Controls.Add(this.btnGlavni);
             this.Controls.Add(this.btnNaprijed);
@@ -202,6 +216,7 @@
             this.Controls.Add(this.cmbKorisnik);
             this.Name = "FrmZahtjev";
             this.Text = "Zahtjevi";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +238,6 @@
         private System.Windows.Forms.Button btnNaprijed;
         private System.Windows.Forms.Button btnGlavni;
         private System.Windows.Forms.ListBox lstZahtjevi;
+        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

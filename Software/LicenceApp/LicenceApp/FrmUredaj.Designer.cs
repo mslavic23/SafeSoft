@@ -28,6 +28,8 @@
             this.btnGlavni = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
             this.lstUredaji = new System.Windows.Forms.ListBox();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNazivRacunala
@@ -151,11 +153,23 @@
             this.lstUredaji.TabIndex = 13;
             this.lstUredaji.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
+            this.pbxLogo.Location = new System.Drawing.Point(76, 27);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(113, 35);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogo.TabIndex = 14;
+            this.pbxLogo.TabStop = false;
+            this.pbxLogo.Click += new System.EventHandler(this.pbxLogo_Click);
+            // 
             // FrmUredaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstUredaji);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.btnGlavni);
@@ -171,6 +185,7 @@
             this.Controls.Add(this.txtNazivRacunala);
             this.Name = "FrmUredaj";
             this.Text = "Uređaji";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +204,6 @@
         private System.Windows.Forms.Button btnGlavni;
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.ListBox lstUredaji;
+        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

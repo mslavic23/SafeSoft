@@ -21,6 +21,8 @@
             this.btnIzvjestaj = new System.Windows.Forms.Button();
             this.btnKorisnici = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSoftveri
@@ -83,11 +85,23 @@
             this.btnOdjava.UseVisualStyleBackColor = true;
             this.btnOdjava.Click += new System.EventHandler(this.BtnOdjava_Click);
             // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
+            this.pbxLogo.Location = new System.Drawing.Point(161, 45);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(471, 96);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxLogo.TabIndex = 7;
+            this.pbxLogo.TabStop = false;
+            this.pbxLogo.Click += new System.EventHandler(this.pbxLogo_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnKorisnici);
             this.Controls.Add(this.btnIzvjestaj);
@@ -97,6 +111,7 @@
             this.Name = "FrmMain";
             this.Text = "SafeSoft";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +122,6 @@
         private System.Windows.Forms.Button btnIzvjestaj;
         private System.Windows.Forms.Button btnKorisnici;
         private System.Windows.Forms.Button btnOdjava;
+        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

@@ -32,7 +32,9 @@ namespace LicenceApp
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+            this.Close();
         }
 
         private void BtnMain_Click(object sender, EventArgs e)

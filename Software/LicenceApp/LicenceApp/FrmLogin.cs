@@ -22,11 +22,12 @@ namespace LicenceApp
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-
+            FrmKorisnik frmKorisnik = new FrmKorisnik();
+            frmKorisnik.Show();
+            this.Hide();
         }
     }
 }
-
 
 
 

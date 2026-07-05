@@ -44,5 +44,10 @@ namespace LicenceApp
         {
 
         }
+
+        private void pbxLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
