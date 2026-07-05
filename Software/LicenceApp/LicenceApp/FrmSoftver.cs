@@ -10,37 +10,37 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void btnDodaj_Click_1(object sender, EventArgs e)
+        private void BtnDodaj_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void btnUredi_Click(object sender, EventArgs e)
+        private void BtnUredi_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnObrisi_Click_1(object sender, EventArgs e)
+        private void BtnObrisi_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void lstSoftveri_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void LstSoftveri_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
 
         }

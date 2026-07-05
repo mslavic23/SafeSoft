@@ -26,9 +26,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnFilter = new System.Windows.Forms.Button();
             this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvIzvjestaj
@@ -49,7 +47,7 @@
             this.btnOsvjezi.TabIndex = 1;
             this.btnOsvjezi.Text = "Osvježi";
             this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
+            this.btnOsvjezi.Click += new System.EventHandler(this.BtnOsvjezi_Click);
             // 
             // btnGlavni
             // 
@@ -59,7 +57,7 @@
             this.btnGlavni.TabIndex = 3;
             this.btnGlavni.Text = "Izbornik";
             this.btnGlavni.UseVisualStyleBackColor = true;
-            this.btnGlavni.Click += new System.EventHandler(this.button3_Click);
+            this.btnGlavni.Click += new System.EventHandler(this.Button3_Click);
             // 
             // btnNatrag
             // 
@@ -69,7 +67,7 @@
             this.btnNatrag.TabIndex = 4;
             this.btnNatrag.Text = "←";
             this.btnNatrag.UseVisualStyleBackColor = true;
-            this.btnNatrag.Click += new System.EventHandler(this.button4_Click);
+            this.btnNatrag.Click += new System.EventHandler(this.Button4_Click);
             // 
             // lblNaslov
             // 
@@ -80,7 +78,7 @@
             this.lblNaslov.Size = new System.Drawing.Size(304, 29);
             this.lblNaslov.TabIndex = 5;
             this.lblNaslov.Text = "Izvještaj zahtjeva za licence";
-            this.lblNaslov.Click += new System.EventHandler(this.lblNaslov_Click);
+            this.lblNaslov.Click += new System.EventHandler(this.LblNaslov_Click);
             // 
             // lblUkupno
             // 
@@ -90,7 +88,7 @@
             this.lblUkupno.Size = new System.Drawing.Size(120, 16);
             this.lblUkupno.TabIndex = 6;
             this.lblUkupno.Text = "Ukupno zahtjeva: 0";
-            this.lblUkupno.Click += new System.EventHandler(this.label1_Click);
+            this.lblUkupno.Click += new System.EventHandler(this.Label1_Click);
             // 
             // dtpOd
             // 
@@ -98,7 +96,7 @@
             this.dtpOd.Name = "dtpOd";
             this.dtpOd.Size = new System.Drawing.Size(200, 22);
             this.dtpOd.TabIndex = 7;
-            this.dtpOd.ValueChanged += new System.EventHandler(this.dtpOd_ValueChanged);
+            this.dtpOd.ValueChanged += new System.EventHandler(this.DtpOd_ValueChanged);
             // 
             // label1
             // 
@@ -108,7 +106,7 @@
             this.label1.Size = new System.Drawing.Size(28, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Do:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.Click += new System.EventHandler(this.Label1_Click_1);
             // 
             // label2
             // 
@@ -127,7 +125,7 @@
             this.btnFilter.TabIndex = 10;
             this.btnFilter.Text = "Filteraj";
             this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
             // dtpDo
             // 
@@ -135,24 +133,13 @@
             this.dtpDo.Name = "dtpDo";
             this.dtpDo.Size = new System.Drawing.Size(200, 22);
             this.dtpDo.TabIndex = 11;
-            this.dtpDo.ValueChanged += new System.EventHandler(this.dtpDo_ValueChanged);
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(12, 12);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(103, 29);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxLogo.TabIndex = 21;
-            this.pbxLogo.TabStop = false;
+            this.dtpDo.ValueChanged += new System.EventHandler(this.DtpDo_ValueChanged);
             // 
             // FrmIzvjestaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.dtpDo);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.label2);
@@ -167,7 +154,6 @@
             this.Name = "FrmIzvjestaj";
             this.Text = "Izvještaji";
             ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +170,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.DateTimePicker dtpDo;
-        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

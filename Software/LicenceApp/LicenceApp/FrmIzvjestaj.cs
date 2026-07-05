@@ -10,47 +10,47 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void btnOsvjezi_Click(object sender, EventArgs e)
+        private void BtnOsvjezi_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnFilter_Click(object sender, EventArgs e)
+        private void BtnFilter_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dtpOd_ValueChanged(object sender, EventArgs e)
+        private void DtpOd_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dtpDo_ValueChanged(object sender, EventArgs e)
+        private void DtpDo_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblNaslov_Click(object sender, EventArgs e)
+        private void LblNaslov_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void Label1_Click_1(object sender, EventArgs e)
         {
 
         }

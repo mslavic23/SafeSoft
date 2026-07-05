@@ -21,8 +21,6 @@
             this.btnIzvjestaj = new System.Windows.Forms.Button();
             this.btnKorisnici = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSoftveri
@@ -33,7 +31,7 @@
             this.btnSoftveri.TabIndex = 0;
             this.btnSoftveri.Text = "Softveri";
             this.btnSoftveri.UseVisualStyleBackColor = true;
-            this.btnSoftveri.Click += new System.EventHandler(this.button1_Click);
+            this.btnSoftveri.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnZahtjevi
             // 
@@ -43,7 +41,7 @@
             this.btnZahtjevi.TabIndex = 1;
             this.btnZahtjevi.Text = "Zahtjevi";
             this.btnZahtjevi.UseVisualStyleBackColor = true;
-            this.btnZahtjevi.Click += new System.EventHandler(this.button2_Click);
+            this.btnZahtjevi.Click += new System.EventHandler(this.Button2_Click);
             // 
             // btnUredaji
             // 
@@ -53,7 +51,7 @@
             this.btnUredaji.TabIndex = 2;
             this.btnUredaji.Text = "Uređaji";
             this.btnUredaji.UseVisualStyleBackColor = true;
-            this.btnUredaji.Click += new System.EventHandler(this.button3_Click);
+            this.btnUredaji.Click += new System.EventHandler(this.Button3_Click);
             // 
             // btnIzvjestaj
             // 
@@ -63,7 +61,7 @@
             this.btnIzvjestaj.TabIndex = 3;
             this.btnIzvjestaj.Text = "Izvještaj";
             this.btnIzvjestaj.UseVisualStyleBackColor = true;
-            this.btnIzvjestaj.Click += new System.EventHandler(this.button4_Click);
+            this.btnIzvjestaj.Click += new System.EventHandler(this.Button4_Click);
             // 
             // btnKorisnici
             // 
@@ -73,7 +71,7 @@
             this.btnKorisnici.TabIndex = 5;
             this.btnKorisnici.Text = "KORISNICI";
             this.btnKorisnici.UseVisualStyleBackColor = true;
-            this.btnKorisnici.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnKorisnici.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // btnOdjava
             // 
@@ -83,24 +81,13 @@
             this.btnOdjava.TabIndex = 6;
             this.btnOdjava.Text = "Odjava";
             this.btnOdjava.UseVisualStyleBackColor = true;
-            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(145, 37);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(509, 100);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxLogo.TabIndex = 7;
-            this.pbxLogo.TabStop = false;
+            this.btnOdjava.Click += new System.EventHandler(this.BtnOdjava_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnKorisnici);
             this.Controls.Add(this.btnIzvjestaj);
@@ -110,7 +97,6 @@
             this.Name = "FrmMain";
             this.Text = "SafeSoft";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,6 +107,5 @@
         private System.Windows.Forms.Button btnIzvjestaj;
         private System.Windows.Forms.Button btnKorisnici;
         private System.Windows.Forms.Button btnOdjava;
-        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

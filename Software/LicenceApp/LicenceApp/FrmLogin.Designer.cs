@@ -74,7 +74,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Prijava";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnPrijava_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnPrijava_Click);
             // 
             // pbxAddUser
             // 
@@ -85,7 +85,7 @@
             this.pbxAddUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAddUser.TabIndex = 7;
             this.pbxAddUser.TabStop = false;
-            this.pbxAddUser.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pbxAddUser.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // pbxLogo
             // 

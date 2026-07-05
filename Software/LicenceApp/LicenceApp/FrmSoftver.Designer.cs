@@ -29,8 +29,6 @@
             this.btnGlavni = new System.Windows.Forms.Button();
             this.btnNaprijed = new System.Windows.Forms.Button();
             this.lstSoftveri = new System.Windows.Forms.ListBox();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -109,7 +107,7 @@
             this.btnDodaj.TabIndex = 9;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click_1);
+            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click_1);
             // 
             // btnUredi
             // 
@@ -119,7 +117,7 @@
             this.btnUredi.TabIndex = 10;
             this.btnUredi.Text = "Uredi";
             this.btnUredi.UseVisualStyleBackColor = true;
-            this.btnUredi.Click += new System.EventHandler(this.btnUredi_Click);
+            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
             // 
             // btnObrisi
             // 
@@ -129,7 +127,7 @@
             this.btnObrisi.TabIndex = 11;
             this.btnObrisi.Text = "Obriši";
             this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click_1);
+            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click_1);
             // 
             // btnGlavni
             // 
@@ -139,7 +137,7 @@
             this.btnGlavni.TabIndex = 13;
             this.btnGlavni.Text = "Izbornik";
             this.btnGlavni.UseVisualStyleBackColor = true;
-            this.btnGlavni.Click += new System.EventHandler(this.button2_Click);
+            this.btnGlavni.Click += new System.EventHandler(this.Button2_Click);
             // 
             // btnNaprijed
             // 
@@ -149,34 +147,23 @@
             this.btnNaprijed.TabIndex = 14;
             this.btnNaprijed.Text = "→";
             this.btnNaprijed.UseVisualStyleBackColor = true;
-            this.btnNaprijed.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnNaprijed.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // lstSoftveri
             // 
             this.lstSoftveri.FormattingEnabled = true;
             this.lstSoftveri.ItemHeight = 16;
-            this.lstSoftveri.Location = new System.Drawing.Point(154, 107);
+            this.lstSoftveri.Location = new System.Drawing.Point(154, 91);
             this.lstSoftveri.Name = "lstSoftveri";
-            this.lstSoftveri.Size = new System.Drawing.Size(307, 164);
+            this.lstSoftveri.Size = new System.Drawing.Size(307, 180);
             this.lstSoftveri.TabIndex = 15;
-            this.lstSoftveri.SelectedIndexChanged += new System.EventHandler(this.lstSoftveri_SelectedIndexChanged_1);
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(154, 59);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(151, 42);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxLogo.TabIndex = 16;
-            this.pbxLogo.TabStop = false;
+            this.lstSoftveri.SelectedIndexChanged += new System.EventHandler(this.LstSoftveri_SelectedIndexChanged_1);
             // 
             // FrmSoftver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 450);
-            this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstSoftveri);
             this.Controls.Add(this.btnNaprijed);
             this.Controls.Add(this.btnGlavni);
@@ -193,7 +180,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmSoftver";
             this.Text = "Softveri";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,6 +199,5 @@
         private System.Windows.Forms.Button btnGlavni;
         private System.Windows.Forms.Button btnNaprijed;
         private System.Windows.Forms.ListBox lstSoftveri;
-        private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

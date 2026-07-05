@@ -15,12 +15,12 @@ namespace LicenceApp
 
         }
 
-        private void btnPrijava_Click(object sender, EventArgs e)
+        private void BtnPrijava_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
 
         }
