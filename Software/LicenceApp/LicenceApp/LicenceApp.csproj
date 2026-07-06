@@ -93,6 +93,7 @@
       <DependentUpon>FrmZahtjev.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenceApp.Models\Korisnik.cs" />
+    <Compile Include="LicenceApp.Models\Softver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmIzvjestaj.resx">
