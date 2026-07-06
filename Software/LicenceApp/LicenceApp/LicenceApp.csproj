@@ -92,6 +92,7 @@
     <Compile Include="FrmZahtjev.Designer.cs">
       <DependentUpon>FrmZahtjev.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenceApp.Models\Korisnik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmIzvjestaj.resx">
@@ -152,7 +153,6 @@
     <Content Include="LicenceApp.Resources\user_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LicenceApp.Models\" />
     <Folder Include="LicenceApp.Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
