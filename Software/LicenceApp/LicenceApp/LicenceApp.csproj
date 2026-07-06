@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBLayer">
+      <HintPath>LicenceApp.DIIs\DBLayer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -148,8 +152,8 @@
     <Content Include="LicenceApp.Resources\user_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LicenceApp.Data\" />
     <Folder Include="LicenceApp.Models\" />
+    <Folder Include="LicenceApp.Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
