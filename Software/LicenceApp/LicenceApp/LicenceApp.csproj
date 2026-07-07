@@ -96,6 +96,7 @@
     <Compile Include="LicenceApp.Models\Softver.cs" />
     <Compile Include="LicenceApp.Models\Uredaj.cs" />
     <Compile Include="LicenceApp.Models\Zahtjev.cs" />
+    <Compile Include="LicenceApp.Repositories\KorisnikRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
@@ -156,8 +157,6 @@
     <Content Include="LicenceApp.Resources\user_icon.png" />
     <Content Include="LicenceApp.Resources\user_white.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LicenceApp.Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
