@@ -26,12 +26,12 @@ namespace LicenceApp.Repositories
         private readonly SoftverRepository _softverRepository = new SoftverRepository();
         private readonly UredajRepository _uredajRepository = new UredajRepository();
 
-        public List<IzvjestajStavka> DohvatiIzvjestaj(DateTime? od = null, DateTime? do_ = null)
+        public List<IzvjestajStavka> GetReport(DateTime? od = null, DateTime? do_ = null)
         {
-            var zahtjevi = _zahtjevRepository.DohvatiSve();
-            var korisnici = _korisnikRepository.DohvatiSve();
-            var softveri = _softverRepository.DohvatiSve();
-            var uredaji = _uredajRepository.DohvatiSve();
+            var zahtjevi = _zahtjevRepository.GetAll();
+            var korisnici = _korisnikRepository.GetAll();
+            var softveri = _softverRepository.GetAll();
+            var uredaji = _uredajRepository.GetAll();
 
             var query = (from z in zahtjevi
                          join k in korisnici on z.ID_korisnik equals k.ID_korisnik

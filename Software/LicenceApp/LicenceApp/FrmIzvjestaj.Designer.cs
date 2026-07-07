@@ -37,7 +37,7 @@
             this.dgvReport.RowTemplate.Height = 24;
             this.dgvReport.Size = new System.Drawing.Size(776, 191);
             this.dgvReport.TabIndex = 0;
-            this.dgvReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReport_CellContentClick);
+            this.dgvReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReport_CellContentClick);
             // 
             // btnRefreshReport
             // 
@@ -47,7 +47,7 @@
             this.btnRefreshReport.TabIndex = 1;
             this.btnRefreshReport.Text = "Osvježi";
             this.btnRefreshReport.UseVisualStyleBackColor = true;
-            this.btnRefreshReport.Click += new System.EventHandler(this.BtnOsvjezi_Click);
+            this.btnRefreshReport.Click += new System.EventHandler(this.BtnRefreshReport_Click);
             // 
             // btnMain
             // 
@@ -57,7 +57,7 @@
             this.btnMain.TabIndex = 3;
             this.btnMain.Text = "Izbornik";
             this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.Button3_Click);
+            this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // lblFrmReportTitle
             // 
@@ -68,7 +68,7 @@
             this.lblFrmReportTitle.Size = new System.Drawing.Size(304, 29);
             this.lblFrmReportTitle.TabIndex = 5;
             this.lblFrmReportTitle.Text = "Izvještaj zahtjeva za licence";
-            this.lblFrmReportTitle.Click += new System.EventHandler(this.LblNaslov_Click);
+            this.lblFrmReportTitle.Click += new System.EventHandler(this.LblFrmReportTitle_Click);
             // 
             // lblTotalRequests
             // 
@@ -78,7 +78,7 @@
             this.lblTotalRequests.Size = new System.Drawing.Size(120, 16);
             this.lblTotalRequests.TabIndex = 6;
             this.lblTotalRequests.Text = "Ukupno zahtjeva: 0";
-            this.lblTotalRequests.Click += new System.EventHandler(this.Label1_Click);
+            this.lblTotalRequests.Click += new System.EventHandler(this.LblTotalRequests_Click);
             // 
             // dtpDateFrom
             // 
@@ -86,7 +86,7 @@
             this.dtpDateFrom.Name = "dtpDateFrom";
             this.dtpDateFrom.Size = new System.Drawing.Size(200, 22);
             this.dtpDateFrom.TabIndex = 7;
-            this.dtpDateFrom.ValueChanged += new System.EventHandler(this.DtpOd_ValueChanged);
+            this.dtpDateFrom.ValueChanged += new System.EventHandler(this.DtpDateFrom_ValueChanged);
             // 
             // lblDateTIl
             // 
@@ -96,7 +96,7 @@
             this.lblDateTIl.Size = new System.Drawing.Size(28, 16);
             this.lblDateTIl.TabIndex = 8;
             this.lblDateTIl.Text = "Do:";
-            this.lblDateTIl.Click += new System.EventHandler(this.Label1_Click_1);
+            this.lblDateTIl.Click += new System.EventHandler(this.LblDateTIl_Click);
             // 
             // lblDateFrom
             // 
@@ -106,7 +106,7 @@
             this.lblDateFrom.Size = new System.Drawing.Size(31, 16);
             this.lblDateFrom.TabIndex = 9;
             this.lblDateFrom.Text = "Od: ";
-            this.lblDateFrom.Click += new System.EventHandler(this.lblDateFrom_Click);
+            this.lblDateFrom.Click += new System.EventHandler(this.LblDateFrom_Click);
             // 
             // btnFilterReport
             // 
@@ -124,7 +124,7 @@
             this.dtpDateTil.Name = "dtpDateTil";
             this.dtpDateTil.Size = new System.Drawing.Size(200, 22);
             this.dtpDateTil.TabIndex = 11;
-            this.dtpDateTil.ValueChanged += new System.EventHandler(this.DtpDo_ValueChanged);
+            this.dtpDateTil.ValueChanged += new System.EventHandler(this.DtpDateTil_ValueChanged);
             // 
             // FrmIzvjestaj
             // 

@@ -10,7 +10,7 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void BtnOsvjezi_Click(object sender, EventArgs e)
+        private void BtnRefreshReport_Click(object sender, EventArgs e)
         {
 
         }
@@ -20,49 +20,44 @@ namespace LicenceApp
 
         }
 
-        private void DtpOd_ValueChanged(object sender, EventArgs e)
+        private void DtpDateFrom_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void DtpDo_ValueChanged(object sender, EventArgs e)
+        private void DtpDateTil_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
+        private void BtnMain_Click(object sender, EventArgs e)
         {
             FrmMain frmMain = new FrmMain();
             frmMain.Show();
             this.Hide();
         }
 
-        private void LblNaslov_Click(object sender, EventArgs e)
+        private void LblFrmReportTitle_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void LblTotalRequests_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click_1(object sender, EventArgs e)
+        private void LblDateTIl_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblDateFrom_Click(object sender, EventArgs e)
+        private void LblDateFrom_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dgvReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
