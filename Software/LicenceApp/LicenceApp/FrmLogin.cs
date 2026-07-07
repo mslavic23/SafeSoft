@@ -53,30 +53,8 @@ namespace LicenceApp
             frmKorisnik.Show();
             this.Hide();
         }
-
-        private void lbPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLoginUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLoginUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
-
-
 
 
 

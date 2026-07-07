@@ -34,7 +34,6 @@
             this.lblLoginUser.Size = new System.Drawing.Size(97, 16);
             this.lblLoginUser.TabIndex = 0;
             this.lblLoginUser.Text = "Korisničko ime:";
-            this.lblLoginUser.Click += new System.EventHandler(this.lblLoginUser_Click);
             // 
             // txtLoginUser
             // 
@@ -44,7 +43,6 @@
             this.txtLoginUser.Name = "txtLoginUser";
             this.txtLoginUser.Size = new System.Drawing.Size(180, 22);
             this.txtLoginUser.TabIndex = 1;
-            this.txtLoginUser.TextChanged += new System.EventHandler(this.txtLoginUser_TextChanged);
             // 
             // lblLoginPassword
             // 
@@ -54,7 +52,6 @@
             this.lblLoginPassword.Size = new System.Drawing.Size(56, 16);
             this.lblLoginPassword.TabIndex = 2;
             this.lblLoginPassword.Text = "Lozinka:";
-            this.lblLoginPassword.Click += new System.EventHandler(this.lbPassword_Click);
             // 
             // txtLoginPassword
             // 
@@ -65,7 +62,6 @@
             this.txtLoginPassword.PasswordChar = '*';
             this.txtLoginPassword.Size = new System.Drawing.Size(180, 22);
             this.txtLoginPassword.TabIndex = 3;
-            this.txtLoginPassword.TextChanged += new System.EventHandler(this.txtUserPassword_TextChanged);
             // 
             // btnLogin
             // 
