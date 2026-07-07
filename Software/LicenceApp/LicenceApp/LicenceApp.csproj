@@ -99,6 +99,7 @@
     <Compile Include="LicenceApp.Repositories\KorisnikRepository.cs" />
     <Compile Include="LicenceApp.Repositories\SoftveRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UredajRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\ZahtjevRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
