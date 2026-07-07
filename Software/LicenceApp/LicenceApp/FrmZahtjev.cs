@@ -37,7 +37,9 @@ namespace LicenceApp
 
         private void BtnGlavni_Click(object sender, EventArgs e)
         {
-
+            FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            this.Hide();
         }
 
         private void BtnNaprijed_Click(object sender, EventArgs e)

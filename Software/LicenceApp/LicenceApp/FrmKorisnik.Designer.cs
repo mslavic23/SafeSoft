@@ -27,7 +27,6 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -155,21 +154,12 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(174, 401);
+            this.btnMain.Location = new System.Drawing.Point(119, 401);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 14;
             this.btnMain.Text = "Izbornik";
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(119, 401);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "←";
-            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // pbxLogo
             // 
@@ -201,7 +191,6 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnMain);
-            this.Controls.Add(this.btnBack);
             this.Name = "FrmKorisnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
@@ -226,7 +215,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnMain;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

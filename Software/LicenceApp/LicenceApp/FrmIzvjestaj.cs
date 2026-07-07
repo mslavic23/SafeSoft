@@ -37,7 +37,9 @@ namespace LicenceApp
 
         private void Button3_Click(object sender, EventArgs e)
         {
-
+            FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            this.Hide();
         }
 
         private void LblNaslov_Click(object sender, EventArgs e)

@@ -24,9 +24,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnGoFoward = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
-            this.btnGoBack = new System.Windows.Forms.Button();
             this.lstDevices = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
@@ -118,16 +116,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // btnGoFoward
-            // 
-            this.btnGoFoward.Location = new System.Drawing.Point(676, 196);
-            this.btnGoFoward.Name = "btnGoFoward";
-            this.btnGoFoward.Size = new System.Drawing.Size(52, 23);
-            this.btnGoFoward.TabIndex = 10;
-            this.btnGoFoward.Text = "→";
-            this.btnGoFoward.UseVisualStyleBackColor = true;
-            this.btnGoFoward.Click += new System.EventHandler(this.Button1_Click_2);
-            // 
             // btnMain
             // 
             this.btnMain.Location = new System.Drawing.Point(76, 270);
@@ -137,16 +125,6 @@
             this.btnMain.Text = "Izbornik";
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Location = new System.Drawing.Point(478, 196);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(49, 23);
-            this.btnGoBack.TabIndex = 12;
-            this.btnGoBack.Text = "←";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            this.btnGoBack.Click += new System.EventHandler(this.Button3_Click);
             // 
             // lstDevices
             // 
@@ -176,9 +154,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstDevices);
-            this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.btnMain);
-            this.Controls.Add(this.btnGoFoward);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -207,10 +183,13 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnGoFoward;
         private System.Windows.Forms.Button btnMain;
-        private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.ListBox lstDevices;
         private System.Windows.Forms.PictureBox pbxLogo;
     }
 }
+
+
+
+
+

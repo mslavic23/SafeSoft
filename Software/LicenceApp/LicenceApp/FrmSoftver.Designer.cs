@@ -26,8 +26,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnFrmMain = new System.Windows.Forms.Button();
-            this.btnGoFoward = new System.Windows.Forms.Button();
+            this.btnMain = new System.Windows.Forms.Button();
             this.lstSoftwares = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
@@ -139,25 +138,15 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.BtnObrisi_Click_1);
             // 
-            // btnFrmMain
+            // btnMain
             // 
-            this.btnFrmMain.Location = new System.Drawing.Point(467, 245);
-            this.btnFrmMain.Name = "btnFrmMain";
-            this.btnFrmMain.Size = new System.Drawing.Size(77, 26);
-            this.btnFrmMain.TabIndex = 13;
-            this.btnFrmMain.Text = "Izbornik";
-            this.btnFrmMain.UseVisualStyleBackColor = true;
-            this.btnFrmMain.Click += new System.EventHandler(this.Button2_Click);
-            // 
-            // btnGoFoward
-            // 
-            this.btnGoFoward.Location = new System.Drawing.Point(729, 247);
-            this.btnGoFoward.Name = "btnGoFoward";
-            this.btnGoFoward.Size = new System.Drawing.Size(61, 23);
-            this.btnGoFoward.TabIndex = 14;
-            this.btnGoFoward.Text = "→";
-            this.btnGoFoward.UseVisualStyleBackColor = true;
-            this.btnGoFoward.Click += new System.EventHandler(this.Button1_Click_1);
+            this.btnMain.Location = new System.Drawing.Point(467, 245);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(77, 26);
+            this.btnMain.TabIndex = 13;
+            this.btnMain.Text = "Izbornik";
+            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.Button2_Click);
             // 
             // lstSoftwares
             // 
@@ -187,8 +176,7 @@
             this.ClientSize = new System.Drawing.Size(910, 450);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstSoftwares);
-            this.Controls.Add(this.btnGoFoward);
-            this.Controls.Add(this.btnFrmMain);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -221,8 +209,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnFrmMain;
-        private System.Windows.Forms.Button btnGoFoward;
+        private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.ListBox lstSoftwares;
         private System.Windows.Forms.PictureBox pbxLogo;
     }

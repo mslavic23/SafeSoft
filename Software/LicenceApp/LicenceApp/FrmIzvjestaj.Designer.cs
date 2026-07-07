@@ -17,8 +17,7 @@
         {
             this.dgvReport = new System.Windows.Forms.DataGridView();
             this.btnRefreshReport = new System.Windows.Forms.Button();
-            this.btnFrmMain = new System.Windows.Forms.Button();
-            this.btnGoBack = new System.Windows.Forms.Button();
+            this.btnMain = new System.Windows.Forms.Button();
             this.lblFrmReportTitle = new System.Windows.Forms.Label();
             this.lblTotalRequests = new System.Windows.Forms.Label();
             this.dtpDateFrom = new System.Windows.Forms.DateTimePicker();
@@ -50,25 +49,15 @@
             this.btnRefreshReport.UseVisualStyleBackColor = true;
             this.btnRefreshReport.Click += new System.EventHandler(this.BtnOsvjezi_Click);
             // 
-            // btnFrmMain
+            // btnMain
             // 
-            this.btnFrmMain.Location = new System.Drawing.Point(713, 320);
-            this.btnFrmMain.Name = "btnFrmMain";
-            this.btnFrmMain.Size = new System.Drawing.Size(75, 23);
-            this.btnFrmMain.TabIndex = 3;
-            this.btnFrmMain.Text = "Izbornik";
-            this.btnFrmMain.UseVisualStyleBackColor = true;
-            this.btnFrmMain.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // btnGoBack
-            // 
-            this.btnGoBack.Location = new System.Drawing.Point(28, 318);
-            this.btnGoBack.Name = "btnGoBack";
-            this.btnGoBack.Size = new System.Drawing.Size(51, 23);
-            this.btnGoBack.TabIndex = 4;
-            this.btnGoBack.Text = "←";
-            this.btnGoBack.UseVisualStyleBackColor = true;
-            this.btnGoBack.Click += new System.EventHandler(this.Button4_Click);
+            this.btnMain.Location = new System.Drawing.Point(713, 320);
+            this.btnMain.Name = "btnMain";
+            this.btnMain.Size = new System.Drawing.Size(75, 23);
+            this.btnMain.TabIndex = 3;
+            this.btnMain.Text = "Izbornik";
+            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.Click += new System.EventHandler(this.Button3_Click);
             // 
             // lblFrmReportTitle
             // 
@@ -149,8 +138,7 @@
             this.Controls.Add(this.dtpDateFrom);
             this.Controls.Add(this.lblTotalRequests);
             this.Controls.Add(this.lblFrmReportTitle);
-            this.Controls.Add(this.btnGoBack);
-            this.Controls.Add(this.btnFrmMain);
+            this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnRefreshReport);
             this.Controls.Add(this.dgvReport);
             this.Name = "FrmIzvjestaj";
@@ -164,8 +152,7 @@
 
         private System.Windows.Forms.DataGridView dgvReport;
         private System.Windows.Forms.Button btnRefreshReport;
-        private System.Windows.Forms.Button btnFrmMain;
-        private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.Label lblFrmReportTitle;
         private System.Windows.Forms.Label lblTotalRequests;
         private System.Windows.Forms.DateTimePicker dtpDateFrom;
