@@ -10,41 +10,31 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void BtnDodaj_Click_1(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnUredi_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnObrisi_Click_1(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LstSoftveri_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void LstSoftwares_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
+        private void BtnMain_Click(object sender, EventArgs e)
         {
             FrmMain frmMain = new FrmMain();
             frmMain.Show();
             this.Hide();
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void PbxLogo_Click(object sender, EventArgs e)
@@ -52,42 +42,42 @@ namespace LicenceApp
 
         }
 
-        private void txtSeats_TextChanged(object sender, EventArgs e)
+        private void TxtTotalSeats_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbSeats_Click(object sender, EventArgs e)
+        private void LblTotalSeats_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lbType_Click(object sender, EventArgs e)
+        private void LblLicenceType_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtType_TextChanged(object sender, EventArgs e)
+        private void TxtLicenceType_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtVersion_TextChanged(object sender, EventArgs e)
+        private void TxtSofwareVersion_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbVersion_Click(object sender, EventArgs e)
+        private void LblSoftwareVersion_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void TxtSoftwareName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbName_Click(object sender, EventArgs e)
+        private void LblSoftwareName_Click(object sender, EventArgs e)
         {
 
         }

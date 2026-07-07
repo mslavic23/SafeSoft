@@ -40,7 +40,7 @@
             this.lblSoftwareName.Size = new System.Drawing.Size(44, 16);
             this.lblSoftwareName.TabIndex = 1;
             this.lblSoftwareName.Text = "Naziv:";
-            this.lblSoftwareName.Click += new System.EventHandler(this.lbName_Click);
+            this.lblSoftwareName.Click += new System.EventHandler(this.LblSoftwareName_Click);
             // 
             // txtSoftwareName
             // 
@@ -49,7 +49,7 @@
             this.txtSoftwareName.Name = "txtSoftwareName";
             this.txtSoftwareName.Size = new System.Drawing.Size(149, 22);
             this.txtSoftwareName.TabIndex = 2;
-            this.txtSoftwareName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtSoftwareName.TextChanged += new System.EventHandler(this.TxtSoftwareName_TextChanged);
             // 
             // lblSoftwareVersion
             // 
@@ -59,7 +59,7 @@
             this.lblSoftwareVersion.Size = new System.Drawing.Size(51, 16);
             this.lblSoftwareVersion.TabIndex = 3;
             this.lblSoftwareVersion.Text = "Verzija:";
-            this.lblSoftwareVersion.Click += new System.EventHandler(this.lbVersion_Click);
+            this.lblSoftwareVersion.Click += new System.EventHandler(this.LblSoftwareVersion_Click);
             // 
             // txtSofwareVersion
             // 
@@ -68,7 +68,7 @@
             this.txtSofwareVersion.Name = "txtSofwareVersion";
             this.txtSofwareVersion.Size = new System.Drawing.Size(149, 22);
             this.txtSofwareVersion.TabIndex = 4;
-            this.txtSofwareVersion.TextChanged += new System.EventHandler(this.txtVersion_TextChanged);
+            this.txtSofwareVersion.TextChanged += new System.EventHandler(this.TxtSofwareVersion_TextChanged);
             // 
             // lblLicenceType
             // 
@@ -78,7 +78,7 @@
             this.lblLicenceType.Size = new System.Drawing.Size(76, 16);
             this.lblLicenceType.TabIndex = 5;
             this.lblLicenceType.Text = "Tip licence:";
-            this.lblLicenceType.Click += new System.EventHandler(this.lbType_Click);
+            this.lblLicenceType.Click += new System.EventHandler(this.LblLicenceType_Click);
             // 
             // txtLicenceType
             // 
@@ -87,7 +87,7 @@
             this.txtLicenceType.Name = "txtLicenceType";
             this.txtLicenceType.Size = new System.Drawing.Size(124, 22);
             this.txtLicenceType.TabIndex = 6;
-            this.txtLicenceType.TextChanged += new System.EventHandler(this.txtType_TextChanged);
+            this.txtLicenceType.TextChanged += new System.EventHandler(this.TxtLicenceType_TextChanged);
             // 
             // txtTotalSeats
             // 
@@ -96,7 +96,7 @@
             this.txtTotalSeats.Name = "txtTotalSeats";
             this.txtTotalSeats.Size = new System.Drawing.Size(100, 22);
             this.txtTotalSeats.TabIndex = 7;
-            this.txtTotalSeats.TextChanged += new System.EventHandler(this.txtSeats_TextChanged);
+            this.txtTotalSeats.TextChanged += new System.EventHandler(this.TxtTotalSeats_TextChanged);
             // 
             // lblTotalSeats
             // 
@@ -106,7 +106,7 @@
             this.lblTotalSeats.Size = new System.Drawing.Size(100, 16);
             this.lblTotalSeats.TabIndex = 8;
             this.lblTotalSeats.Text = "Ukupno mjesta:";
-            this.lblTotalSeats.Click += new System.EventHandler(this.lbSeats_Click);
+            this.lblTotalSeats.Click += new System.EventHandler(this.LblTotalSeats_Click);
             // 
             // btnAdd
             // 
@@ -116,7 +116,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnDodaj_Click_1);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
@@ -126,7 +126,7 @@
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Uredi";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.BtnUredi_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
@@ -136,7 +136,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnObrisi_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnMain
             // 
@@ -146,7 +146,7 @@
             this.btnMain.TabIndex = 13;
             this.btnMain.Text = "Izbornik";
             this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.Button2_Click);
+            this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // lstSoftwares
             // 
@@ -156,7 +156,7 @@
             this.lstSoftwares.Name = "lstSoftwares";
             this.lstSoftwares.Size = new System.Drawing.Size(307, 180);
             this.lstSoftwares.TabIndex = 15;
-            this.lstSoftwares.SelectedIndexChanged += new System.EventHandler(this.LstSoftveri_SelectedIndexChanged_1);
+            this.lstSoftwares.SelectedIndexChanged += new System.EventHandler(this.LstSoftwares_SelectedIndexChanged);
             // 
             // pbxLogo
             // 

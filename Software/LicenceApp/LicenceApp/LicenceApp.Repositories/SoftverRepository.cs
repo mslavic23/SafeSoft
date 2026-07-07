@@ -7,7 +7,7 @@ namespace LicenceApp.Repositories
 {
     public class SoftverRepository
     {
-        public List<Softver> DohvatiSve()
+        public List<Softver> GetAll()
         {
             List<Softver> softveri = new List<Softver>();
 
@@ -31,7 +31,7 @@ namespace LicenceApp.Repositories
             return softveri;
         }
 
-        public bool Dodaj(Softver softver)
+        public bool Add(Softver softver)
         {
             DB.OpenConnection();
             string query = $"INSERT INTO Softver (Naziv, Verzija, Tip_licence, Ukupno_mjesta) VALUES ('{softver.Naziv}', '{softver.Verzija}', '{softver.Tip_licence}', {softver.Ukupno_mjesta})";
@@ -40,7 +40,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Uredi(Softver softver)
+        public bool Update(Softver softver)
         {
             DB.OpenConnection();
             string query = $"UPDATE Softver SET Naziv = '{softver.Naziv}', Verzija = '{softver.Verzija}', Tip_licence = '{softver.Tip_licence}', Ukupno_mjesta = {softver.Ukupno_mjesta} WHERE ID_softver = {softver.ID_softver}";
@@ -49,7 +49,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Obrisi(int id)
+        public bool Delete(int id)
         {
             DB.OpenConnection();
             string query = $"DELETE FROM Softver WHERE ID_softver = {id}";
