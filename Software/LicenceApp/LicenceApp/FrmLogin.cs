@@ -18,7 +18,7 @@ namespace LicenceApp
 
         }
 
-        private void BtnPrijava_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             string email = txtLoginUser.Text;
             string lozinka = txtLoginPassword.Text;
@@ -47,7 +47,7 @@ namespace LicenceApp
             }
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
+        private void PbxAddUser_Click(object sender, EventArgs e)
         {
             FrmKorisnik frmKorisnik = new FrmKorisnik();
             frmKorisnik.Show();
@@ -55,21 +55,3 @@ namespace LicenceApp
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
