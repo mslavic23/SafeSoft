@@ -92,6 +92,7 @@
     <Compile Include="FrmZahtjev.Designer.cs">
       <DependentUpon>FrmZahtjev.cs</DependentUpon>
     </Compile>
+    <Compile Include="LicenceApp.Helpers\HashHelper.cs" />
     <Compile Include="LicenceApp.Models\Korisnik.cs" />
     <Compile Include="LicenceApp.Models\Softver.cs" />
     <Compile Include="LicenceApp.Models\Uredaj.cs" />

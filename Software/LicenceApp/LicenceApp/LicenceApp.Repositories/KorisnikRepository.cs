@@ -2,12 +2,13 @@
 using DBLayer;
 using System.Data.SqlClient;
 using LicenceApp.Models;
+using LicenceApp.Helpers;
 
 namespace LicenceApp.Repositories
 {
     public class KorisnikRepository
     {
-        public List<Korisnik> DohvatiSve()
+        public List<Korisnik> GetAll()
         {
             List<Korisnik> korisnici = new List<Korisnik>();
 
@@ -32,11 +33,12 @@ namespace LicenceApp.Repositories
             return korisnici;
         }
 
-        public Korisnik Prijava(string email, string lozinka)
+        public Korisnik Login(string email, string lozinka)
         {
             DB.OpenConnection();
 
-            string query = $"SELECT ID_korisnik, Ime, Prezime, Email, LozinkaHash, Uloga FROM Korisnik WHERE Email = '{email}' AND LozinkaHash = '{lozinka}'";
+            string hash = HashHelper.HashPassword(lozinka);
+            string query = $"SELECT ID_korisnik, Ime, Prezime, Email, LozinkaHash, Uloga FROM Korisnik WHERE Email = '{email}' AND LozinkaHash = '{hash}'";
             SqlDataReader reader = DB.GetDataReader(query);
 
             Korisnik korisnik = null;
@@ -57,25 +59,37 @@ namespace LicenceApp.Repositories
             return korisnik;
         }
 
-        public bool Dodaj(Korisnik korisnik)
+        public bool Add(Korisnik korisnik)
         {
             DB.OpenConnection();
-            string query = $"INSERT INTO Korisnik (Ime, Prezime, Email, LozinkaHash, Uloga) VALUES ('{korisnik.Ime}', '{korisnik.Prezime}', '{korisnik.Email}', '{korisnik.LozinkaHash}', '{korisnik.Uloga}')";
+            string hash = HashHelper.HashPassword(korisnik.LozinkaHash);
+            string query = $"INSERT INTO Korisnik (Ime, Prezime, Email, LozinkaHash, Uloga) VALUES ('{korisnik.Ime}', '{korisnik.Prezime}', '{korisnik.Email}', '{hash}', '{korisnik.Uloga}')";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
         }
 
-        public bool Uredi(Korisnik korisnik)
+        public bool Update(Korisnik korisnik)
         {
             DB.OpenConnection();
-            string query = $"UPDATE Korisnik SET Ime = '{korisnik.Ime}', Prezime = '{korisnik.Prezime}', Email = '{korisnik.Email}', LozinkaHash = '{korisnik.LozinkaHash}', Uloga = '{korisnik.Uloga}' WHERE ID_korisnik = {korisnik.ID_korisnik}";
+
+            string query;
+            if (string.IsNullOrEmpty(korisnik.LozinkaHash))
+            {
+                query = $"UPDATE Korisnik SET Ime = '{korisnik.Ime}', Prezime = '{korisnik.Prezime}', Email = '{korisnik.Email}', Uloga = '{korisnik.Uloga}' WHERE ID_korisnik = {korisnik.ID_korisnik}";
+            }
+            else
+            {
+                string hash = HashHelper.HashPassword(korisnik.LozinkaHash);
+                query = $"UPDATE Korisnik SET Ime = '{korisnik.Ime}', Prezime = '{korisnik.Prezime}', Email = '{korisnik.Email}', LozinkaHash = '{hash}', Uloga = '{korisnik.Uloga}' WHERE ID_korisnik = {korisnik.ID_korisnik}";
+            }
+
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
         }
 
-        public bool Obrisi(int id)
+        public bool Delete(int id)
         {
             DB.OpenConnection();
             string query = $"DELETE FROM Korisnik WHERE ID_korisnik = {id}";

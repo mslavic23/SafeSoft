@@ -19,7 +19,7 @@
             this.lblUserLastName = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.txtUserPassword = new System.Windows.Forms.TextBox();
-            this.txUserName = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtUserEmail = new System.Windows.Forms.TextBox();
             this.txtUserLastName = new System.Windows.Forms.TextBox();
             this.cmbUserRole = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.lblUserPassword.Size = new System.Drawing.Size(100, 23);
             this.lblUserPassword.TabIndex = 7;
             this.lblUserPassword.Text = "Lozinka: ";
-            this.lblUserPassword.Click += new System.EventHandler(this.lblUserPassword_Click);
+            this.lblUserPassword.Click += new System.EventHandler(this.LblUserPassword_Click);
             // 
             // lblUserRole
             // 
@@ -56,7 +56,7 @@
             this.lblUserRole.Size = new System.Drawing.Size(100, 23);
             this.lblUserRole.TabIndex = 9;
             this.lblUserRole.Text = "Uloga:";
-            this.lblUserRole.Click += new System.EventHandler(this.lblUserRole_Click);
+            this.lblUserRole.Click += new System.EventHandler(this.LblUserRole_Click);
             // 
             // lblUserEmail
             // 
@@ -65,7 +65,7 @@
             this.lblUserEmail.Size = new System.Drawing.Size(100, 23);
             this.lblUserEmail.TabIndex = 5;
             this.lblUserEmail.Text = "Email: ";
-            this.lblUserEmail.Click += new System.EventHandler(this.lblUserEmail_Click);
+            this.lblUserEmail.Click += new System.EventHandler(this.LblUserEmail_Click);
             // 
             // lblUserLastName
             // 
@@ -74,7 +74,7 @@
             this.lblUserLastName.Size = new System.Drawing.Size(100, 23);
             this.lblUserLastName.TabIndex = 3;
             this.lblUserLastName.Text = "Prezime: ";
-            this.lblUserLastName.Click += new System.EventHandler(this.lblUserLastName_Click);
+            this.lblUserLastName.Click += new System.EventHandler(this.LblUserLastName_Click);
             // 
             // lblUserName
             // 
@@ -83,7 +83,7 @@
             this.lblUserName.Size = new System.Drawing.Size(100, 23);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "Ime: ";
-            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
+            this.lblUserName.Click += new System.EventHandler(this.LblUserName_Click);
             // 
             // txtUserPassword
             // 
@@ -91,15 +91,15 @@
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.Size = new System.Drawing.Size(216, 22);
             this.txtUserPassword.TabIndex = 8;
-            this.txtUserPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtUserPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
-            // txUserName
+            // txtUserName
             // 
-            this.txUserName.Location = new System.Drawing.Point(632, 243);
-            this.txUserName.Name = "txUserName";
-            this.txUserName.Size = new System.Drawing.Size(216, 22);
-            this.txUserName.TabIndex = 2;
-            this.txUserName.TextChanged += new System.EventHandler(this.txUserName_TextChanged);
+            this.txtUserName.Location = new System.Drawing.Point(632, 243);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(216, 22);
+            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TextChanged += new System.EventHandler(this.TxUserName_TextChanged);
             // 
             // txtUserEmail
             // 
@@ -107,7 +107,7 @@
             this.txtUserEmail.Name = "txtUserEmail";
             this.txtUserEmail.Size = new System.Drawing.Size(216, 22);
             this.txtUserEmail.TabIndex = 6;
-            this.txtUserEmail.TextChanged += new System.EventHandler(this.txtUserEmail_TextChanged);
+            this.txtUserEmail.TextChanged += new System.EventHandler(this.TxtUserEmail_TextChanged);
             // 
             // txtUserLastName
             // 
@@ -115,7 +115,7 @@
             this.txtUserLastName.Name = "txtUserLastName";
             this.txtUserLastName.Size = new System.Drawing.Size(216, 22);
             this.txtUserLastName.TabIndex = 4;
-            this.txtUserLastName.TextChanged += new System.EventHandler(this.txtUserLastName_TextChanged);
+            this.txtUserLastName.TextChanged += new System.EventHandler(this.TxtUserLastName_TextChanged);
             // 
             // cmbUserRole
             // 
@@ -123,7 +123,7 @@
             this.cmbUserRole.Name = "cmbUserRole";
             this.cmbUserRole.Size = new System.Drawing.Size(216, 24);
             this.cmbUserRole.TabIndex = 10;
-            this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.cmbUserRole_SelectedIndexChanged);
+            this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.CmbUserRole_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -178,7 +178,7 @@
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.txUserName);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserLastName);
             this.Controls.Add(this.txtUserLastName);
             this.Controls.Add(this.lblUserEmail);
@@ -194,6 +194,7 @@
             this.Name = "FrmKorisnik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
+            this.Load += new System.EventHandler(this.FrmKorisnik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,7 +208,7 @@
         private System.Windows.Forms.Label lblUserLastName;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.TextBox txtUserPassword;
-        private System.Windows.Forms.TextBox txUserName;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtUserEmail;
         private System.Windows.Forms.TextBox txtUserLastName;
         private System.Windows.Forms.ComboBox cmbUserRole;
