@@ -98,6 +98,7 @@
     <Compile Include="LicenceApp.Models\Zahtjev.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManager.cs" />
     <EmbeddedResource Include="FrmIzvjestaj.resx">
       <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
