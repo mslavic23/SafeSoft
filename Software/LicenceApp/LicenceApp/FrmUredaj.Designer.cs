@@ -37,7 +37,7 @@
             this.txtDeviceName.Name = "txtDeviceName";
             this.txtDeviceName.Size = new System.Drawing.Size(137, 22);
             this.txtDeviceName.TabIndex = 1;
-            this.txtDeviceName.TextChanged += new System.EventHandler(this.txtDeviceName_TextChanged);
+            this.txtDeviceName.TextChanged += new System.EventHandler(this.TxtDeviceName_TextChanged);
             // 
             // lblDeviceName
             // 
@@ -47,7 +47,7 @@
             this.lblDeviceName.Size = new System.Drawing.Size(99, 16);
             this.lblDeviceName.TabIndex = 4;
             this.lblDeviceName.Text = "Naziv računala:";
-            this.lblDeviceName.Click += new System.EventHandler(this.lbName_Click);
+            this.lblDeviceName.Click += new System.EventHandler(this.LblDeviceName_Click);
             // 
             // lblDeviceLocation
             // 
@@ -57,7 +57,7 @@
             this.lblDeviceLocation.Size = new System.Drawing.Size(61, 16);
             this.lblDeviceLocation.TabIndex = 5;
             this.lblDeviceLocation.Text = "Lokacija:";
-            this.lblDeviceLocation.Click += new System.EventHandler(this.lbLocation_Click);
+            this.lblDeviceLocation.Click += new System.EventHandler(this.LblDeviceLocation_Click);
             // 
             // lblDeviceType
             // 
@@ -67,7 +67,7 @@
             this.lblDeviceType.Size = new System.Drawing.Size(79, 16);
             this.lblDeviceType.TabIndex = 6;
             this.lblDeviceType.Text = "Tip uređaja:";
-            this.lblDeviceType.Click += new System.EventHandler(this.lbType_Click);
+            this.lblDeviceType.Click += new System.EventHandler(this.LblDeviceType_Click);
             // 
             // btnAdd
             // 
@@ -77,7 +77,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnDodaj_Click_1);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
@@ -87,7 +87,7 @@
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Uredi";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.Button1_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
@@ -97,7 +97,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.Button1_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnMain
             // 
@@ -107,7 +107,7 @@
             this.btnMain.TabIndex = 11;
             this.btnMain.Text = "Izbornik";
             this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.Button2_Click);
+            this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // lstDevices
             // 
@@ -117,7 +117,7 @@
             this.lstDevices.Name = "lstDevices";
             this.lstDevices.Size = new System.Drawing.Size(346, 196);
             this.lstDevices.TabIndex = 13;
-            this.lstDevices.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
+            this.lstDevices.SelectedIndexChanged += new System.EventHandler(this.LstDevices_SelectedIndexChanged);
             // 
             // pbxLogo
             // 
@@ -137,7 +137,7 @@
             this.cmbDeviceLocation.Name = "cmbDeviceLocation";
             this.cmbDeviceLocation.Size = new System.Drawing.Size(137, 24);
             this.cmbDeviceLocation.TabIndex = 15;
-            this.cmbDeviceLocation.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceLocation_SelectedIndexChanged);
+            this.cmbDeviceLocation.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceLocation_SelectedIndexChanged);
             // 
             // cmbDeviceType
             // 
@@ -146,7 +146,7 @@
             this.cmbDeviceType.Name = "cmbDeviceType";
             this.cmbDeviceType.Size = new System.Drawing.Size(137, 24);
             this.cmbDeviceType.TabIndex = 16;
-            this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceType_SelectedIndexChanged);
+            this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceType_SelectedIndexChanged);
             // 
             // FrmUredaj
             // 
@@ -188,9 +188,5 @@
         private System.Windows.Forms.ComboBox cmbDeviceLocation;
         private System.Windows.Forms.ComboBox cmbDeviceType;
     }
+
 }
-
-
-
-
-

@@ -10,41 +10,31 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void BtnDodaj_Click_1(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Button1_Click_1(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstDevices_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Button1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
+        private void BtnMain_Click(object sender, EventArgs e)
         {
             FrmMain frmMain = new FrmMain();
             frmMain.Show();
             this.Hide();
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void PbxLogo_Click(object sender, EventArgs e)
@@ -52,27 +42,22 @@ namespace LicenceApp
 
         }
 
-        private void txtLokacija_TextChanged(object sender, EventArgs e)
+        private void LblDeviceType_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lbType_Click(object sender, EventArgs e)
+        private void LblDeviceLocation_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lbLocation_Click(object sender, EventArgs e)
+        private void LblDeviceName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lbName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDeviceName_TextChanged(object sender, EventArgs e)
+        private void TxtDeviceName_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -82,12 +67,12 @@ namespace LicenceApp
 
         }
 
-        private void cmbDeviceLocation_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbDeviceLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void cmbDeviceType_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbDeviceType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

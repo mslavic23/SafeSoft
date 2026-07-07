@@ -7,7 +7,7 @@ namespace LicenceApp.Repositories
 {
     public class UredajRepository
     {
-        public List<Uredaj> DohvatiSve()
+        public List<Uredaj> GetAll()
         {
             List<Uredaj> uredaji = new List<Uredaj>();
 
@@ -30,7 +30,7 @@ namespace LicenceApp.Repositories
             return uredaji;
         }
 
-        public bool Dodaj(Uredaj uredaj)
+        public bool Add(Uredaj uredaj)
         {
             DB.OpenConnection();
             string query = $"INSERT INTO Uredaj (Naziv_racunala, Lokacija, Tip_uredaja) VALUES ('{uredaj.Naziv_racunala}', '{uredaj.Lokacija}', '{uredaj.Tip_uredaja}')";
@@ -39,7 +39,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Uredi(Uredaj uredaj)
+        public bool Update(Uredaj uredaj)
         {
             DB.OpenConnection();
             string query = $"UPDATE Uredaj SET Naziv_racunala = '{uredaj.Naziv_racunala}', Lokacija = '{uredaj.Lokacija}', Tip_uredaja = '{uredaj.Tip_uredaja}' WHERE ID_uredaj = {uredaj.ID_uredaj}";
@@ -48,7 +48,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Obrisi(int id)
+        public bool Delete(int id)
         {
             DB.OpenConnection();
             string query = $"DELETE FROM Uredaj WHERE ID_uredaj = {id}";
