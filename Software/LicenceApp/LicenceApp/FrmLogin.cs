@@ -29,7 +29,7 @@ namespace LicenceApp
                 return;
             }
 
-            var korisnik = _korisnikRepository.Prijava(email, lozinka);
+            var korisnik = _korisnikRepository.Login(email, lozinka);
 
             if (korisnik != null)
             {
