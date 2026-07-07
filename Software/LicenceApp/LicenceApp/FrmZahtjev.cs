@@ -10,49 +10,39 @@ namespace LicenceApp
             InitializeComponent();
         }
 
-        private void BtnDodaj_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnUredi_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnObrisi_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void LstZahtjevi_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstRequestApp_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnNatrag_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnGlavni_Click(object sender, EventArgs e)
+        private void BtnMain_Click(object sender, EventArgs e)
         {
             FrmMain frmMain = new FrmMain();
             frmMain.Show();
             this.Hide();
         }
 
-        private void BtnNaprijed_Click(object sender, EventArgs e)
+        private void LbSoftwareName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
+        private void LblRequestReason_Click(object sender, EventArgs e)
         {
 
         }
@@ -62,42 +52,42 @@ namespace LicenceApp
 
         }
 
-        private void cmbSoftver_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbSoftwareName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtRequestReason_TextChanged(object sender, EventArgs e)
+        private void TxtRequestReason_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void cmbUser_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbUserName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lbRequestDate_Click(object sender, EventArgs e)
+        private void LblRequestDate_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblUserName_Click(object sender, EventArgs e)
+        private void LblUserName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void lblDeviceName_Click(object sender, EventArgs e)
+        private void LblDeviceName_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void cmbDeviceName_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbDeviceName_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dtpRequestDate_ValueChanged(object sender, EventArgs e)
+        private void DtpRequestDate_ValueChanged(object sender, EventArgs e)
         {
 
         }

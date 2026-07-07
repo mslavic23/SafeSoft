@@ -41,7 +41,7 @@
             this.cmbUserName.Name = "cmbUserName";
             this.cmbUserName.Size = new System.Drawing.Size(210, 24);
             this.cmbUserName.TabIndex = 1;
-            this.cmbUserName.SelectedIndexChanged += new System.EventHandler(this.cmbUser_SelectedIndexChanged);
+            this.cmbUserName.SelectedIndexChanged += new System.EventHandler(this.CmbUserName_SelectedIndexChanged);
             // 
             // cmbSoftwareName
             // 
@@ -50,7 +50,7 @@
             this.cmbSoftwareName.Name = "cmbSoftwareName";
             this.cmbSoftwareName.Size = new System.Drawing.Size(210, 24);
             this.cmbSoftwareName.TabIndex = 2;
-            this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.cmbSoftver_SelectedIndexChanged);
+            this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.CmbSoftwareName_SelectedIndexChanged);
             // 
             // cmbDeviceName
             // 
@@ -59,7 +59,7 @@
             this.cmbDeviceName.Name = "cmbDeviceName";
             this.cmbDeviceName.Size = new System.Drawing.Size(210, 24);
             this.cmbDeviceName.TabIndex = 3;
-            this.cmbDeviceName.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceName_SelectedIndexChanged);
+            this.cmbDeviceName.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceName_SelectedIndexChanged);
             // 
             // txtRequestReason
             // 
@@ -68,7 +68,7 @@
             this.txtRequestReason.Name = "txtRequestReason";
             this.txtRequestReason.Size = new System.Drawing.Size(210, 22);
             this.txtRequestReason.TabIndex = 4;
-            this.txtRequestReason.TextChanged += new System.EventHandler(this.txtRequestReason_TextChanged);
+            this.txtRequestReason.TextChanged += new System.EventHandler(this.TxtRequestReason_TextChanged);
             // 
             // dtpRequestDate
             // 
@@ -76,7 +76,7 @@
             this.dtpRequestDate.Name = "dtpRequestDate";
             this.dtpRequestDate.Size = new System.Drawing.Size(210, 22);
             this.dtpRequestDate.TabIndex = 5;
-            this.dtpRequestDate.ValueChanged += new System.EventHandler(this.dtpRequestDate_ValueChanged);
+            this.dtpRequestDate.ValueChanged += new System.EventHandler(this.DtpRequestDate_ValueChanged);
             // 
             // lbSoftwareName
             // 
@@ -86,7 +86,7 @@
             this.lbSoftwareName.Size = new System.Drawing.Size(52, 16);
             this.lbSoftwareName.TabIndex = 6;
             this.lbSoftwareName.Text = "Softver:";
-            this.lbSoftwareName.Click += new System.EventHandler(this.Label1_Click);
+            this.lbSoftwareName.Click += new System.EventHandler(this.LbSoftwareName_Click);
             // 
             // lblDeviceName
             // 
@@ -96,7 +96,7 @@
             this.lblDeviceName.Size = new System.Drawing.Size(54, 16);
             this.lblDeviceName.TabIndex = 7;
             this.lblDeviceName.Text = "Uređaj: ";
-            this.lblDeviceName.Click += new System.EventHandler(this.lblDeviceName_Click);
+            this.lblDeviceName.Click += new System.EventHandler(this.LblDeviceName_Click);
             // 
             // lblUserName
             // 
@@ -106,7 +106,7 @@
             this.lblUserName.Size = new System.Drawing.Size(57, 16);
             this.lblUserName.TabIndex = 9;
             this.lblUserName.Text = "Korisnik:";
-            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
+            this.lblUserName.Click += new System.EventHandler(this.LblUserName_Click);
             // 
             // lblRequestReason
             // 
@@ -116,7 +116,7 @@
             this.lblRequestReason.Size = new System.Drawing.Size(114, 16);
             this.lblRequestReason.TabIndex = 10;
             this.lblRequestReason.Text = "Razlog korištenja:";
-            this.lblRequestReason.Click += new System.EventHandler(this.Label5_Click);
+            this.lblRequestReason.Click += new System.EventHandler(this.LblRequestReason_Click);
             // 
             // lblRequestDate
             // 
@@ -126,7 +126,7 @@
             this.lblRequestDate.Size = new System.Drawing.Size(124, 16);
             this.lblRequestDate.TabIndex = 11;
             this.lblRequestDate.Text = "Datum podnošenja:";
-            this.lblRequestDate.Click += new System.EventHandler(this.lbRequestDate_Click);
+            this.lblRequestDate.Click += new System.EventHandler(this.LblRequestDate_Click);
             // 
             // btnEdit
             // 
@@ -136,7 +136,7 @@
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "Uredi";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.BtnUredi_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
@@ -146,7 +146,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnObrisi_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnAdd
             // 
@@ -156,7 +156,7 @@
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnDodaj_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnMain
             // 
@@ -166,7 +166,7 @@
             this.btnMain.TabIndex = 17;
             this.btnMain.Text = "Izbornik";
             this.btnMain.UseVisualStyleBackColor = true;
-            this.btnMain.Click += new System.EventHandler(this.BtnGlavni_Click);
+            this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // lstRequestApp
             // 
@@ -176,7 +176,7 @@
             this.lstRequestApp.Name = "lstRequestApp";
             this.lstRequestApp.Size = new System.Drawing.Size(316, 164);
             this.lstRequestApp.TabIndex = 19;
-            this.lstRequestApp.SelectedIndexChanged += new System.EventHandler(this.LstZahtjevi_SelectedIndexChanged);
+            this.lstRequestApp.SelectedIndexChanged += new System.EventHandler(this.LstRequestApp_SelectedIndexChanged);
             // 
             // pbxLogo
             // 

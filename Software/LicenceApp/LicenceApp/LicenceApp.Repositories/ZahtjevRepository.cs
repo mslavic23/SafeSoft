@@ -8,7 +8,7 @@ namespace LicenceApp.Repositories
 {
     public class ZahtjevRepository
     {
-        public List<Zahtjev> DohvatiSve()
+        public List<Zahtjev> GetAll()
         {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
 
@@ -33,7 +33,7 @@ namespace LicenceApp.Repositories
             return zahtjevi;
         }
 
-        public List<Zahtjev> DohvatiZaKorisnika(int idKorisnik)
+        public List<Zahtjev> GetByUser(int idKorisnik)
         {
             List<Zahtjev> zahtjevi = new List<Zahtjev>();
 
@@ -58,7 +58,7 @@ namespace LicenceApp.Repositories
             return zahtjevi;
         }
 
-        public bool ImaLicenci(int idSoftver)
+        public bool HasAvailableSeats(int idSoftver)
         {
             DB.OpenConnection();
 
@@ -80,7 +80,7 @@ namespace LicenceApp.Repositories
             return zauzeto < ukupnoMjesta;
         }
 
-        public bool Dodaj(Zahtjev zahtjev)
+        public bool Add(Zahtjev zahtjev)
         {
             DB.OpenConnection();
             string datum = zahtjev.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
@@ -90,7 +90,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Uredi(Zahtjev zahtjev)
+        public bool Update(Zahtjev zahtjev)
         {
             DB.OpenConnection();
             string datum = zahtjev.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
@@ -100,7 +100,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Obrisi(int id)
+        public bool Delete(int id)
         {
             DB.OpenConnection();
             string query = $"DELETE FROM Zahtjev WHERE ID_zahtjev = {id}";
