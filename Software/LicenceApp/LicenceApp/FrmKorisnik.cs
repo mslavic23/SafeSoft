@@ -21,10 +21,10 @@ namespace LicenceApp
             cmbUserRole.Items.Add("Administrator");
             cmbUserRole.Items.Add("Korisnik");
 
-            OsvjeziListu();
+            RefreshList();
         }
 
-        private void OsvjeziListu()
+        private void RefreshList()
         {
             lstUsers.Items.Clear();
             foreach (var korisnik in _korisnikRepository.GetAll())
@@ -33,7 +33,7 @@ namespace LicenceApp
             }
         }
 
-        private void OcistiPolja()
+        private void ClearFields()
         {
             txtUserName.Text = "";
             txtUserLastName.Text = "";
@@ -69,8 +69,8 @@ namespace LicenceApp
             if (uspjeh)
             {
                 MessageBox.Show("Korisnik uspješno dodan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                OcistiPolja();
-                OsvjeziListu();
+                ClearFields();
+                RefreshList();
             }
             else
             {
@@ -112,8 +112,8 @@ namespace LicenceApp
             if (uspjeh)
             {
                 MessageBox.Show("Korisnik uspješno ažuriran!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                OcistiPolja();
-                OsvjeziListu();
+                ClearFields();
+                RefreshList();
                 _odabraniKorisnik = null;
             }
             else
@@ -144,8 +144,8 @@ namespace LicenceApp
             if (uspjeh)
             {
                 MessageBox.Show("Korisnik uspješno obrisan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                OcistiPolja();
-                OsvjeziListu();
+                ClearFields();
+                RefreshList();
                 _odabraniKorisnik = null;
             }
             else

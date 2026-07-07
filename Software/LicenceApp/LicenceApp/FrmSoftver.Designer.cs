@@ -20,8 +20,6 @@
             this.lblSoftwareVersion = new System.Windows.Forms.Label();
             this.txtSofwareVersion = new System.Windows.Forms.TextBox();
             this.lblLicenceType = new System.Windows.Forms.Label();
-            this.txtLicenceType = new System.Windows.Forms.TextBox();
-            this.txtTotalSeats = new System.Windows.Forms.TextBox();
             this.lblTotalSeats = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -29,7 +27,10 @@
             this.btnMain = new System.Windows.Forms.Button();
             this.lstSoftwares = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.cmbLicenceType = new System.Windows.Forms.ComboBox();
+            this.numTotalSeats = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTotalSeats)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSoftwareName
@@ -79,24 +80,6 @@
             this.lblLicenceType.TabIndex = 5;
             this.lblLicenceType.Text = "Tip licence:";
             this.lblLicenceType.Click += new System.EventHandler(this.LblLicenceType_Click);
-            // 
-            // txtLicenceType
-            // 
-            this.txtLicenceType.Location = new System.Drawing.Point(561, 167);
-            this.txtLicenceType.MaxLength = 20;
-            this.txtLicenceType.Name = "txtLicenceType";
-            this.txtLicenceType.Size = new System.Drawing.Size(124, 22);
-            this.txtLicenceType.TabIndex = 6;
-            this.txtLicenceType.TextChanged += new System.EventHandler(this.TxtLicenceType_TextChanged);
-            // 
-            // txtTotalSeats
-            // 
-            this.txtTotalSeats.Location = new System.Drawing.Point(585, 195);
-            this.txtTotalSeats.MaxLength = 4;
-            this.txtTotalSeats.Name = "txtTotalSeats";
-            this.txtTotalSeats.Size = new System.Drawing.Size(100, 22);
-            this.txtTotalSeats.TabIndex = 7;
-            this.txtTotalSeats.TextChanged += new System.EventHandler(this.TxtTotalSeats_TextChanged);
             // 
             // lblTotalSeats
             // 
@@ -169,11 +152,30 @@
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
+            // cmbLicenceType
+            // 
+            this.cmbLicenceType.FormattingEnabled = true;
+            this.cmbLicenceType.Location = new System.Drawing.Point(549, 167);
+            this.cmbLicenceType.Name = "cmbLicenceType";
+            this.cmbLicenceType.Size = new System.Drawing.Size(133, 24);
+            this.cmbLicenceType.TabIndex = 17;
+            this.cmbLicenceType.SelectedIndexChanged += new System.EventHandler(this.CmbLicenceType_SelectedIndexChanged);
+            // 
+            // numTotalSeats
+            // 
+            this.numTotalSeats.Location = new System.Drawing.Point(573, 197);
+            this.numTotalSeats.Name = "numTotalSeats";
+            this.numTotalSeats.Size = new System.Drawing.Size(124, 22);
+            this.numTotalSeats.TabIndex = 18;
+            this.numTotalSeats.ValueChanged += new System.EventHandler(this.NumTotalSeats_ValueChanged);
+            // 
             // FrmSoftver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 450);
+            this.Controls.Add(this.numTotalSeats);
+            this.Controls.Add(this.cmbLicenceType);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstSoftwares);
             this.Controls.Add(this.btnMain);
@@ -181,8 +183,6 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblTotalSeats);
-            this.Controls.Add(this.txtTotalSeats);
-            this.Controls.Add(this.txtLicenceType);
             this.Controls.Add(this.lblLicenceType);
             this.Controls.Add(this.txtSofwareVersion);
             this.Controls.Add(this.lblSoftwareVersion);
@@ -193,6 +193,7 @@
             this.Text = "Softveri";
             this.Load += new System.EventHandler(this.FrmSoftver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numTotalSeats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +204,6 @@
         private System.Windows.Forms.Label lblSoftwareVersion;
         private System.Windows.Forms.TextBox txtSofwareVersion;
         private System.Windows.Forms.Label lblLicenceType;
-        private System.Windows.Forms.TextBox txtLicenceType;
-        private System.Windows.Forms.TextBox txtTotalSeats;
         private System.Windows.Forms.Label lblTotalSeats;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
@@ -212,5 +211,7 @@
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.ListBox lstSoftwares;
         private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.ComboBox cmbLicenceType;
+        private System.Windows.Forms.NumericUpDown numTotalSeats;
     }
 }
