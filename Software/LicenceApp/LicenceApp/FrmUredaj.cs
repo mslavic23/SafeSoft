@@ -81,5 +81,15 @@ namespace LicenceApp
         {
 
         }
+
+        private void cmbDeviceLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDeviceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

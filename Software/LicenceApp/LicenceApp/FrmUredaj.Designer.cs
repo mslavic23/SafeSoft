@@ -16,8 +16,6 @@
         private void InitializeComponent()
         {
             this.txtDeviceName = new System.Windows.Forms.TextBox();
-            this.txtDeviceLocation = new System.Windows.Forms.TextBox();
-            this.txtDeviceType = new System.Windows.Forms.TextBox();
             this.lblDeviceName = new System.Windows.Forms.Label();
             this.lblDeviceLocation = new System.Windows.Forms.Label();
             this.lblDeviceType = new System.Windows.Forms.Label();
@@ -27,6 +25,8 @@
             this.btnMain = new System.Windows.Forms.Button();
             this.lstDevices = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.cmbDeviceLocation = new System.Windows.Forms.ComboBox();
+            this.cmbDeviceType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,23 +38,6 @@
             this.txtDeviceName.Size = new System.Drawing.Size(137, 22);
             this.txtDeviceName.TabIndex = 1;
             this.txtDeviceName.TextChanged += new System.EventHandler(this.txtDeviceName_TextChanged);
-            // 
-            // txtDeviceLocation
-            // 
-            this.txtDeviceLocation.Location = new System.Drawing.Point(533, 124);
-            this.txtDeviceLocation.MaxLength = 20;
-            this.txtDeviceLocation.Name = "txtDeviceLocation";
-            this.txtDeviceLocation.Size = new System.Drawing.Size(137, 22);
-            this.txtDeviceLocation.TabIndex = 2;
-            this.txtDeviceLocation.TextChanged += new System.EventHandler(this.txtLokacija_TextChanged);
-            // 
-            // txtDeviceType
-            // 
-            this.txtDeviceType.Location = new System.Drawing.Point(533, 152);
-            this.txtDeviceType.MaxLength = 10;
-            this.txtDeviceType.Name = "txtDeviceType";
-            this.txtDeviceType.Size = new System.Drawing.Size(137, 22);
-            this.txtDeviceType.TabIndex = 3;
             // 
             // lblDeviceName
             // 
@@ -147,11 +130,31 @@
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
+            // cmbDeviceLocation
+            // 
+            this.cmbDeviceLocation.FormattingEnabled = true;
+            this.cmbDeviceLocation.Location = new System.Drawing.Point(533, 124);
+            this.cmbDeviceLocation.Name = "cmbDeviceLocation";
+            this.cmbDeviceLocation.Size = new System.Drawing.Size(137, 24);
+            this.cmbDeviceLocation.TabIndex = 15;
+            this.cmbDeviceLocation.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceLocation_SelectedIndexChanged);
+            // 
+            // cmbDeviceType
+            // 
+            this.cmbDeviceType.FormattingEnabled = true;
+            this.cmbDeviceType.Location = new System.Drawing.Point(533, 154);
+            this.cmbDeviceType.Name = "cmbDeviceType";
+            this.cmbDeviceType.Size = new System.Drawing.Size(137, 24);
+            this.cmbDeviceType.TabIndex = 16;
+            this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceType_SelectedIndexChanged);
+            // 
             // FrmUredaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbDeviceType);
+            this.Controls.Add(this.cmbDeviceLocation);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstDevices);
             this.Controls.Add(this.btnMain);
@@ -161,8 +164,6 @@
             this.Controls.Add(this.lblDeviceType);
             this.Controls.Add(this.lblDeviceLocation);
             this.Controls.Add(this.lblDeviceName);
-            this.Controls.Add(this.txtDeviceType);
-            this.Controls.Add(this.txtDeviceLocation);
             this.Controls.Add(this.txtDeviceName);
             this.Name = "FrmUredaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -175,8 +176,6 @@
         }
 
         private System.Windows.Forms.TextBox txtDeviceName;
-        private System.Windows.Forms.TextBox txtDeviceLocation;
-        private System.Windows.Forms.TextBox txtDeviceType;
         private System.Windows.Forms.Label lblDeviceName;
         private System.Windows.Forms.Label lblDeviceLocation;
         private System.Windows.Forms.Label lblDeviceType;
@@ -186,6 +185,8 @@
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.ListBox lstDevices;
         private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.ComboBox cmbDeviceLocation;
+        private System.Windows.Forms.ComboBox cmbDeviceType;
     }
 }
 
