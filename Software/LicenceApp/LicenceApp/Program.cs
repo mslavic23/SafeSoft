@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DBLayer;
+using System;
 using System.Windows.Forms;
 
 namespace LicenceApp
@@ -14,6 +12,8 @@ namespace LicenceApp
         [STAThread]
         static void Main()
         {
+            DB.SetConfiguration("RWA2526_mslavic23", "RWA2526_mslavic23", "+>D01Lav(g6T51Iu");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());

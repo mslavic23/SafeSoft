@@ -32,3 +32,5 @@ C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\ob
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.csproj.CoreCompileInputs.cache
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.exe
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\bin\Debug\DBLayer.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.csproj.Up2Date

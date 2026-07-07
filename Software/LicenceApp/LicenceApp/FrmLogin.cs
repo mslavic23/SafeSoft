@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
     public partial class FrmLogin : Form
     {
+        private readonly KorisnikRepository _korisnikRepository = new KorisnikRepository();
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -17,7 +20,31 @@ namespace LicenceApp
 
         private void BtnPrijava_Click(object sender, EventArgs e)
         {
+            string email = txtUser.Text;
+            string lozinka = txtPassword.Text;
 
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(lozinka))
+            {
+                MessageBox.Show("Molimo unesite email i lozinku!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var korisnik = _korisnikRepository.Prijava(email, lozinka);
+
+            if (korisnik != null)
+            {
+                SessionManager.Korisnik = korisnik;
+
+                MessageBox.Show("Prijava uspješna! Dobrodošli, " + korisnik.Ime + "!", "Prijava", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                FrmMain frmMain = new FrmMain();
+                frmMain.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Pogrešno korisničko ime ili lozinka!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
@@ -28,13 +55,6 @@ namespace LicenceApp
         }
     }
 }
-
-
-
-
-
-
-
 
 
 

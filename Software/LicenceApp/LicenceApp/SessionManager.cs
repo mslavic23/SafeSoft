@@ -2,7 +2,7 @@
 
 namespace LicenceApp
 {
-    public static class TrenutniKorisnik
+    public static class SessionManager
     {
         public static Korisnik Korisnik { get; set; }
     }

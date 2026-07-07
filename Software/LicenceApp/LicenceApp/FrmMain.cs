@@ -47,6 +47,8 @@ namespace LicenceApp
 
         private void BtnOdjava_Click(object sender, EventArgs e)
         {
+            SessionManager.Korisnik = null;
+
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.Show();
             this.Close();
@@ -54,7 +56,14 @@ namespace LicenceApp
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            bool jeAdmin = SessionManager.Korisnik != null && SessionManager.Korisnik.Uloga == "Administrator";
 
+            if (!jeAdmin)
+            {
+                btnSoftveri.Enabled = false;
+                btnUredaji.Enabled = false;
+                btnKorisnici.Enabled = false;
+            }
         }
 
         private void PbxLogo_Click(object sender, EventArgs e)
