@@ -15,10 +15,10 @@
 
         private void InitializeComponent()
         {
-            this.lbUser = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.lbPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblLoginUser = new System.Windows.Forms.Label();
+            this.txtLoginUser = new System.Windows.Forms.TextBox();
+            this.lblLoginPassword = new System.Windows.Forms.Label();
+            this.txtLoginPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pbxAddUser = new System.Windows.Forms.PictureBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
@@ -26,42 +26,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbUser
+            // lblLoginUser
             // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Location = new System.Drawing.Point(295, 247);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(97, 16);
-            this.lbUser.TabIndex = 0;
-            this.lbUser.Text = "Korisničko ime:";
+            this.lblLoginUser.AutoSize = true;
+            this.lblLoginUser.Location = new System.Drawing.Point(295, 247);
+            this.lblLoginUser.Name = "lblLoginUser";
+            this.lblLoginUser.Size = new System.Drawing.Size(97, 16);
+            this.lblLoginUser.TabIndex = 0;
+            this.lblLoginUser.Text = "Korisničko ime:";
+            this.lblLoginUser.Click += new System.EventHandler(this.lblLoginUser_Click);
             // 
-            // txtUser
+            // txtLoginUser
             // 
-            this.txtUser.AccessibleName = "";
-            this.txtUser.Location = new System.Drawing.Point(398, 244);
-            this.txtUser.MaxLength = 20;
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(180, 22);
-            this.txtUser.TabIndex = 1;
+            this.txtLoginUser.AccessibleName = "";
+            this.txtLoginUser.Location = new System.Drawing.Point(398, 244);
+            this.txtLoginUser.MaxLength = 20;
+            this.txtLoginUser.Name = "txtLoginUser";
+            this.txtLoginUser.Size = new System.Drawing.Size(180, 22);
+            this.txtLoginUser.TabIndex = 1;
+            this.txtLoginUser.TextChanged += new System.EventHandler(this.txtLoginUser_TextChanged);
             // 
-            // lbPassword
+            // lblLoginPassword
             // 
-            this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(336, 281);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(56, 16);
-            this.lbPassword.TabIndex = 2;
-            this.lbPassword.Text = "Lozinka:";
+            this.lblLoginPassword.AutoSize = true;
+            this.lblLoginPassword.Location = new System.Drawing.Point(336, 281);
+            this.lblLoginPassword.Name = "lblLoginPassword";
+            this.lblLoginPassword.Size = new System.Drawing.Size(56, 16);
+            this.lblLoginPassword.TabIndex = 2;
+            this.lblLoginPassword.Text = "Lozinka:";
+            this.lblLoginPassword.Click += new System.EventHandler(this.lbPassword_Click);
             // 
-            // txtPassword
+            // txtLoginPassword
             // 
-            this.txtPassword.AccessibleName = "";
-            this.txtPassword.Location = new System.Drawing.Point(398, 278);
-            this.txtPassword.MaxLength = 20;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(180, 22);
-            this.txtPassword.TabIndex = 3;
+            this.txtLoginPassword.AccessibleName = "";
+            this.txtLoginPassword.Location = new System.Drawing.Point(398, 278);
+            this.txtLoginPassword.MaxLength = 20;
+            this.txtLoginPassword.Name = "txtLoginPassword";
+            this.txtLoginPassword.PasswordChar = '*';
+            this.txtLoginPassword.Size = new System.Drawing.Size(180, 22);
+            this.txtLoginPassword.TabIndex = 3;
+            this.txtLoginPassword.TextChanged += new System.EventHandler(this.txtUserPassword_TextChanged);
             // 
             // btnLogin
             // 
@@ -106,10 +110,10 @@
             this.Controls.Add(this.pbxAddUser);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.lbUser);
+            this.Controls.Add(this.txtLoginPassword);
+            this.Controls.Add(this.lblLoginPassword);
+            this.Controls.Add(this.txtLoginUser);
+            this.Controls.Add(this.lblLoginUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -124,10 +128,10 @@
 
         }
 
-        private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblLoginUser;
+        private System.Windows.Forms.TextBox txtLoginUser;
+        private System.Windows.Forms.Label lblLoginPassword;
+        private System.Windows.Forms.TextBox txtLoginPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.PictureBox pbxAddUser;

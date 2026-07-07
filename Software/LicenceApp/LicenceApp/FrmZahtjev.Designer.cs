@@ -15,171 +15,179 @@
 
         private void InitializeComponent()
         {
-            this.cmbKorisnik = new System.Windows.Forms.ComboBox();
-            this.cmbSoftver = new System.Windows.Forms.ComboBox();
-            this.cmbUredaj = new System.Windows.Forms.ComboBox();
-            this.txtRazlog = new System.Windows.Forms.TextBox();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnUredi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.btnNaprijed = new System.Windows.Forms.Button();
-            this.btnGlavni = new System.Windows.Forms.Button();
-            this.lstZahtjevi = new System.Windows.Forms.ListBox();
+            this.cmbUserName = new System.Windows.Forms.ComboBox();
+            this.cmbSoftwareName = new System.Windows.Forms.ComboBox();
+            this.cmbDeviceName = new System.Windows.Forms.ComboBox();
+            this.txtRequestReason = new System.Windows.Forms.TextBox();
+            this.dtpRequestDate = new System.Windows.Forms.DateTimePicker();
+            this.lbSoftwareName = new System.Windows.Forms.Label();
+            this.lblDeviceName = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblRequestReason = new System.Windows.Forms.Label();
+            this.lblRequestDate = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnGoFoward = new System.Windows.Forms.Button();
+            this.btnFrmMain = new System.Windows.Forms.Button();
+            this.lstRequestApp = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmbKorisnik
+            // cmbUserName
             // 
-            this.cmbKorisnik.FormattingEnabled = true;
-            this.cmbKorisnik.Location = new System.Drawing.Point(473, 81);
-            this.cmbKorisnik.Name = "cmbKorisnik";
-            this.cmbKorisnik.Size = new System.Drawing.Size(210, 24);
-            this.cmbKorisnik.TabIndex = 1;
+            this.cmbUserName.FormattingEnabled = true;
+            this.cmbUserName.Location = new System.Drawing.Point(473, 81);
+            this.cmbUserName.Name = "cmbUserName";
+            this.cmbUserName.Size = new System.Drawing.Size(210, 24);
+            this.cmbUserName.TabIndex = 1;
+            this.cmbUserName.SelectedIndexChanged += new System.EventHandler(this.cmbUser_SelectedIndexChanged);
             // 
-            // cmbSoftver
+            // cmbSoftwareName
             // 
-            this.cmbSoftver.FormattingEnabled = true;
-            this.cmbSoftver.Location = new System.Drawing.Point(473, 138);
-            this.cmbSoftver.Name = "cmbSoftver";
-            this.cmbSoftver.Size = new System.Drawing.Size(210, 24);
-            this.cmbSoftver.TabIndex = 2;
+            this.cmbSoftwareName.FormattingEnabled = true;
+            this.cmbSoftwareName.Location = new System.Drawing.Point(473, 138);
+            this.cmbSoftwareName.Name = "cmbSoftwareName";
+            this.cmbSoftwareName.Size = new System.Drawing.Size(210, 24);
+            this.cmbSoftwareName.TabIndex = 2;
+            this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.cmbSoftver_SelectedIndexChanged);
             // 
-            // cmbUredaj
+            // cmbDeviceName
             // 
-            this.cmbUredaj.FormattingEnabled = true;
-            this.cmbUredaj.Location = new System.Drawing.Point(473, 110);
-            this.cmbUredaj.Name = "cmbUredaj";
-            this.cmbUredaj.Size = new System.Drawing.Size(210, 24);
-            this.cmbUredaj.TabIndex = 3;
+            this.cmbDeviceName.FormattingEnabled = true;
+            this.cmbDeviceName.Location = new System.Drawing.Point(473, 110);
+            this.cmbDeviceName.Name = "cmbDeviceName";
+            this.cmbDeviceName.Size = new System.Drawing.Size(210, 24);
+            this.cmbDeviceName.TabIndex = 3;
+            this.cmbDeviceName.SelectedIndexChanged += new System.EventHandler(this.cmbDeviceName_SelectedIndexChanged);
             // 
-            // txtRazlog
+            // txtRequestReason
             // 
-            this.txtRazlog.Location = new System.Drawing.Point(473, 205);
-            this.txtRazlog.MaxLength = 100;
-            this.txtRazlog.Name = "txtRazlog";
-            this.txtRazlog.Size = new System.Drawing.Size(210, 22);
-            this.txtRazlog.TabIndex = 4;
+            this.txtRequestReason.Location = new System.Drawing.Point(473, 205);
+            this.txtRequestReason.MaxLength = 100;
+            this.txtRequestReason.Name = "txtRequestReason";
+            this.txtRequestReason.Size = new System.Drawing.Size(210, 22);
+            this.txtRequestReason.TabIndex = 4;
+            this.txtRequestReason.TextChanged += new System.EventHandler(this.txtRequestReason_TextChanged);
             // 
-            // dtpDatum
+            // dtpRequestDate
             // 
-            this.dtpDatum.Location = new System.Drawing.Point(473, 171);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(210, 22);
-            this.dtpDatum.TabIndex = 5;
+            this.dtpRequestDate.Location = new System.Drawing.Point(473, 171);
+            this.dtpRequestDate.Name = "dtpRequestDate";
+            this.dtpRequestDate.Size = new System.Drawing.Size(210, 22);
+            this.dtpRequestDate.TabIndex = 5;
+            this.dtpRequestDate.ValueChanged += new System.EventHandler(this.dtpRequestDate_ValueChanged);
             // 
-            // label1
+            // lbSoftwareName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(410, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Softver:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.lbSoftwareName.AutoSize = true;
+            this.lbSoftwareName.Location = new System.Drawing.Point(410, 149);
+            this.lbSoftwareName.Name = "lbSoftwareName";
+            this.lbSoftwareName.Size = new System.Drawing.Size(52, 16);
+            this.lbSoftwareName.TabIndex = 6;
+            this.lbSoftwareName.Text = "Softver:";
+            this.lbSoftwareName.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // label2
+            // lblDeviceName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(410, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Uređaj: ";
+            this.lblDeviceName.AutoSize = true;
+            this.lblDeviceName.Location = new System.Drawing.Point(410, 119);
+            this.lblDeviceName.Name = "lblDeviceName";
+            this.lblDeviceName.Size = new System.Drawing.Size(54, 16);
+            this.lblDeviceName.TabIndex = 7;
+            this.lblDeviceName.Text = "Uređaj: ";
+            this.lblDeviceName.Click += new System.EventHandler(this.lblDeviceName_Click);
             // 
-            // label4
+            // lblUserName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(407, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Korisnik:";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(407, 84);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(57, 16);
+            this.lblUserName.TabIndex = 9;
+            this.lblUserName.Text = "Korisnik:";
+            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
             // 
-            // label5
+            // lblRequestReason
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(348, 208);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Razlog korištenja:";
-            this.label5.Click += new System.EventHandler(this.Label5_Click);
+            this.lblRequestReason.AutoSize = true;
+            this.lblRequestReason.Location = new System.Drawing.Point(348, 208);
+            this.lblRequestReason.Name = "lblRequestReason";
+            this.lblRequestReason.Size = new System.Drawing.Size(114, 16);
+            this.lblRequestReason.TabIndex = 10;
+            this.lblRequestReason.Text = "Razlog korištenja:";
+            this.lblRequestReason.Click += new System.EventHandler(this.Label5_Click);
             // 
-            // label6
+            // lblRequestDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(343, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Datum podnošenja:";
+            this.lblRequestDate.AutoSize = true;
+            this.lblRequestDate.Location = new System.Drawing.Point(343, 175);
+            this.lblRequestDate.Name = "lblRequestDate";
+            this.lblRequestDate.Size = new System.Drawing.Size(124, 16);
+            this.lblRequestDate.TabIndex = 11;
+            this.lblRequestDate.Text = "Datum podnošenja:";
+            this.lblRequestDate.Click += new System.EventHandler(this.lbRequestDate_Click);
             // 
-            // btnUredi
+            // btnEdit
             // 
-            this.btnUredi.Location = new System.Drawing.Point(689, 139);
-            this.btnUredi.Name = "btnUredi";
-            this.btnUredi.Size = new System.Drawing.Size(75, 23);
-            this.btnUredi.TabIndex = 13;
-            this.btnUredi.Text = "Uredi";
-            this.btnUredi.UseVisualStyleBackColor = true;
-            this.btnUredi.Click += new System.EventHandler(this.BtnUredi_Click);
+            this.btnEdit.Location = new System.Drawing.Point(689, 139);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 13;
+            this.btnEdit.Text = "Uredi";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.BtnUredi_Click);
             // 
-            // btnObrisi
+            // btnDelete
             // 
-            this.btnObrisi.Location = new System.Drawing.Point(689, 168);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(75, 23);
-            this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obriši";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
+            this.btnDelete.Location = new System.Drawing.Point(689, 168);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Obriši";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnObrisi_Click);
             // 
-            // btnDodaj
+            // btnAdd
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(689, 110);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 23);
-            this.btnDodaj.TabIndex = 15;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.BtnDodaj_Click);
+            this.btnAdd.Location = new System.Drawing.Point(689, 110);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Dodaj";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnDodaj_Click);
             // 
-            // btnNaprijed
+            // btnGoFoward
             // 
-            this.btnNaprijed.Location = new System.Drawing.Point(701, 248);
-            this.btnNaprijed.Name = "btnNaprijed";
-            this.btnNaprijed.Size = new System.Drawing.Size(50, 23);
-            this.btnNaprijed.TabIndex = 16;
-            this.btnNaprijed.Text = "→";
-            this.btnNaprijed.UseVisualStyleBackColor = true;
-            this.btnNaprijed.Click += new System.EventHandler(this.BtnNaprijed_Click);
+            this.btnGoFoward.Location = new System.Drawing.Point(701, 248);
+            this.btnGoFoward.Name = "btnGoFoward";
+            this.btnGoFoward.Size = new System.Drawing.Size(50, 23);
+            this.btnGoFoward.TabIndex = 16;
+            this.btnGoFoward.Text = "→";
+            this.btnGoFoward.UseVisualStyleBackColor = true;
+            this.btnGoFoward.Click += new System.EventHandler(this.BtnNaprijed_Click);
             // 
-            // btnGlavni
+            // btnFrmMain
             // 
-            this.btnGlavni.Location = new System.Drawing.Point(689, 219);
-            this.btnGlavni.Name = "btnGlavni";
-            this.btnGlavni.Size = new System.Drawing.Size(75, 23);
-            this.btnGlavni.TabIndex = 17;
-            this.btnGlavni.Text = "Izbornik";
-            this.btnGlavni.UseVisualStyleBackColor = true;
-            this.btnGlavni.Click += new System.EventHandler(this.BtnGlavni_Click);
+            this.btnFrmMain.Location = new System.Drawing.Point(689, 219);
+            this.btnFrmMain.Name = "btnFrmMain";
+            this.btnFrmMain.Size = new System.Drawing.Size(75, 23);
+            this.btnFrmMain.TabIndex = 17;
+            this.btnFrmMain.Text = "Izbornik";
+            this.btnFrmMain.UseVisualStyleBackColor = true;
+            this.btnFrmMain.Click += new System.EventHandler(this.BtnGlavni_Click);
             // 
-            // lstZahtjevi
+            // lstRequestApp
             // 
-            this.lstZahtjevi.FormattingEnabled = true;
-            this.lstZahtjevi.ItemHeight = 16;
-            this.lstZahtjevi.Location = new System.Drawing.Point(21, 82);
-            this.lstZahtjevi.Name = "lstZahtjevi";
-            this.lstZahtjevi.Size = new System.Drawing.Size(316, 164);
-            this.lstZahtjevi.TabIndex = 19;
-            this.lstZahtjevi.SelectedIndexChanged += new System.EventHandler(this.LstZahtjevi_SelectedIndexChanged);
+            this.lstRequestApp.FormattingEnabled = true;
+            this.lstRequestApp.ItemHeight = 16;
+            this.lstRequestApp.Location = new System.Drawing.Point(21, 82);
+            this.lstRequestApp.Name = "lstRequestApp";
+            this.lstRequestApp.Size = new System.Drawing.Size(316, 164);
+            this.lstRequestApp.TabIndex = 19;
+            this.lstRequestApp.SelectedIndexChanged += new System.EventHandler(this.LstZahtjevi_SelectedIndexChanged);
             // 
             // pbxLogo
             // 
@@ -198,46 +206,48 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 290);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstZahtjevi);
-            this.Controls.Add(this.btnGlavni);
-            this.Controls.Add(this.btnNaprijed);
-            this.Controls.Add(this.btnDodaj);
-            this.Controls.Add(this.btnObrisi);
-            this.Controls.Add(this.btnUredi);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpDatum);
-            this.Controls.Add(this.txtRazlog);
-            this.Controls.Add(this.cmbUredaj);
-            this.Controls.Add(this.cmbSoftver);
-            this.Controls.Add(this.cmbKorisnik);
+            this.Controls.Add(this.lstRequestApp);
+            this.Controls.Add(this.btnFrmMain);
+            this.Controls.Add(this.btnGoFoward);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.lblRequestDate);
+            this.Controls.Add(this.lblRequestReason);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblDeviceName);
+            this.Controls.Add(this.lbSoftwareName);
+            this.Controls.Add(this.dtpRequestDate);
+            this.Controls.Add(this.txtRequestReason);
+            this.Controls.Add(this.cmbDeviceName);
+            this.Controls.Add(this.cmbSoftwareName);
+            this.Controls.Add(this.cmbUserName);
             this.Name = "FrmZahtjev";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zahtjevi";
+            this.Load += new System.EventHandler(this.FrmZahtjev_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private System.Windows.Forms.ComboBox cmbKorisnik;
-        private System.Windows.Forms.ComboBox cmbSoftver;
-        private System.Windows.Forms.ComboBox cmbUredaj;
-        private System.Windows.Forms.TextBox txtRazlog;
-        private System.Windows.Forms.DateTimePicker dtpDatum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnUredi;
-        private System.Windows.Forms.Button btnObrisi;
-        private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.Button btnNaprijed;
-        private System.Windows.Forms.Button btnGlavni;
-        private System.Windows.Forms.ListBox lstZahtjevi;
+        private System.Windows.Forms.ComboBox cmbUserName;
+        private System.Windows.Forms.ComboBox cmbSoftwareName;
+        private System.Windows.Forms.ComboBox cmbDeviceName;
+        private System.Windows.Forms.TextBox txtRequestReason;
+        private System.Windows.Forms.DateTimePicker dtpRequestDate;
+        private System.Windows.Forms.Label lbSoftwareName;
+        private System.Windows.Forms.Label lblDeviceName;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblRequestReason;
+        private System.Windows.Forms.Label lblRequestDate;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnGoFoward;
+        private System.Windows.Forms.Button btnFrmMain;
+        private System.Windows.Forms.ListBox lstRequestApp;
         private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

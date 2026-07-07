@@ -49,5 +49,50 @@ namespace LicenceApp
         {
 
         }
+
+        private void txtSeats_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSeats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtVersion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbVersion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmSoftver_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

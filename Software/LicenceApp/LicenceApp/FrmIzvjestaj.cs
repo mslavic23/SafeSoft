@@ -54,5 +54,15 @@ namespace LicenceApp
         {
 
         }
+
+        private void lblDateFrom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

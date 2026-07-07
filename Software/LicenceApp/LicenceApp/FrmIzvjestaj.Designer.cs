@@ -15,160 +15,163 @@
 
         private void InitializeComponent()
         {
-            this.dgvIzvjestaj = new System.Windows.Forms.DataGridView();
-            this.btnOsvjezi = new System.Windows.Forms.Button();
-            this.btnGlavni = new System.Windows.Forms.Button();
-            this.btnNatrag = new System.Windows.Forms.Button();
-            this.lblNaslov = new System.Windows.Forms.Label();
-            this.lblUkupno = new System.Windows.Forms.Label();
-            this.dtpOd = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.dtpDo = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).BeginInit();
+            this.dgvReport = new System.Windows.Forms.DataGridView();
+            this.btnRefreshReport = new System.Windows.Forms.Button();
+            this.btnFrmMain = new System.Windows.Forms.Button();
+            this.btnGoBack = new System.Windows.Forms.Button();
+            this.lblFrmReportTitle = new System.Windows.Forms.Label();
+            this.lblTotalRequests = new System.Windows.Forms.Label();
+            this.dtpDateFrom = new System.Windows.Forms.DateTimePicker();
+            this.lblDateTIl = new System.Windows.Forms.Label();
+            this.lblDateFrom = new System.Windows.Forms.Label();
+            this.btnFilterReport = new System.Windows.Forms.Button();
+            this.dtpDateTil = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvIzvjestaj
+            // dgvReport
             // 
-            this.dgvIzvjestaj.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIzvjestaj.Location = new System.Drawing.Point(12, 110);
-            this.dgvIzvjestaj.Name = "dgvIzvjestaj";
-            this.dgvIzvjestaj.RowHeadersWidth = 51;
-            this.dgvIzvjestaj.RowTemplate.Height = 24;
-            this.dgvIzvjestaj.Size = new System.Drawing.Size(776, 191);
-            this.dgvIzvjestaj.TabIndex = 0;
+            this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReport.Location = new System.Drawing.Point(12, 110);
+            this.dgvReport.Name = "dgvReport";
+            this.dgvReport.RowHeadersWidth = 51;
+            this.dgvReport.RowTemplate.Height = 24;
+            this.dgvReport.Size = new System.Drawing.Size(776, 191);
+            this.dgvReport.TabIndex = 0;
+            this.dgvReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReport_CellContentClick);
             // 
-            // btnOsvjezi
+            // btnRefreshReport
             // 
-            this.btnOsvjezi.Location = new System.Drawing.Point(511, 350);
-            this.btnOsvjezi.Name = "btnOsvjezi";
-            this.btnOsvjezi.Size = new System.Drawing.Size(75, 23);
-            this.btnOsvjezi.TabIndex = 1;
-            this.btnOsvjezi.Text = "Osvježi";
-            this.btnOsvjezi.UseVisualStyleBackColor = true;
-            this.btnOsvjezi.Click += new System.EventHandler(this.BtnOsvjezi_Click);
+            this.btnRefreshReport.Location = new System.Drawing.Point(511, 350);
+            this.btnRefreshReport.Name = "btnRefreshReport";
+            this.btnRefreshReport.Size = new System.Drawing.Size(75, 23);
+            this.btnRefreshReport.TabIndex = 1;
+            this.btnRefreshReport.Text = "Osvježi";
+            this.btnRefreshReport.UseVisualStyleBackColor = true;
+            this.btnRefreshReport.Click += new System.EventHandler(this.BtnOsvjezi_Click);
             // 
-            // btnGlavni
+            // btnFrmMain
             // 
-            this.btnGlavni.Location = new System.Drawing.Point(713, 320);
-            this.btnGlavni.Name = "btnGlavni";
-            this.btnGlavni.Size = new System.Drawing.Size(75, 23);
-            this.btnGlavni.TabIndex = 3;
-            this.btnGlavni.Text = "Izbornik";
-            this.btnGlavni.UseVisualStyleBackColor = true;
-            this.btnGlavni.Click += new System.EventHandler(this.Button3_Click);
+            this.btnFrmMain.Location = new System.Drawing.Point(713, 320);
+            this.btnFrmMain.Name = "btnFrmMain";
+            this.btnFrmMain.Size = new System.Drawing.Size(75, 23);
+            this.btnFrmMain.TabIndex = 3;
+            this.btnFrmMain.Text = "Izbornik";
+            this.btnFrmMain.UseVisualStyleBackColor = true;
+            this.btnFrmMain.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // btnNatrag
+            // btnGoBack
             // 
-            this.btnNatrag.Location = new System.Drawing.Point(28, 318);
-            this.btnNatrag.Name = "btnNatrag";
-            this.btnNatrag.Size = new System.Drawing.Size(51, 23);
-            this.btnNatrag.TabIndex = 4;
-            this.btnNatrag.Text = "←";
-            this.btnNatrag.UseVisualStyleBackColor = true;
-            this.btnNatrag.Click += new System.EventHandler(this.Button4_Click);
+            this.btnGoBack.Location = new System.Drawing.Point(28, 318);
+            this.btnGoBack.Name = "btnGoBack";
+            this.btnGoBack.Size = new System.Drawing.Size(51, 23);
+            this.btnGoBack.TabIndex = 4;
+            this.btnGoBack.Text = "←";
+            this.btnGoBack.UseVisualStyleBackColor = true;
+            this.btnGoBack.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // lblNaslov
+            // lblFrmReportTitle
             // 
-            this.lblNaslov.AutoSize = true;
-            this.lblNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblNaslov.Location = new System.Drawing.Point(221, 67);
-            this.lblNaslov.Name = "lblNaslov";
-            this.lblNaslov.Size = new System.Drawing.Size(304, 29);
-            this.lblNaslov.TabIndex = 5;
-            this.lblNaslov.Text = "Izvještaj zahtjeva za licence";
-            this.lblNaslov.Click += new System.EventHandler(this.LblNaslov_Click);
+            this.lblFrmReportTitle.AutoSize = true;
+            this.lblFrmReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblFrmReportTitle.Location = new System.Drawing.Point(221, 67);
+            this.lblFrmReportTitle.Name = "lblFrmReportTitle";
+            this.lblFrmReportTitle.Size = new System.Drawing.Size(304, 29);
+            this.lblFrmReportTitle.TabIndex = 5;
+            this.lblFrmReportTitle.Text = "Izvještaj zahtjeva za licence";
+            this.lblFrmReportTitle.Click += new System.EventHandler(this.LblNaslov_Click);
             // 
-            // lblUkupno
+            // lblTotalRequests
             // 
-            this.lblUkupno.AutoSize = true;
-            this.lblUkupno.Location = new System.Drawing.Point(289, 401);
-            this.lblUkupno.Name = "lblUkupno";
-            this.lblUkupno.Size = new System.Drawing.Size(120, 16);
-            this.lblUkupno.TabIndex = 6;
-            this.lblUkupno.Text = "Ukupno zahtjeva: 0";
-            this.lblUkupno.Click += new System.EventHandler(this.Label1_Click);
+            this.lblTotalRequests.AutoSize = true;
+            this.lblTotalRequests.Location = new System.Drawing.Point(289, 401);
+            this.lblTotalRequests.Name = "lblTotalRequests";
+            this.lblTotalRequests.Size = new System.Drawing.Size(120, 16);
+            this.lblTotalRequests.TabIndex = 6;
+            this.lblTotalRequests.Text = "Ukupno zahtjeva: 0";
+            this.lblTotalRequests.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // dtpOd
+            // dtpDateFrom
             // 
-            this.dtpOd.Location = new System.Drawing.Point(274, 320);
-            this.dtpOd.Name = "dtpOd";
-            this.dtpOd.Size = new System.Drawing.Size(200, 22);
-            this.dtpOd.TabIndex = 7;
-            this.dtpOd.ValueChanged += new System.EventHandler(this.DtpOd_ValueChanged);
+            this.dtpDateFrom.Location = new System.Drawing.Point(274, 320);
+            this.dtpDateFrom.Name = "dtpDateFrom";
+            this.dtpDateFrom.Size = new System.Drawing.Size(200, 22);
+            this.dtpDateFrom.TabIndex = 7;
+            this.dtpDateFrom.ValueChanged += new System.EventHandler(this.DtpOd_ValueChanged);
             // 
-            // label1
+            // lblDateTIl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(237, 353);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Do:";
-            this.label1.Click += new System.EventHandler(this.Label1_Click_1);
+            this.lblDateTIl.AutoSize = true;
+            this.lblDateTIl.Location = new System.Drawing.Point(237, 353);
+            this.lblDateTIl.Name = "lblDateTIl";
+            this.lblDateTIl.Size = new System.Drawing.Size(28, 16);
+            this.lblDateTIl.TabIndex = 8;
+            this.lblDateTIl.Text = "Do:";
+            this.lblDateTIl.Click += new System.EventHandler(this.Label1_Click_1);
             // 
-            // label2
+            // lblDateFrom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 323);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Od: ";
+            this.lblDateFrom.AutoSize = true;
+            this.lblDateFrom.Location = new System.Drawing.Point(237, 323);
+            this.lblDateFrom.Name = "lblDateFrom";
+            this.lblDateFrom.Size = new System.Drawing.Size(31, 16);
+            this.lblDateFrom.TabIndex = 9;
+            this.lblDateFrom.Text = "Od: ";
+            this.lblDateFrom.Click += new System.EventHandler(this.lblDateFrom_Click);
             // 
-            // btnFilter
+            // btnFilterReport
             // 
-            this.btnFilter.Location = new System.Drawing.Point(511, 320);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 10;
-            this.btnFilter.Text = "Filteraj";
-            this.btnFilter.UseVisualStyleBackColor = true;
-            this.btnFilter.Click += new System.EventHandler(this.BtnFilter_Click);
+            this.btnFilterReport.Location = new System.Drawing.Point(511, 320);
+            this.btnFilterReport.Name = "btnFilterReport";
+            this.btnFilterReport.Size = new System.Drawing.Size(75, 23);
+            this.btnFilterReport.TabIndex = 10;
+            this.btnFilterReport.Text = "Filteraj";
+            this.btnFilterReport.UseVisualStyleBackColor = true;
+            this.btnFilterReport.Click += new System.EventHandler(this.BtnFilter_Click);
             // 
-            // dtpDo
+            // dtpDateTil
             // 
-            this.dtpDo.Location = new System.Drawing.Point(274, 353);
-            this.dtpDo.Name = "dtpDo";
-            this.dtpDo.Size = new System.Drawing.Size(200, 22);
-            this.dtpDo.TabIndex = 11;
-            this.dtpDo.ValueChanged += new System.EventHandler(this.DtpDo_ValueChanged);
+            this.dtpDateTil.Location = new System.Drawing.Point(274, 353);
+            this.dtpDateTil.Name = "dtpDateTil";
+            this.dtpDateTil.Size = new System.Drawing.Size(200, 22);
+            this.dtpDateTil.TabIndex = 11;
+            this.dtpDateTil.ValueChanged += new System.EventHandler(this.DtpDo_ValueChanged);
             // 
             // FrmIzvjestaj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dtpDo);
-            this.Controls.Add(this.btnFilter);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpOd);
-            this.Controls.Add(this.lblUkupno);
-            this.Controls.Add(this.lblNaslov);
-            this.Controls.Add(this.btnNatrag);
-            this.Controls.Add(this.btnGlavni);
-            this.Controls.Add(this.btnOsvjezi);
-            this.Controls.Add(this.dgvIzvjestaj);
+            this.Controls.Add(this.dtpDateTil);
+            this.Controls.Add(this.btnFilterReport);
+            this.Controls.Add(this.lblDateFrom);
+            this.Controls.Add(this.lblDateTIl);
+            this.Controls.Add(this.dtpDateFrom);
+            this.Controls.Add(this.lblTotalRequests);
+            this.Controls.Add(this.lblFrmReportTitle);
+            this.Controls.Add(this.btnGoBack);
+            this.Controls.Add(this.btnFrmMain);
+            this.Controls.Add(this.btnRefreshReport);
+            this.Controls.Add(this.dgvReport);
             this.Name = "FrmIzvjestaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izvještaji";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIzvjestaj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private System.Windows.Forms.DataGridView dgvIzvjestaj;
-        private System.Windows.Forms.Button btnOsvjezi;
-        private System.Windows.Forms.Button btnGlavni;
-        private System.Windows.Forms.Button btnNatrag;
-        private System.Windows.Forms.Label lblNaslov;
-        private System.Windows.Forms.Label lblUkupno;
-        private System.Windows.Forms.DateTimePicker dtpOd;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.DateTimePicker dtpDo;
+        private System.Windows.Forms.DataGridView dgvReport;
+        private System.Windows.Forms.Button btnRefreshReport;
+        private System.Windows.Forms.Button btnFrmMain;
+        private System.Windows.Forms.Button btnGoBack;
+        private System.Windows.Forms.Label lblFrmReportTitle;
+        private System.Windows.Forms.Label lblTotalRequests;
+        private System.Windows.Forms.DateTimePicker dtpDateFrom;
+        private System.Windows.Forms.Label lblDateTIl;
+        private System.Windows.Forms.Label lblDateFrom;
+        private System.Windows.Forms.Button btnFilterReport;
+        private System.Windows.Forms.DateTimePicker dtpDateTil;
     }
 }

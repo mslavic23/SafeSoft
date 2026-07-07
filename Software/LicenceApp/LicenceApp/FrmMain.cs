@@ -60,9 +60,9 @@ namespace LicenceApp
 
             if (!jeAdmin)
             {
-                btnSoftveri.Enabled = false;
-                btnUredaji.Enabled = false;
-                btnKorisnici.Enabled = false;
+                btnSoftwares.Enabled = false;
+                btnDevices.Enabled = false;
+                btnUsers.Enabled = false;
             }
         }
 

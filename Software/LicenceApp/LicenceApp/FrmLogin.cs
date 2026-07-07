@@ -20,8 +20,8 @@ namespace LicenceApp
 
         private void BtnPrijava_Click(object sender, EventArgs e)
         {
-            string email = txtUser.Text;
-            string lozinka = txtPassword.Text;
+            string email = txtLoginUser.Text;
+            string lozinka = txtLoginPassword.Text;
 
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(lozinka))
             {
@@ -52,6 +52,26 @@ namespace LicenceApp
             FrmKorisnik frmKorisnik = new FrmKorisnik();
             frmKorisnik.Show();
             this.Hide();
+        }
+
+        private void lbPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLoginUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoginUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

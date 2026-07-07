@@ -59,5 +59,50 @@ namespace LicenceApp
         {
 
         }
+
+        private void cmbSoftver_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRequestReason_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbRequestDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDeviceName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDeviceName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpRequestDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmZahtjev_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

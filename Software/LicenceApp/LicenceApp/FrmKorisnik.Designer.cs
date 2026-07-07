@@ -12,17 +12,17 @@
 
         private void InitializeComponent()
         {
-            this.lstKorisnici = new System.Windows.Forms.ListBox();
-            this.lbPassword = new System.Windows.Forms.Label();
-            this.lbRole = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.lbLastName = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txName = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.lstUsers = new System.Windows.Forms.ListBox();
+            this.lblUserPassword = new System.Windows.Forms.Label();
+            this.lblUserRole = new System.Windows.Forms.Label();
+            this.lblUserEmail = new System.Windows.Forms.Label();
+            this.lblUserLastName = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtUserPassword = new System.Windows.Forms.TextBox();
+            this.txUserName = new System.Windows.Forms.TextBox();
+            this.txtUserEmail = new System.Windows.Forms.TextBox();
+            this.txtUserLastName = new System.Windows.Forms.TextBox();
+            this.cmbUserRole = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -32,89 +32,99 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lstKorisnici
+            // lstUsers
             // 
-            this.lstKorisnici.ItemHeight = 16;
-            this.lstKorisnici.Location = new System.Drawing.Point(119, 231);
-            this.lstKorisnici.Name = "lstKorisnici";
-            this.lstKorisnici.Size = new System.Drawing.Size(409, 164);
-            this.lstKorisnici.TabIndex = 0;
-            this.lstKorisnici.SelectedIndexChanged += new System.EventHandler(this.LstKorisnici_SelectedIndexChanged);
+            this.lstUsers.ItemHeight = 16;
+            this.lstUsers.Location = new System.Drawing.Point(119, 231);
+            this.lstUsers.Name = "lstUsers";
+            this.lstUsers.Size = new System.Drawing.Size(409, 164);
+            this.lstUsers.TabIndex = 0;
+            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstKorisnici_SelectedIndexChanged);
             // 
-            // lbPassword
+            // lblUserPassword
             // 
-            this.lbPassword.Location = new System.Drawing.Point(549, 332);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(100, 23);
-            this.lbPassword.TabIndex = 7;
-            this.lbPassword.Text = "Lozinka: ";
+            this.lblUserPassword.Location = new System.Drawing.Point(549, 332);
+            this.lblUserPassword.Name = "lblUserPassword";
+            this.lblUserPassword.Size = new System.Drawing.Size(100, 23);
+            this.lblUserPassword.TabIndex = 7;
+            this.lblUserPassword.Text = "Lozinka: ";
+            this.lblUserPassword.Click += new System.EventHandler(this.lblUserPassword_Click);
             // 
-            // lbRole
+            // lblUserRole
             // 
-            this.lbRole.Location = new System.Drawing.Point(549, 361);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(100, 23);
-            this.lbRole.TabIndex = 9;
-            this.lbRole.Text = "Uloga:";
+            this.lblUserRole.Location = new System.Drawing.Point(549, 361);
+            this.lblUserRole.Name = "lblUserRole";
+            this.lblUserRole.Size = new System.Drawing.Size(100, 23);
+            this.lblUserRole.TabIndex = 9;
+            this.lblUserRole.Text = "Uloga:";
+            this.lblUserRole.Click += new System.EventHandler(this.lblUserRole_Click);
             // 
-            // lbEmail
+            // lblUserEmail
             // 
-            this.lbEmail.Location = new System.Drawing.Point(549, 305);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(100, 23);
-            this.lbEmail.TabIndex = 5;
-            this.lbEmail.Text = "Email: ";
+            this.lblUserEmail.Location = new System.Drawing.Point(549, 305);
+            this.lblUserEmail.Name = "lblUserEmail";
+            this.lblUserEmail.Size = new System.Drawing.Size(100, 23);
+            this.lblUserEmail.TabIndex = 5;
+            this.lblUserEmail.Text = "Email: ";
+            this.lblUserEmail.Click += new System.EventHandler(this.lblUserEmail_Click);
             // 
-            // lbLastName
+            // lblUserLastName
             // 
-            this.lbLastName.Location = new System.Drawing.Point(549, 273);
-            this.lbLastName.Name = "lbLastName";
-            this.lbLastName.Size = new System.Drawing.Size(100, 23);
-            this.lbLastName.TabIndex = 3;
-            this.lbLastName.Text = "Prezime: ";
+            this.lblUserLastName.Location = new System.Drawing.Point(549, 273);
+            this.lblUserLastName.Name = "lblUserLastName";
+            this.lblUserLastName.Size = new System.Drawing.Size(100, 23);
+            this.lblUserLastName.TabIndex = 3;
+            this.lblUserLastName.Text = "Prezime: ";
+            this.lblUserLastName.Click += new System.EventHandler(this.lblUserLastName_Click);
             // 
-            // lbName
+            // lblUserName
             // 
-            this.lbName.Location = new System.Drawing.Point(549, 246);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(100, 23);
-            this.lbName.TabIndex = 1;
-            this.lbName.Text = "Ime: ";
+            this.lblUserName.Location = new System.Drawing.Point(549, 246);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(100, 23);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "Ime: ";
+            this.lblUserName.Click += new System.EventHandler(this.lblUserName_Click);
             // 
-            // txtPassword
+            // txtUserPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(632, 330);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(216, 22);
-            this.txtPassword.TabIndex = 8;
+            this.txtUserPassword.Location = new System.Drawing.Point(632, 330);
+            this.txtUserPassword.Name = "txtUserPassword";
+            this.txtUserPassword.Size = new System.Drawing.Size(216, 22);
+            this.txtUserPassword.TabIndex = 8;
+            this.txtUserPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // txName
+            // txUserName
             // 
-            this.txName.Location = new System.Drawing.Point(632, 243);
-            this.txName.Name = "txName";
-            this.txName.Size = new System.Drawing.Size(216, 22);
-            this.txName.TabIndex = 2;
+            this.txUserName.Location = new System.Drawing.Point(632, 243);
+            this.txUserName.Name = "txUserName";
+            this.txUserName.Size = new System.Drawing.Size(216, 22);
+            this.txUserName.TabIndex = 2;
+            this.txUserName.TextChanged += new System.EventHandler(this.txUserName_TextChanged);
             // 
-            // txtEmail
+            // txtUserEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(632, 302);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(216, 22);
-            this.txtEmail.TabIndex = 6;
+            this.txtUserEmail.Location = new System.Drawing.Point(632, 302);
+            this.txtUserEmail.Name = "txtUserEmail";
+            this.txtUserEmail.Size = new System.Drawing.Size(216, 22);
+            this.txtUserEmail.TabIndex = 6;
+            this.txtUserEmail.TextChanged += new System.EventHandler(this.txtUserEmail_TextChanged);
             // 
-            // txtLastName
+            // txtUserLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(632, 273);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(216, 22);
-            this.txtLastName.TabIndex = 4;
+            this.txtUserLastName.Location = new System.Drawing.Point(632, 273);
+            this.txtUserLastName.Name = "txtUserLastName";
+            this.txtUserLastName.Size = new System.Drawing.Size(216, 22);
+            this.txtUserLastName.TabIndex = 4;
+            this.txtUserLastName.TextChanged += new System.EventHandler(this.txtUserLastName_TextChanged);
             // 
-            // cmbRole
+            // cmbUserRole
             // 
-            this.cmbRole.Location = new System.Drawing.Point(632, 358);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(216, 24);
-            this.cmbRole.TabIndex = 10;
+            this.cmbUserRole.Location = new System.Drawing.Point(632, 358);
+            this.cmbUserRole.Name = "cmbUserRole";
+            this.cmbUserRole.Size = new System.Drawing.Size(216, 24);
+            this.cmbUserRole.TabIndex = 10;
+            this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.cmbUserRole_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -176,23 +186,24 @@
             // 
             this.ClientSize = new System.Drawing.Size(1189, 579);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstKorisnici);
-            this.Controls.Add(this.lbName);
-            this.Controls.Add(this.txName);
-            this.Controls.Add(this.lbLastName);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.lbEmail);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lbPassword);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.lbRole);
-            this.Controls.Add(this.cmbRole);
+            this.Controls.Add(this.lstUsers);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.txUserName);
+            this.Controls.Add(this.lblUserLastName);
+            this.Controls.Add(this.txtUserLastName);
+            this.Controls.Add(this.lblUserEmail);
+            this.Controls.Add(this.txtUserEmail);
+            this.Controls.Add(this.lblUserPassword);
+            this.Controls.Add(this.txtUserPassword);
+            this.Controls.Add(this.lblUserRole);
+            this.Controls.Add(this.cmbUserRole);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnBack);
             this.Name = "FrmKorisnik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
@@ -200,17 +211,17 @@
 
         }
 
-        private System.Windows.Forms.ListBox lstKorisnici;
-        private System.Windows.Forms.Label lbPassword;
-        private System.Windows.Forms.Label lbRole;
-        private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.Label lbLastName;
-        private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txName;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.ListBox lstUsers;
+        private System.Windows.Forms.Label lblUserPassword;
+        private System.Windows.Forms.Label lblUserRole;
+        private System.Windows.Forms.Label lblUserEmail;
+        private System.Windows.Forms.Label lblUserLastName;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtUserPassword;
+        private System.Windows.Forms.TextBox txUserName;
+        private System.Windows.Forms.TextBox txtUserEmail;
+        private System.Windows.Forms.TextBox txtUserLastName;
+        private System.Windows.Forms.ComboBox cmbUserRole;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;

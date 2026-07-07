@@ -49,5 +49,35 @@ namespace LicenceApp
         {
 
         }
+
+        private void txtLokacija_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbLocation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDeviceName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmUredaj_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,75 +15,75 @@
 
         private void InitializeComponent()
         {
-            this.btnSoftveri = new System.Windows.Forms.Button();
-            this.btnZahtjevi = new System.Windows.Forms.Button();
-            this.btnUredaji = new System.Windows.Forms.Button();
-            this.btnIzvjestaj = new System.Windows.Forms.Button();
-            this.btnKorisnici = new System.Windows.Forms.Button();
-            this.btnOdjava = new System.Windows.Forms.Button();
+            this.btnSoftwares = new System.Windows.Forms.Button();
+            this.btnRequestApp = new System.Windows.Forms.Button();
+            this.btnDevices = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSoftveri
+            // btnSoftwares
             // 
-            this.btnSoftveri.Location = new System.Drawing.Point(237, 156);
-            this.btnSoftveri.Name = "btnSoftveri";
-            this.btnSoftveri.Size = new System.Drawing.Size(145, 62);
-            this.btnSoftveri.TabIndex = 0;
-            this.btnSoftveri.Text = "Softveri";
-            this.btnSoftveri.UseVisualStyleBackColor = true;
-            this.btnSoftveri.Click += new System.EventHandler(this.Button1_Click);
+            this.btnSoftwares.Location = new System.Drawing.Point(237, 156);
+            this.btnSoftwares.Name = "btnSoftwares";
+            this.btnSoftwares.Size = new System.Drawing.Size(145, 62);
+            this.btnSoftwares.TabIndex = 0;
+            this.btnSoftwares.Text = "Softveri";
+            this.btnSoftwares.UseVisualStyleBackColor = true;
+            this.btnSoftwares.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // btnZahtjevi
+            // btnRequestApp
             // 
-            this.btnZahtjevi.Location = new System.Drawing.Point(237, 237);
-            this.btnZahtjevi.Name = "btnZahtjevi";
-            this.btnZahtjevi.Size = new System.Drawing.Size(145, 65);
-            this.btnZahtjevi.TabIndex = 1;
-            this.btnZahtjevi.Text = "Zahtjevi";
-            this.btnZahtjevi.UseVisualStyleBackColor = true;
-            this.btnZahtjevi.Click += new System.EventHandler(this.Button2_Click);
+            this.btnRequestApp.Location = new System.Drawing.Point(237, 237);
+            this.btnRequestApp.Name = "btnRequestApp";
+            this.btnRequestApp.Size = new System.Drawing.Size(145, 65);
+            this.btnRequestApp.TabIndex = 1;
+            this.btnRequestApp.Text = "Zahtjevi";
+            this.btnRequestApp.UseVisualStyleBackColor = true;
+            this.btnRequestApp.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // btnUredaji
+            // btnDevices
             // 
-            this.btnUredaji.Location = new System.Drawing.Point(416, 156);
-            this.btnUredaji.Name = "btnUredaji";
-            this.btnUredaji.Size = new System.Drawing.Size(143, 62);
-            this.btnUredaji.TabIndex = 2;
-            this.btnUredaji.Text = "Uređaji";
-            this.btnUredaji.UseVisualStyleBackColor = true;
-            this.btnUredaji.Click += new System.EventHandler(this.Button3_Click);
+            this.btnDevices.Location = new System.Drawing.Point(416, 156);
+            this.btnDevices.Name = "btnDevices";
+            this.btnDevices.Size = new System.Drawing.Size(143, 62);
+            this.btnDevices.TabIndex = 2;
+            this.btnDevices.Text = "Uređaji";
+            this.btnDevices.UseVisualStyleBackColor = true;
+            this.btnDevices.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // btnIzvjestaj
+            // btnReport
             // 
-            this.btnIzvjestaj.Location = new System.Drawing.Point(416, 240);
-            this.btnIzvjestaj.Name = "btnIzvjestaj";
-            this.btnIzvjestaj.Size = new System.Drawing.Size(143, 62);
-            this.btnIzvjestaj.TabIndex = 3;
-            this.btnIzvjestaj.Text = "Izvještaj";
-            this.btnIzvjestaj.UseVisualStyleBackColor = true;
-            this.btnIzvjestaj.Click += new System.EventHandler(this.Button4_Click);
+            this.btnReport.Location = new System.Drawing.Point(416, 240);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(143, 62);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.Text = "Izvještaj";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.Button4_Click);
             // 
-            // btnKorisnici
+            // btnUsers
             // 
-            this.btnKorisnici.Location = new System.Drawing.Point(237, 322);
-            this.btnKorisnici.Name = "btnKorisnici";
-            this.btnKorisnici.Size = new System.Drawing.Size(322, 26);
-            this.btnKorisnici.TabIndex = 5;
-            this.btnKorisnici.Text = "KORISNICI";
-            this.btnKorisnici.UseVisualStyleBackColor = true;
-            this.btnKorisnici.Click += new System.EventHandler(this.Button1_Click_1);
+            this.btnUsers.Location = new System.Drawing.Point(237, 322);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(322, 26);
+            this.btnUsers.TabIndex = 5;
+            this.btnUsers.Text = "KORISNICI";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.Button1_Click_1);
             // 
-            // btnOdjava
+            // btnLogout
             // 
-            this.btnOdjava.Location = new System.Drawing.Point(12, 12);
-            this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(75, 23);
-            this.btnOdjava.TabIndex = 6;
-            this.btnOdjava.Text = "Odjava";
-            this.btnOdjava.UseVisualStyleBackColor = true;
-            this.btnOdjava.Click += new System.EventHandler(this.BtnOdjava_Click);
+            this.btnLogout.Location = new System.Drawing.Point(12, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Odjava";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.BtnOdjava_Click);
             // 
             // pbxLogo
             // 
@@ -102,13 +102,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.btnOdjava);
-            this.Controls.Add(this.btnKorisnici);
-            this.Controls.Add(this.btnIzvjestaj);
-            this.Controls.Add(this.btnUredaji);
-            this.Controls.Add(this.btnZahtjevi);
-            this.Controls.Add(this.btnSoftveri);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.btnDevices);
+            this.Controls.Add(this.btnRequestApp);
+            this.Controls.Add(this.btnSoftwares);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SafeSoft";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
@@ -116,12 +117,12 @@
 
         }
 
-        private System.Windows.Forms.Button btnSoftveri;
-        private System.Windows.Forms.Button btnZahtjevi;
-        private System.Windows.Forms.Button btnUredaji;
-        private System.Windows.Forms.Button btnIzvjestaj;
-        private System.Windows.Forms.Button btnKorisnici;
-        private System.Windows.Forms.Button btnOdjava;
+        private System.Windows.Forms.Button btnSoftwares;
+        private System.Windows.Forms.Button btnRequestApp;
+        private System.Windows.Forms.Button btnDevices;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pbxLogo;
     }
 }
