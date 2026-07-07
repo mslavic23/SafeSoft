@@ -1,0 +1,61 @@
+﻿using System.Collections.Generic;
+using DBLayer;
+using System.Data.SqlClient;
+using LicenceApp.Models;
+
+namespace LicenceApp.Repositories
+{
+    public class SoftverRepository
+    {
+        public List<Softver> DohvatiSve()
+        {
+            List<Softver> softveri = new List<Softver>();
+
+            DB.OpenConnection();
+            string query = "SELECT ID_softver, Naziv, Verzija, Tip_licence, Ukupno_mjesta FROM Softver";
+            SqlDataReader reader = DB.GetDataReader(query);
+
+            while (reader.Read())
+            {
+                Softver softver = new Softver
+                {
+                    ID_softver = (int)reader["ID_softver"],
+                    Naziv = reader["Naziv"].ToString(),
+                    Verzija = reader["Verzija"].ToString(),
+                    Tip_licence = reader["Tip_licence"].ToString(),
+                    Ukupno_mjesta = (int)reader["Ukupno_mjesta"]
+                };
+                softveri.Add(softver);
+            }
+            DB.CloseConnection();
+            return softveri;
+        }
+
+        public bool Dodaj(Softver softver)
+        {
+            DB.OpenConnection();
+            string query = $"INSERT INTO Softver (Naziv, Verzija, Tip_licence, Ukupno_mjesta) VALUES ('{softver.Naziv}', '{softver.Verzija}', '{softver.Tip_licence}', {softver.Ukupno_mjesta})";
+            int affectedRows = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+            return affectedRows > 0;
+        }
+
+        public bool Uredi(Softver softver)
+        {
+            DB.OpenConnection();
+            string query = $"UPDATE Softver SET Naziv = '{softver.Naziv}', Verzija = '{softver.Verzija}', Tip_licence = '{softver.Tip_licence}', Ukupno_mjesta = {softver.Ukupno_mjesta} WHERE ID_softver = {softver.ID_softver}";
+            int affectedRows = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+            return affectedRows > 0;
+        }
+
+        public bool Obrisi(int id)
+        {
+            DB.OpenConnection();
+            string query = $"DELETE FROM Softver WHERE ID_softver = {id}";
+            int affectedRows = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+            return affectedRows > 0;
+        }
+    }
+}
