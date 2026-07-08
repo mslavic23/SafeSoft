@@ -1,217 +1,230 @@
 ﻿namespace LicenceApp
 {
-    partial class FrmSoftver
+    partial class FrmUser
     {
         private System.ComponentModel.IContainer components = null;
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            this.lblSoftwareName = new System.Windows.Forms.Label();
-            this.txtSoftwareName = new System.Windows.Forms.TextBox();
-            this.lblSoftwareVersion = new System.Windows.Forms.Label();
-            this.txtSofwareVersion = new System.Windows.Forms.TextBox();
-            this.lblLicenceType = new System.Windows.Forms.Label();
-            this.lblTotalSeats = new System.Windows.Forms.Label();
+            this.lstUsers = new System.Windows.Forms.ListBox();
+            this.lblUserPassword = new System.Windows.Forms.Label();
+            this.lblUserRole = new System.Windows.Forms.Label();
+            this.lblUserEmail = new System.Windows.Forms.Label();
+            this.lblUserLastName = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtUserPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtUserEmail = new System.Windows.Forms.TextBox();
+            this.txtUserLastName = new System.Windows.Forms.TextBox();
+            this.cmbUserRole = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
-            this.lstSoftwares = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
-            this.cmbLicenceType = new System.Windows.Forms.ComboBox();
-            this.numTotalSeats = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTotalSeats)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblSoftwareName
+            // lstUsers
             // 
-            this.lblSoftwareName.AutoSize = true;
-            this.lblSoftwareName.Location = new System.Drawing.Point(467, 111);
-            this.lblSoftwareName.Name = "lblSoftwareName";
-            this.lblSoftwareName.Size = new System.Drawing.Size(44, 16);
-            this.lblSoftwareName.TabIndex = 1;
-            this.lblSoftwareName.Text = "Naziv:";
-            this.lblSoftwareName.Click += new System.EventHandler(this.LblSoftwareName_Click);
+            this.lstUsers.ItemHeight = 16;
+            this.lstUsers.Location = new System.Drawing.Point(32, 231);
+            this.lstUsers.Name = "lstUsers";
+            this.lstUsers.Size = new System.Drawing.Size(494, 164);
+            this.lstUsers.TabIndex = 0;
+            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstUsers_SelectedIndexChanged);
             // 
-            // txtSoftwareName
+            // lblUserPassword
             // 
-            this.txtSoftwareName.Location = new System.Drawing.Point(536, 111);
-            this.txtSoftwareName.MaxLength = 30;
-            this.txtSoftwareName.Name = "txtSoftwareName";
-            this.txtSoftwareName.Size = new System.Drawing.Size(149, 22);
-            this.txtSoftwareName.TabIndex = 2;
-            this.txtSoftwareName.TextChanged += new System.EventHandler(this.TxtSoftwareName_TextChanged);
+            this.lblUserPassword.Location = new System.Drawing.Point(549, 332);
+            this.lblUserPassword.Name = "lblUserPassword";
+            this.lblUserPassword.Size = new System.Drawing.Size(59, 23);
+            this.lblUserPassword.TabIndex = 7;
+            this.lblUserPassword.Text = "Lozinka: ";
+            this.lblUserPassword.Click += new System.EventHandler(this.LblUserPassword_Click);
             // 
-            // lblSoftwareVersion
+            // lblUserRole
             // 
-            this.lblSoftwareVersion.AutoSize = true;
-            this.lblSoftwareVersion.Location = new System.Drawing.Point(467, 142);
-            this.lblSoftwareVersion.Name = "lblSoftwareVersion";
-            this.lblSoftwareVersion.Size = new System.Drawing.Size(51, 16);
-            this.lblSoftwareVersion.TabIndex = 3;
-            this.lblSoftwareVersion.Text = "Verzija:";
-            this.lblSoftwareVersion.Click += new System.EventHandler(this.LblSoftwareVersion_Click);
+            this.lblUserRole.Location = new System.Drawing.Point(549, 361);
+            this.lblUserRole.Name = "lblUserRole";
+            this.lblUserRole.Size = new System.Drawing.Size(59, 23);
+            this.lblUserRole.TabIndex = 9;
+            this.lblUserRole.Text = "Uloga:";
+            this.lblUserRole.Click += new System.EventHandler(this.LblUserRole_Click);
             // 
-            // txtSofwareVersion
+            // lblUserEmail
             // 
-            this.txtSofwareVersion.Location = new System.Drawing.Point(536, 139);
-            this.txtSofwareVersion.MaxLength = 6;
-            this.txtSofwareVersion.Name = "txtSofwareVersion";
-            this.txtSofwareVersion.Size = new System.Drawing.Size(149, 22);
-            this.txtSofwareVersion.TabIndex = 4;
-            this.txtSofwareVersion.TextChanged += new System.EventHandler(this.TxtSofwareVersion_TextChanged);
+            this.lblUserEmail.Location = new System.Drawing.Point(549, 305);
+            this.lblUserEmail.Name = "lblUserEmail";
+            this.lblUserEmail.Size = new System.Drawing.Size(77, 23);
+            this.lblUserEmail.TabIndex = 5;
+            this.lblUserEmail.Text = "Email: ";
+            this.lblUserEmail.Click += new System.EventHandler(this.LblUserEmail_Click);
             // 
-            // lblLicenceType
+            // lblUserLastName
             // 
-            this.lblLicenceType.AutoSize = true;
-            this.lblLicenceType.Location = new System.Drawing.Point(467, 170);
-            this.lblLicenceType.Name = "lblLicenceType";
-            this.lblLicenceType.Size = new System.Drawing.Size(76, 16);
-            this.lblLicenceType.TabIndex = 5;
-            this.lblLicenceType.Text = "Tip licence:";
-            this.lblLicenceType.Click += new System.EventHandler(this.LblLicenceType_Click);
+            this.lblUserLastName.Location = new System.Drawing.Point(549, 273);
+            this.lblUserLastName.Name = "lblUserLastName";
+            this.lblUserLastName.Size = new System.Drawing.Size(77, 23);
+            this.lblUserLastName.TabIndex = 3;
+            this.lblUserLastName.Text = "Prezime: ";
+            this.lblUserLastName.Click += new System.EventHandler(this.LblUserLastName_Click);
             // 
-            // lblTotalSeats
+            // lblUserName
             // 
-            this.lblTotalSeats.AutoSize = true;
-            this.lblTotalSeats.Location = new System.Drawing.Point(467, 198);
-            this.lblTotalSeats.Name = "lblTotalSeats";
-            this.lblTotalSeats.Size = new System.Drawing.Size(100, 16);
-            this.lblTotalSeats.TabIndex = 8;
-            this.lblTotalSeats.Text = "Ukupno mjesta:";
-            this.lblTotalSeats.Click += new System.EventHandler(this.LblTotalSeats_Click);
+            this.lblUserName.Location = new System.Drawing.Point(549, 246);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(77, 23);
+            this.lblUserName.TabIndex = 1;
+            this.lblUserName.Text = "Ime: ";
+            this.lblUserName.Click += new System.EventHandler(this.LblUserName_Click);
+            // 
+            // txtUserPassword
+            // 
+            this.txtUserPassword.Location = new System.Drawing.Point(632, 330);
+            this.txtUserPassword.Name = "txtUserPassword";
+            this.txtUserPassword.Size = new System.Drawing.Size(245, 22);
+            this.txtUserPassword.TabIndex = 8;
+            this.txtUserPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(632, 243);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(245, 22);
+            this.txtUserName.TabIndex = 2;
+            this.txtUserName.TextChanged += new System.EventHandler(this.TxUserName_TextChanged);
+            // 
+            // txtUserEmail
+            // 
+            this.txtUserEmail.Location = new System.Drawing.Point(632, 302);
+            this.txtUserEmail.Name = "txtUserEmail";
+            this.txtUserEmail.Size = new System.Drawing.Size(245, 22);
+            this.txtUserEmail.TabIndex = 6;
+            this.txtUserEmail.TextChanged += new System.EventHandler(this.TxtUserEmail_TextChanged);
+            // 
+            // txtUserLastName
+            // 
+            this.txtUserLastName.Location = new System.Drawing.Point(632, 273);
+            this.txtUserLastName.Name = "txtUserLastName";
+            this.txtUserLastName.Size = new System.Drawing.Size(245, 22);
+            this.txtUserLastName.TabIndex = 4;
+            this.txtUserLastName.TextChanged += new System.EventHandler(this.TxtUserLastName_TextChanged);
+            // 
+            // cmbUserRole
+            // 
+            this.cmbUserRole.Location = new System.Drawing.Point(632, 358);
+            this.cmbUserRole.Name = "cmbUserRole";
+            this.cmbUserRole.Size = new System.Drawing.Size(245, 24);
+            this.cmbUserRole.TabIndex = 10;
+            this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.CmbUserRole_SelectedIndexChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(715, 111);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAdd.Location = new System.Drawing.Point(898, 300);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 9;
+            this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Dodaj";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(715, 142);
+            this.btnEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnEdit.Location = new System.Drawing.Point(898, 329);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 10;
+            this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Uredi";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(715, 173);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnDelete.Location = new System.Drawing.Point(898, 358);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 11;
+            this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Obriši";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(467, 245);
+            this.btnMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnMain.Location = new System.Drawing.Point(32, 401);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(77, 26);
-            this.btnMain.TabIndex = 13;
+            this.btnMain.Size = new System.Drawing.Size(75, 23);
+            this.btnMain.TabIndex = 14;
             this.btnMain.Text = "Izbornik";
-            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.UseVisualStyleBackColor = false;
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
-            // 
-            // lstSoftwares
-            // 
-            this.lstSoftwares.FormattingEnabled = true;
-            this.lstSoftwares.ItemHeight = 16;
-            this.lstSoftwares.Location = new System.Drawing.Point(154, 91);
-            this.lstSoftwares.Name = "lstSoftwares";
-            this.lstSoftwares.Size = new System.Drawing.Size(307, 180);
-            this.lstSoftwares.TabIndex = 15;
-            this.lstSoftwares.SelectedIndexChanged += new System.EventHandler(this.LstSoftwares_SelectedIndexChanged);
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(154, 39);
+            this.pbxLogo.Location = new System.Drawing.Point(66, 77);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(172, 46);
+            this.pbxLogo.Size = new System.Drawing.Size(974, 119);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 16;
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
-            // cmbLicenceType
+            // FrmUser
             // 
-            this.cmbLicenceType.FormattingEnabled = true;
-            this.cmbLicenceType.Location = new System.Drawing.Point(549, 167);
-            this.cmbLicenceType.Name = "cmbLicenceType";
-            this.cmbLicenceType.Size = new System.Drawing.Size(133, 24);
-            this.cmbLicenceType.TabIndex = 17;
-            this.cmbLicenceType.SelectedIndexChanged += new System.EventHandler(this.CmbLicenceType_SelectedIndexChanged);
-            // 
-            // numTotalSeats
-            // 
-            this.numTotalSeats.Location = new System.Drawing.Point(573, 197);
-            this.numTotalSeats.Name = "numTotalSeats";
-            this.numTotalSeats.Size = new System.Drawing.Size(124, 22);
-            this.numTotalSeats.TabIndex = 18;
-            this.numTotalSeats.ValueChanged += new System.EventHandler(this.NumTotalSeats_ValueChanged);
-            // 
-            // FrmSoftver
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 450);
-            this.Controls.Add(this.numTotalSeats);
-            this.Controls.Add(this.cmbLicenceType);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1021, 614);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstSoftwares);
-            this.Controls.Add(this.btnMain);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.lstUsers);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.lblUserLastName);
+            this.Controls.Add(this.txtUserLastName);
+            this.Controls.Add(this.lblUserEmail);
+            this.Controls.Add(this.txtUserEmail);
+            this.Controls.Add(this.lblUserPassword);
+            this.Controls.Add(this.txtUserPassword);
+            this.Controls.Add(this.lblUserRole);
+            this.Controls.Add(this.cmbUserRole);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lblTotalSeats);
-            this.Controls.Add(this.lblLicenceType);
-            this.Controls.Add(this.txtSofwareVersion);
-            this.Controls.Add(this.lblSoftwareVersion);
-            this.Controls.Add(this.txtSoftwareName);
-            this.Controls.Add(this.lblSoftwareName);
-            this.Name = "FrmSoftver";
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnMain);
+            this.Name = "FrmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Softveri";
-            this.Load += new System.EventHandler(this.FrmSoftver_Load);
+            this.Text = "Korisnici";
+            this.Load += new System.EventHandler(this.FrmUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numTotalSeats)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private System.Windows.Forms.Label lblSoftwareName;
-        private System.Windows.Forms.TextBox txtSoftwareName;
-        private System.Windows.Forms.Label lblSoftwareVersion;
-        private System.Windows.Forms.TextBox txtSofwareVersion;
-        private System.Windows.Forms.Label lblLicenceType;
-        private System.Windows.Forms.Label lblTotalSeats;
+        private System.Windows.Forms.ListBox lstUsers;
+        private System.Windows.Forms.Label lblUserPassword;
+        private System.Windows.Forms.Label lblUserRole;
+        private System.Windows.Forms.Label lblUserEmail;
+        private System.Windows.Forms.Label lblUserLastName;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtUserPassword;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtUserEmail;
+        private System.Windows.Forms.TextBox txtUserLastName;
+        private System.Windows.Forms.ComboBox cmbUserRole;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnMain;
-        private System.Windows.Forms.ListBox lstSoftwares;
         private System.Windows.Forms.PictureBox pbxLogo;
-        private System.Windows.Forms.ComboBox cmbLicenceType;
-        private System.Windows.Forms.NumericUpDown numTotalSeats;
     }
 }

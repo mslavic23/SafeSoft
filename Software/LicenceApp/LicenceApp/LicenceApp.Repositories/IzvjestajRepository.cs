@@ -23,7 +23,7 @@ namespace LicenceApp.Repositories
     public class IzvjestajRepository
     {
         private readonly ZahtjevRepository _zahtjevRepository = new ZahtjevRepository();
-        private readonly KorisnikRepository _korisnikRepository = new KorisnikRepository();
+        private readonly UserRepository _korisnikRepository = new UserRepository();
         private readonly SoftverRepository _softverRepository = new SoftverRepository();
         private readonly UredajRepository _uredajRepository = new UredajRepository();
 

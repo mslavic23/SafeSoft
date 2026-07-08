@@ -6,7 +6,7 @@ namespace LicenceApp
 {
     public partial class FrmLogin : Form
     {
-        private readonly KorisnikRepository _korisnikRepository = new KorisnikRepository();
+        private readonly UserRepository _userRepository = new UserRepository();
 
         public FrmLogin()
         {
@@ -29,13 +29,13 @@ namespace LicenceApp
                 return;
             }
 
-            var korisnik = _korisnikRepository.Login(email, lozinka);
+            var user = _userRepository.Login(email, lozinka);
 
-            if (korisnik != null)
+            if (user != null)
             {
-                SessionManager.Korisnik = korisnik;
+                SessionManager.User = user;
 
-                MessageBox.Show("Prijava uspješna! Dobrodošli, " + korisnik.Ime + "!", "Prijava", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Prijava uspješna! Dobrodošli, " + user.Ime + "!", "Prijava", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FrmMain frmMain = new FrmMain();
                 frmMain.Show();
@@ -49,8 +49,8 @@ namespace LicenceApp
 
         private void PbxAddUser_Click(object sender, EventArgs e)
         {
-            FrmKorisnik frmKorisnik = new FrmKorisnik();
-            frmKorisnik.Show();
+            FrmUser frmUser = new FrmUser();
+            frmUser.Show();
             this.Hide();
         }
     }

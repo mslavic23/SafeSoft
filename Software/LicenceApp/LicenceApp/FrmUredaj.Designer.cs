@@ -32,17 +32,17 @@
             // 
             // txtDeviceName
             // 
-            this.txtDeviceName.Location = new System.Drawing.Point(533, 96);
+            this.txtDeviceName.Location = new System.Drawing.Point(490, 120);
             this.txtDeviceName.MaxLength = 20;
             this.txtDeviceName.Name = "txtDeviceName";
-            this.txtDeviceName.Size = new System.Drawing.Size(137, 22);
+            this.txtDeviceName.Size = new System.Drawing.Size(383, 22);
             this.txtDeviceName.TabIndex = 1;
             this.txtDeviceName.TextChanged += new System.EventHandler(this.TxtDeviceName_TextChanged);
             // 
             // lblDeviceName
             // 
             this.lblDeviceName.AutoSize = true;
-            this.lblDeviceName.Location = new System.Drawing.Point(428, 99);
+            this.lblDeviceName.Location = new System.Drawing.Point(385, 123);
             this.lblDeviceName.Name = "lblDeviceName";
             this.lblDeviceName.Size = new System.Drawing.Size(99, 16);
             this.lblDeviceName.TabIndex = 4;
@@ -52,7 +52,7 @@
             // lblDeviceLocation
             // 
             this.lblDeviceLocation.AutoSize = true;
-            this.lblDeviceLocation.Location = new System.Drawing.Point(466, 124);
+            this.lblDeviceLocation.Location = new System.Drawing.Point(423, 151);
             this.lblDeviceLocation.Name = "lblDeviceLocation";
             this.lblDeviceLocation.Size = new System.Drawing.Size(61, 16);
             this.lblDeviceLocation.TabIndex = 5;
@@ -62,7 +62,7 @@
             // lblDeviceType
             // 
             this.lblDeviceType.AutoSize = true;
-            this.lblDeviceType.Location = new System.Drawing.Point(448, 152);
+            this.lblDeviceType.Location = new System.Drawing.Point(405, 184);
             this.lblDeviceType.Name = "lblDeviceType";
             this.lblDeviceType.Size = new System.Drawing.Size(79, 16);
             this.lblDeviceType.TabIndex = 6;
@@ -71,7 +71,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(676, 152);
+            this.btnAdd.Location = new System.Drawing.Point(897, 182);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 7;
@@ -81,7 +81,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(676, 96);
+            this.btnEdit.Location = new System.Drawing.Point(897, 128);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 8;
@@ -91,7 +91,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(676, 123);
+            this.btnDelete.Location = new System.Drawing.Point(897, 157);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 9;
@@ -101,7 +101,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(76, 270);
+            this.btnMain.Location = new System.Drawing.Point(12, 523);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 11;
@@ -113,18 +113,18 @@
             // 
             this.lstDevices.FormattingEnabled = true;
             this.lstDevices.ItemHeight = 16;
-            this.lstDevices.Location = new System.Drawing.Point(76, 68);
+            this.lstDevices.Location = new System.Drawing.Point(12, 81);
             this.lstDevices.Name = "lstDevices";
-            this.lstDevices.Size = new System.Drawing.Size(346, 196);
+            this.lstDevices.Size = new System.Drawing.Size(346, 436);
             this.lstDevices.TabIndex = 13;
             this.lstDevices.SelectedIndexChanged += new System.EventHandler(this.LstDevices_SelectedIndexChanged);
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(76, 27);
+            this.pbxLogo.Location = new System.Drawing.Point(12, 27);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(113, 35);
+            this.pbxLogo.Size = new System.Drawing.Size(237, 48);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 14;
             this.pbxLogo.TabStop = false;
@@ -133,18 +133,18 @@
             // cmbDeviceLocation
             // 
             this.cmbDeviceLocation.FormattingEnabled = true;
-            this.cmbDeviceLocation.Location = new System.Drawing.Point(533, 124);
+            this.cmbDeviceLocation.Location = new System.Drawing.Point(490, 148);
             this.cmbDeviceLocation.Name = "cmbDeviceLocation";
-            this.cmbDeviceLocation.Size = new System.Drawing.Size(137, 24);
+            this.cmbDeviceLocation.Size = new System.Drawing.Size(383, 24);
             this.cmbDeviceLocation.TabIndex = 15;
             this.cmbDeviceLocation.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceLocation_SelectedIndexChanged);
             // 
             // cmbDeviceType
             // 
             this.cmbDeviceType.FormattingEnabled = true;
-            this.cmbDeviceType.Location = new System.Drawing.Point(533, 154);
+            this.cmbDeviceType.Location = new System.Drawing.Point(490, 181);
             this.cmbDeviceType.Name = "cmbDeviceType";
-            this.cmbDeviceType.Size = new System.Drawing.Size(137, 24);
+            this.cmbDeviceType.Size = new System.Drawing.Size(383, 24);
             this.cmbDeviceType.TabIndex = 16;
             this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceType_SelectedIndexChanged);
             // 
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1003, 567);
             this.Controls.Add(this.cmbDeviceType);
             this.Controls.Add(this.cmbDeviceLocation);
             this.Controls.Add(this.pbxLogo);

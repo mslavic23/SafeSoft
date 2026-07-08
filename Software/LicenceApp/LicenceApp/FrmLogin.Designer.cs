@@ -81,7 +81,7 @@
             this.pbxAddUser.Image = global::LicenceApp.Properties.Resources.add_user;
             this.pbxAddUser.Location = new System.Drawing.Point(12, 12);
             this.pbxAddUser.Name = "pbxAddUser";
-            this.pbxAddUser.Size = new System.Drawing.Size(38, 31);
+            this.pbxAddUser.Size = new System.Drawing.Size(31, 23);
             this.pbxAddUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAddUser.TabIndex = 7;
             this.pbxAddUser.TabStop = false;

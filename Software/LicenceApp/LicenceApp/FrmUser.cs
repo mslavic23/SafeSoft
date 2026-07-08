@@ -5,17 +5,17 @@ using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
-    public partial class FrmKorisnik : Form
+    public partial class FrmUser : Form
     {
-        private readonly KorisnikRepository _korisnikRepository = new KorisnikRepository();
-        private Korisnik _odabraniKorisnik;
+        private readonly UserRepository _userRepository = new UserRepository();
+        private User _selectedUser;
 
-        public FrmKorisnik()
+        public FrmUser()
         {
             InitializeComponent();
         }
 
-        private void FrmKorisnik_Load(object sender, EventArgs e)
+        private void FrmUser_Load(object sender, EventArgs e)
         {
             cmbUserRole.Items.Clear();
             cmbUserRole.Items.Add("Administrator");
@@ -27,9 +27,9 @@ namespace LicenceApp
         private void RefreshList()
         {
             lstUsers.Items.Clear();
-            foreach (var korisnik in _korisnikRepository.GetAll())
+            foreach (var user in _userRepository.GetAll())
             {
-                lstUsers.Items.Add(korisnik);
+                lstUsers.Items.Add(user);
             }
         }
 
@@ -44,31 +44,31 @@ namespace LicenceApp
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string ime = txtUserName.Text;
-            string prezime = txtUserLastName.Text;
+            string firstName = txtUserName.Text;
+            string lastName = txtUserLastName.Text;
             string email = txtUserEmail.Text;
-            string lozinka = txtUserPassword.Text;
+            string password = txtUserPassword.Text;
+            string role = cmbUserRole.SelectedItem as string;
 
-            if (!(cmbUserRole.SelectedItem is string uloga) || string.IsNullOrEmpty(ime) || string.IsNullOrEmpty(prezime) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(lozinka))
+            if (role == null || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Molimo popunite sva polja i odaberite ulogu!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Korisnik korisnik = new Korisnik
+            User user = new User
             {
-                Ime = ime,
-                Prezime = prezime,
+                Ime = firstName,
+                Prezime = lastName,
                 Email = email,
-                LozinkaHash = lozinka,
-                Uloga = uloga
+                LozinkaHash = password,
+                Uloga = role
             };
 
-            bool uspjeh = _korisnikRepository.Add(korisnik);
+            bool success = _userRepository.Add(user);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Korisnik uspješno dodan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
             }
@@ -80,41 +80,42 @@ namespace LicenceApp
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            if (_odabraniKorisnik == null)
+            if (_selectedUser == null)
             {
                 MessageBox.Show("Odaberite korisnika s liste za uređivanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string ime = txtUserName.Text;
-            string prezime = txtUserLastName.Text;
+            string firstName = txtUserName.Text;
+            string lastName = txtUserLastName.Text;
             string email = txtUserEmail.Text;
-            string lozinka = txtUserPassword.Text;
+            string password = txtUserPassword.Text;
+            string role = cmbUserRole.SelectedItem as string;
 
-            if (!(cmbUserRole.SelectedItem is string uloga) || string.IsNullOrEmpty(ime) || string.IsNullOrEmpty(prezime) || string.IsNullOrEmpty(email))
+            if (role == null || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
             {
                 MessageBox.Show("Molimo popunite Ime, Prezime, Email i odaberite ulogu!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Korisnik korisnik = new Korisnik
+            User user = new User
             {
-                ID_korisnik = _odabraniKorisnik.ID_korisnik,
-                Ime = ime,
-                Prezime = prezime,
+                ID_korisnik = _selectedUser.ID_korisnik,
+                Ime = firstName,
+                Prezime = lastName,
                 Email = email,
-                LozinkaHash = lozinka,
-                Uloga = uloga
+                LozinkaHash = password,
+                Uloga = role
             };
 
-            bool uspjeh = _korisnikRepository.Update(korisnik);
+            bool success = _userRepository.Update(user);
 
-            if (uspjeh)
+            if (success)
             {
                 MessageBox.Show("Korisnik uspješno ažuriran!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniKorisnik = null;
+                _selectedUser = null;
             }
             else
             {
@@ -124,29 +125,28 @@ namespace LicenceApp
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (_odabraniKorisnik == null)
+            if (_selectedUser == null)
             {
                 MessageBox.Show("Odaberite korisnika s liste za brisanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult potvrda = MessageBox.Show(
-                $"Jeste li sigurni da želite obrisati korisnika {_odabraniKorisnik.Ime} {_odabraniKorisnik.Prezime}?",
+            DialogResult confirmation = MessageBox.Show(
+                $"Jeste li sigurni da želite obrisati korisnika {_selectedUser.Ime} {_selectedUser.Prezime}?",
                 "Potvrda brisanja",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (potvrda != DialogResult.Yes)
+            if (confirmation != DialogResult.Yes)
                 return;
 
-            bool uspjeh = _korisnikRepository.Delete(_odabraniKorisnik.ID_korisnik);
+            bool success = _userRepository.Delete(_selectedUser.ID_korisnik);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Korisnik uspješno obrisan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniKorisnik = null;
+                _selectedUser = null;
             }
             else
             {
@@ -154,9 +154,9 @@ namespace LicenceApp
             }
         }
 
-        private void LstKorisnici_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _odabraniKorisnik = lstUsers.SelectedItem as Korisnik;
+            _selectedUser = lstUsers.SelectedItem as User;
         }
 
         private void BtnMain_Click(object sender, EventArgs e)
@@ -221,4 +221,5 @@ namespace LicenceApp
 
         }
     }
+}  }
 }

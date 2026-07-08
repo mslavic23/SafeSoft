@@ -14,6 +14,8 @@ namespace LicenceApp
         private const string TipMjesecnaPretplata = "mjesečna-pretplata";
         private const string TipGodisnjaPretplata = "godišnja-pretplata";
         private const int PerSeatMjesta = 50;
+        private const int PrvaGodina = 2000;
+        private const int ZadnjaGodina = 2026;
 
         public FrmSoftver()
         {
@@ -31,29 +33,48 @@ namespace LicenceApp
             cmbLicenceType.Items.Add(TipGodisnjaPretplata);
             cmbLicenceType.SelectedIndex = 0;
 
+            cmbSoftwareVersion.Items.Clear();
+            for (int godina = ZadnjaGodina; godina >= PrvaGodina; godina--)
+            {
+                cmbSoftwareVersion.Items.Add(godina.ToString());
+            }
+            cmbSoftwareVersion.SelectedIndex = 0;
+
             RefreshList();
         }
 
         private void RefreshList()
         {
-            lstSoftwares.Items.Clear();
-            foreach (var softver in _softverRepository.GetAll())
-            {
-                lstSoftwares.Items.Add(softver);
-            }
+            var softveri = _softverRepository.GetAll();
+
+            dgvSoftwares.DataSource = null;
+            dgvSoftwares.AutoGenerateColumns = true;
+            dgvSoftwares.DataSource = softveri;
+
+            if (dgvSoftwares.Columns.Contains("Naziv"))
+                dgvSoftwares.Columns["Naziv"].HeaderText = "Naziv";
+            if (dgvSoftwares.Columns.Contains("Verzija"))
+                dgvSoftwares.Columns["Verzija"].HeaderText = "Verzija";
+            if (dgvSoftwares.Columns.Contains("Tip_licence"))
+                dgvSoftwares.Columns["Tip_licence"].HeaderText = "Tip licence";
+            if (dgvSoftwares.Columns.Contains("Ukupno_mjesta"))
+                dgvSoftwares.Columns["Ukupno_mjesta"].HeaderText = "Ukupno mjesta";
+            if (dgvSoftwares.Columns.Contains("ID_softver"))
+                dgvSoftwares.Columns["ID_softver"].Visible = false;
         }
 
         private void ClearFields()
         {
             txtSoftwareName.Text = "";
-            txtSofwareVersion.Text = "";
+            cmbSoftwareVersion.SelectedIndex = 0;
             cmbLicenceType.SelectedIndex = 0;
             numTotalSeats.Value = PerSeatMjesta;
         }
 
         private void CmbLicenceType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!(cmbLicenceType.SelectedItem is string tipLicence))
+            string tipLicence = cmbLicenceType.SelectedItem as string;
+            if (tipLicence == null)
                 return;
 
             if (tipLicence == TipPerSeat)
@@ -68,6 +89,11 @@ namespace LicenceApp
             }
         }
 
+        private void CmbSoftwareVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void NumTotalSeats_ValueChanged(object sender, EventArgs e)
         {
 
@@ -76,11 +102,12 @@ namespace LicenceApp
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             string naziv = txtSoftwareName.Text;
-            string verzija = txtSofwareVersion.Text;
+            string verzija = cmbSoftwareVersion.SelectedItem as string;
+            string tipLicence = cmbLicenceType.SelectedItem as string;
 
-            if (!(cmbLicenceType.SelectedItem is string tipLicence) || string.IsNullOrEmpty(naziv) || string.IsNullOrEmpty(verzija))
+            if (string.IsNullOrEmpty(naziv) || verzija == null || tipLicence == null)
             {
-                MessageBox.Show("Molimo popunite sva polja i odaberite tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Molimo popunite naziv i odaberite verziju i tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -115,11 +142,12 @@ namespace LicenceApp
             }
 
             string naziv = txtSoftwareName.Text;
-            string verzija = txtSofwareVersion.Text;
+            string verzija = cmbSoftwareVersion.SelectedItem as string;
+            string tipLicence = cmbLicenceType.SelectedItem as string;
 
-            if (!(cmbLicenceType.SelectedItem is string tipLicence) || string.IsNullOrEmpty(naziv) || string.IsNullOrEmpty(verzija))
+            if (string.IsNullOrEmpty(naziv) || verzija == null || tipLicence == null)
             {
-                MessageBox.Show("Molimo popunite sva polja i odaberite tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Molimo popunite naziv i odaberite verziju i tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -179,9 +207,14 @@ namespace LicenceApp
             }
         }
 
-        private void LstSoftwares_SelectedIndexChanged(object sender, EventArgs e)
+        private void DgvSoftwares_SelectionChanged(object sender, EventArgs e)
         {
-            _odabraniSoftver = lstSoftwares.SelectedItem as Softver;
+            _odabraniSoftver = dgvSoftwares.CurrentRow?.DataBoundItem as Softver;
+        }
+
+        private void DgvSoftwares_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void BtnMain_Click(object sender, EventArgs e)
@@ -202,11 +235,6 @@ namespace LicenceApp
         }
 
         private void LblLicenceType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtSofwareVersion_TextChanged(object sender, EventArgs e)
         {
 
         }

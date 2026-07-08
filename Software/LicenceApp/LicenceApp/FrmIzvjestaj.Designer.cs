@@ -41,7 +41,7 @@
             // 
             // btnRefreshReport
             // 
-            this.btnRefreshReport.Location = new System.Drawing.Point(922, 97);
+            this.btnRefreshReport.Location = new System.Drawing.Point(922, 61);
             this.btnRefreshReport.Name = "btnRefreshReport";
             this.btnRefreshReport.Size = new System.Drawing.Size(75, 23);
             this.btnRefreshReport.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(922, 36);
+            this.btnMain.Location = new System.Drawing.Point(922, 96);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             this.lblFrmReportTitle.AutoSize = true;
             this.lblFrmReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblFrmReportTitle.Location = new System.Drawing.Point(401, 97);
+            this.lblFrmReportTitle.Location = new System.Drawing.Point(403, 25);
             this.lblFrmReportTitle.Name = "lblFrmReportTitle";
             this.lblFrmReportTitle.Size = new System.Drawing.Size(197, 29);
             this.lblFrmReportTitle.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             // dtpDateFrom
             // 
-            this.dtpDateFrom.Location = new System.Drawing.Point(89, 57);
+            this.dtpDateFrom.Location = new System.Drawing.Point(89, 71);
             this.dtpDateFrom.Name = "dtpDateFrom";
             this.dtpDateFrom.Size = new System.Drawing.Size(379, 22);
             this.dtpDateFrom.TabIndex = 7;
@@ -91,7 +91,7 @@
             // lblDateTIl
             // 
             this.lblDateTIl.AutoSize = true;
-            this.lblDateTIl.Location = new System.Drawing.Point(512, 63);
+            this.lblDateTIl.Location = new System.Drawing.Point(512, 74);
             this.lblDateTIl.Name = "lblDateTIl";
             this.lblDateTIl.Size = new System.Drawing.Size(28, 16);
             this.lblDateTIl.TabIndex = 8;
@@ -101,7 +101,7 @@
             // lblDateFrom
             // 
             this.lblDateFrom.AutoSize = true;
-            this.lblDateFrom.Location = new System.Drawing.Point(52, 62);
+            this.lblDateFrom.Location = new System.Drawing.Point(52, 74);
             this.lblDateFrom.Name = "lblDateFrom";
             this.lblDateFrom.Size = new System.Drawing.Size(31, 16);
             this.lblDateFrom.TabIndex = 9;
@@ -110,7 +110,7 @@
             // 
             // btnFilterReport
             // 
-            this.btnFilterReport.Location = new System.Drawing.Point(922, 68);
+            this.btnFilterReport.Location = new System.Drawing.Point(922, 32);
             this.btnFilterReport.Name = "btnFilterReport";
             this.btnFilterReport.Size = new System.Drawing.Size(75, 23);
             this.btnFilterReport.TabIndex = 10;
@@ -120,7 +120,7 @@
             // 
             // dtpDateTil
             // 
-            this.dtpDateTil.Location = new System.Drawing.Point(546, 58);
+            this.dtpDateTil.Location = new System.Drawing.Point(546, 71);
             this.dtpDateTil.Name = "dtpDateTil";
             this.dtpDateTil.Size = new System.Drawing.Size(338, 22);
             this.dtpDateTil.TabIndex = 11;

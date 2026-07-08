@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp
 {
-    partial class FrmKorisnik
+    partial class FrmUser
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -34,9 +34,9 @@
             // lstUsers
             // 
             this.lstUsers.ItemHeight = 16;
-            this.lstUsers.Location = new System.Drawing.Point(119, 231);
+            this.lstUsers.Location = new System.Drawing.Point(32, 231);
             this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(409, 164);
+            this.lstUsers.Size = new System.Drawing.Size(494, 164);
             this.lstUsers.TabIndex = 0;
             this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstKorisnici_SelectedIndexChanged);
             // 
@@ -44,7 +44,7 @@
             // 
             this.lblUserPassword.Location = new System.Drawing.Point(549, 332);
             this.lblUserPassword.Name = "lblUserPassword";
-            this.lblUserPassword.Size = new System.Drawing.Size(100, 23);
+            this.lblUserPassword.Size = new System.Drawing.Size(59, 23);
             this.lblUserPassword.TabIndex = 7;
             this.lblUserPassword.Text = "Lozinka: ";
             this.lblUserPassword.Click += new System.EventHandler(this.LblUserPassword_Click);
@@ -53,7 +53,7 @@
             // 
             this.lblUserRole.Location = new System.Drawing.Point(549, 361);
             this.lblUserRole.Name = "lblUserRole";
-            this.lblUserRole.Size = new System.Drawing.Size(100, 23);
+            this.lblUserRole.Size = new System.Drawing.Size(59, 23);
             this.lblUserRole.TabIndex = 9;
             this.lblUserRole.Text = "Uloga:";
             this.lblUserRole.Click += new System.EventHandler(this.LblUserRole_Click);
@@ -62,7 +62,7 @@
             // 
             this.lblUserEmail.Location = new System.Drawing.Point(549, 305);
             this.lblUserEmail.Name = "lblUserEmail";
-            this.lblUserEmail.Size = new System.Drawing.Size(100, 23);
+            this.lblUserEmail.Size = new System.Drawing.Size(77, 23);
             this.lblUserEmail.TabIndex = 5;
             this.lblUserEmail.Text = "Email: ";
             this.lblUserEmail.Click += new System.EventHandler(this.LblUserEmail_Click);
@@ -71,7 +71,7 @@
             // 
             this.lblUserLastName.Location = new System.Drawing.Point(549, 273);
             this.lblUserLastName.Name = "lblUserLastName";
-            this.lblUserLastName.Size = new System.Drawing.Size(100, 23);
+            this.lblUserLastName.Size = new System.Drawing.Size(77, 23);
             this.lblUserLastName.TabIndex = 3;
             this.lblUserLastName.Text = "Prezime: ";
             this.lblUserLastName.Click += new System.EventHandler(this.LblUserLastName_Click);
@@ -80,7 +80,7 @@
             // 
             this.lblUserName.Location = new System.Drawing.Point(549, 246);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(100, 23);
+            this.lblUserName.Size = new System.Drawing.Size(77, 23);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "Ime: ";
             this.lblUserName.Click += new System.EventHandler(this.LblUserName_Click);
@@ -89,7 +89,7 @@
             // 
             this.txtUserPassword.Location = new System.Drawing.Point(632, 330);
             this.txtUserPassword.Name = "txtUserPassword";
-            this.txtUserPassword.Size = new System.Drawing.Size(216, 22);
+            this.txtUserPassword.Size = new System.Drawing.Size(245, 22);
             this.txtUserPassword.TabIndex = 8;
             this.txtUserPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             // 
@@ -97,7 +97,7 @@
             // 
             this.txtUserName.Location = new System.Drawing.Point(632, 243);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(216, 22);
+            this.txtUserName.Size = new System.Drawing.Size(245, 22);
             this.txtUserName.TabIndex = 2;
             this.txtUserName.TextChanged += new System.EventHandler(this.TxUserName_TextChanged);
             // 
@@ -105,7 +105,7 @@
             // 
             this.txtUserEmail.Location = new System.Drawing.Point(632, 302);
             this.txtUserEmail.Name = "txtUserEmail";
-            this.txtUserEmail.Size = new System.Drawing.Size(216, 22);
+            this.txtUserEmail.Size = new System.Drawing.Size(245, 22);
             this.txtUserEmail.TabIndex = 6;
             this.txtUserEmail.TextChanged += new System.EventHandler(this.TxtUserEmail_TextChanged);
             // 
@@ -113,7 +113,7 @@
             // 
             this.txtUserLastName.Location = new System.Drawing.Point(632, 273);
             this.txtUserLastName.Name = "txtUserLastName";
-            this.txtUserLastName.Size = new System.Drawing.Size(216, 22);
+            this.txtUserLastName.Size = new System.Drawing.Size(245, 22);
             this.txtUserLastName.TabIndex = 4;
             this.txtUserLastName.TextChanged += new System.EventHandler(this.TxtUserLastName_TextChanged);
             // 
@@ -121,44 +121,52 @@
             // 
             this.cmbUserRole.Location = new System.Drawing.Point(632, 358);
             this.cmbUserRole.Name = "cmbUserRole";
-            this.cmbUserRole.Size = new System.Drawing.Size(216, 24);
+            this.cmbUserRole.Size = new System.Drawing.Size(245, 24);
             this.cmbUserRole.TabIndex = 10;
             this.cmbUserRole.SelectedIndexChanged += new System.EventHandler(this.CmbUserRole_SelectedIndexChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(904, 283);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAdd.Location = new System.Drawing.Point(898, 300);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Dodaj";
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(904, 325);
+            this.btnEdit.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnEdit.Location = new System.Drawing.Point(898, 329);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Uredi";
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(904, 354);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnDelete.Location = new System.Drawing.Point(898, 358);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Obriši";
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(119, 401);
+            this.btnMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnMain.Location = new System.Drawing.Point(32, 401);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 14;
             this.btnMain.Text = "Izbornik";
+            this.btnMain.UseVisualStyleBackColor = false;
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // pbxLogo
@@ -174,7 +182,8 @@
             // 
             // FrmKorisnik
             // 
-            this.ClientSize = new System.Drawing.Size(1189, 579);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1003, 567);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.lblUserName);

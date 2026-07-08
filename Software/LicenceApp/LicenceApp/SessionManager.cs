@@ -4,6 +4,6 @@ namespace LicenceApp
 {
     public static class SessionManager
     {
-        public static Korisnik Korisnik { get; set; }
+        public static User User { get; set; }
     }
 }

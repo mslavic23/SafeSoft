@@ -63,11 +63,11 @@
     <Compile Include="FrmUredaj.Designer.cs">
       <DependentUpon>FrmUredaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmKorisnik.cs">
+    <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmKorisnik.Designer.cs">
-      <DependentUpon>FrmKorisnik.cs</DependentUpon>
+    <Compile Include="FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -94,12 +94,12 @@
       <DependentUpon>FrmZahtjev.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenceApp.Helpers\HashHelper.cs" />
-    <Compile Include="LicenceApp.Models\Korisnik.cs" />
+    <Compile Include="LicenceApp.Models\User.cs" />
     <Compile Include="LicenceApp.Models\Softver.cs" />
     <Compile Include="LicenceApp.Models\Uredaj.cs" />
     <Compile Include="LicenceApp.Models\Zahtjev.cs" />
     <Compile Include="LicenceApp.Repositories\IzvjestajRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\KorisnikRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\UserRepository.cs" />
     <Compile Include="LicenceApp.Repositories\SoftverRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UredajRepository.cs" />
     <Compile Include="LicenceApp.Repositories\ZahtjevRepository.cs" />
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="FrmIzvjestaj.resx">
       <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmKorisnik.resx">
-      <DependentUpon>FrmKorisnik.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

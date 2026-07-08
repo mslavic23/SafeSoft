@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp.Models
 {
-    public class Korisnik
+    public class User
     {
         public int ID_korisnik { get; set; }
         public string Ime { get; set; }

@@ -6,11 +6,11 @@ using LicenceApp.Helpers;
 
 namespace LicenceApp.Repositories
 {
-    public class KorisnikRepository
+    public class UserRepository
     {
-        public List<Korisnik> GetAll()
+        public List<User> GetAll()
         {
-            List<Korisnik> korisnici = new List<Korisnik>();
+            List<User> users = new List<User>();
 
             DB.OpenConnection();
             string query = "SELECT ID_korisnik, Ime, Prezime, Email, LozinkaHash, Uloga FROM Korisnik";
@@ -18,7 +18,7 @@ namespace LicenceApp.Repositories
 
             while (reader.Read())
             {
-                Korisnik korisnik = new Korisnik
+                User user = new User
                 {
                     ID_korisnik = (int)reader["ID_korisnik"],
                     Ime = reader["Ime"].ToString(),
@@ -27,24 +27,24 @@ namespace LicenceApp.Repositories
                     LozinkaHash = reader["LozinkaHash"].ToString(),
                     Uloga = reader["Uloga"].ToString()
                 };
-                korisnici.Add(korisnik);
+                users.Add(user);
             }
             DB.CloseConnection();
-            return korisnici;
+            return users;
         }
 
-        public Korisnik Login(string email, string lozinka)
+        public User Login(string email, string password)
         {
             DB.OpenConnection();
 
-            string hash = HashHelper.HashPassword(lozinka);
+            string hash = HashHelper.HashPassword(password);
             string query = $"SELECT ID_korisnik, Ime, Prezime, Email, LozinkaHash, Uloga FROM Korisnik WHERE Email = '{email}' AND LozinkaHash = '{hash}'";
             SqlDataReader reader = DB.GetDataReader(query);
 
-            Korisnik korisnik = null;
+            User user = null;
             if (reader.Read())
             {
-                korisnik = new Korisnik
+                user = new User
                 {
                     ID_korisnik = (int)reader["ID_korisnik"],
                     Ime = reader["Ime"].ToString(),
@@ -56,32 +56,32 @@ namespace LicenceApp.Repositories
             }
 
             DB.CloseConnection();
-            return korisnik;
+            return user;
         }
 
-        public bool Add(Korisnik korisnik)
+        public bool Add(User user)
         {
             DB.OpenConnection();
-            string hash = HashHelper.HashPassword(korisnik.LozinkaHash);
-            string query = $"INSERT INTO Korisnik (Ime, Prezime, Email, LozinkaHash, Uloga) VALUES ('{korisnik.Ime}', '{korisnik.Prezime}', '{korisnik.Email}', '{hash}', '{korisnik.Uloga}')";
+            string hash = HashHelper.HashPassword(user.LozinkaHash);
+            string query = $"INSERT INTO Korisnik (Ime, Prezime, Email, LozinkaHash, Uloga) VALUES ('{user.Ime}', '{user.Prezime}', '{user.Email}', '{hash}', '{user.Uloga}')";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
         }
 
-        public bool Update(Korisnik korisnik)
+        public bool Update(User user)
         {
             DB.OpenConnection();
 
             string query;
-            if (string.IsNullOrEmpty(korisnik.LozinkaHash))
+            if (string.IsNullOrEmpty(user.LozinkaHash))
             {
-                query = $"UPDATE Korisnik SET Ime = '{korisnik.Ime}', Prezime = '{korisnik.Prezime}', Email = '{korisnik.Email}', Uloga = '{korisnik.Uloga}' WHERE ID_korisnik = {korisnik.ID_korisnik}";
+                query = $"UPDATE Korisnik SET Ime = '{user.Ime}', Prezime = '{user.Prezime}', Email = '{user.Email}', Uloga = '{user.Uloga}' WHERE ID_korisnik = {user.ID_korisnik}";
             }
             else
             {
-                string hash = HashHelper.HashPassword(korisnik.LozinkaHash);
-                query = $"UPDATE Korisnik SET Ime = '{korisnik.Ime}', Prezime = '{korisnik.Prezime}', Email = '{korisnik.Email}', LozinkaHash = '{hash}', Uloga = '{korisnik.Uloga}' WHERE ID_korisnik = {korisnik.ID_korisnik}";
+                string hash = HashHelper.HashPassword(user.LozinkaHash);
+                query = $"UPDATE Korisnik SET Ime = '{user.Ime}', Prezime = '{user.Prezime}', Email = '{user.Email}', LozinkaHash = '{hash}', Uloga = '{user.Uloga}' WHERE ID_korisnik = {user.ID_korisnik}";
             }
 
             int affectedRows = DB.ExecuteCommand(query);

@@ -21,7 +21,6 @@ C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\bi
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\bin\Debug\LicenceApp.pdb
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.csproj.AssemblyReference.cache
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmIzvjestaj.resources
-C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmKorisnik.resources
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmLogin.resources
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmMain.resources
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmSoftver.resources
@@ -34,3 +33,4 @@ C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\ob
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.pdb
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\bin\Debug\DBLayer.dll
 C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.csproj.Up2Date
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp\obj\Debug\LicenceApp.FrmUser.resources

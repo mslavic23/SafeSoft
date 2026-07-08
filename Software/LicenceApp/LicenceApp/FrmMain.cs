@@ -40,7 +40,7 @@ namespace LicenceApp
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
-            FrmKorisnik frmKorisnik = new FrmKorisnik();
+            FrmUser frmKorisnik = new FrmUser();
             frmKorisnik.Show();
             this.Hide();
         }

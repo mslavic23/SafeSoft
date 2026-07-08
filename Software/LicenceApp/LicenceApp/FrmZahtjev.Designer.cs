@@ -44,7 +44,7 @@
             // cmbUserName
             // 
             this.cmbUserName.FormattingEnabled = true;
-            this.cmbUserName.Location = new System.Drawing.Point(473, 81);
+            this.cmbUserName.Location = new System.Drawing.Point(77, 384);
             this.cmbUserName.Name = "cmbUserName";
             this.cmbUserName.Size = new System.Drawing.Size(210, 24);
             this.cmbUserName.TabIndex = 1;
@@ -53,42 +53,42 @@
             // cmbSoftwareName
             // 
             this.cmbSoftwareName.FormattingEnabled = true;
-            this.cmbSoftwareName.Location = new System.Drawing.Point(473, 138);
+            this.cmbSoftwareName.Location = new System.Drawing.Point(699, 381);
             this.cmbSoftwareName.Name = "cmbSoftwareName";
-            this.cmbSoftwareName.Size = new System.Drawing.Size(210, 24);
+            this.cmbSoftwareName.Size = new System.Drawing.Size(259, 24);
             this.cmbSoftwareName.TabIndex = 2;
             this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.CmbSoftwareName_SelectedIndexChanged);
             // 
             // cmbDeviceName
             // 
             this.cmbDeviceName.FormattingEnabled = true;
-            this.cmbDeviceName.Location = new System.Drawing.Point(473, 110);
+            this.cmbDeviceName.Location = new System.Drawing.Point(376, 382);
             this.cmbDeviceName.Name = "cmbDeviceName";
-            this.cmbDeviceName.Size = new System.Drawing.Size(210, 24);
+            this.cmbDeviceName.Size = new System.Drawing.Size(252, 24);
             this.cmbDeviceName.TabIndex = 3;
             this.cmbDeviceName.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceName_SelectedIndexChanged);
             // 
             // txtRequestReason
             // 
-            this.txtRequestReason.Location = new System.Drawing.Point(473, 205);
+            this.txtRequestReason.Location = new System.Drawing.Point(521, 439);
             this.txtRequestReason.MaxLength = 100;
             this.txtRequestReason.Name = "txtRequestReason";
-            this.txtRequestReason.Size = new System.Drawing.Size(210, 22);
+            this.txtRequestReason.Size = new System.Drawing.Size(437, 22);
             this.txtRequestReason.TabIndex = 4;
             this.txtRequestReason.TextChanged += new System.EventHandler(this.TxtRequestReason_TextChanged);
             // 
             // dtpRequestDate
             // 
-            this.dtpRequestDate.Location = new System.Drawing.Point(473, 171);
+            this.dtpRequestDate.Location = new System.Drawing.Point(148, 440);
             this.dtpRequestDate.Name = "dtpRequestDate";
-            this.dtpRequestDate.Size = new System.Drawing.Size(210, 22);
+            this.dtpRequestDate.Size = new System.Drawing.Size(222, 22);
             this.dtpRequestDate.TabIndex = 5;
             this.dtpRequestDate.ValueChanged += new System.EventHandler(this.DtpRequestDate_ValueChanged);
             // 
             // lbSoftwareName
             // 
             this.lbSoftwareName.AutoSize = true;
-            this.lbSoftwareName.Location = new System.Drawing.Point(410, 149);
+            this.lbSoftwareName.Location = new System.Drawing.Point(641, 384);
             this.lbSoftwareName.Name = "lbSoftwareName";
             this.lbSoftwareName.Size = new System.Drawing.Size(52, 16);
             this.lbSoftwareName.TabIndex = 6;
@@ -98,7 +98,7 @@
             // lblDeviceName
             // 
             this.lblDeviceName.AutoSize = true;
-            this.lblDeviceName.Location = new System.Drawing.Point(410, 119);
+            this.lblDeviceName.Location = new System.Drawing.Point(316, 387);
             this.lblDeviceName.Name = "lblDeviceName";
             this.lblDeviceName.Size = new System.Drawing.Size(54, 16);
             this.lblDeviceName.TabIndex = 7;
@@ -108,7 +108,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(407, 84);
+            this.lblUserName.Location = new System.Drawing.Point(18, 387);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(57, 16);
             this.lblUserName.TabIndex = 9;
@@ -118,7 +118,7 @@
             // lblRequestReason
             // 
             this.lblRequestReason.AutoSize = true;
-            this.lblRequestReason.Location = new System.Drawing.Point(348, 208);
+            this.lblRequestReason.Location = new System.Drawing.Point(401, 445);
             this.lblRequestReason.Name = "lblRequestReason";
             this.lblRequestReason.Size = new System.Drawing.Size(114, 16);
             this.lblRequestReason.TabIndex = 10;
@@ -128,7 +128,7 @@
             // lblRequestDate
             // 
             this.lblRequestDate.AutoSize = true;
-            this.lblRequestDate.Location = new System.Drawing.Point(343, 175);
+            this.lblRequestDate.Location = new System.Drawing.Point(18, 445);
             this.lblRequestDate.Name = "lblRequestDate";
             this.lblRequestDate.Size = new System.Drawing.Size(124, 16);
             this.lblRequestDate.TabIndex = 11;
@@ -137,7 +137,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(689, 139);
+            this.btnEdit.Location = new System.Drawing.Point(741, 493);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 13;
@@ -147,7 +147,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(689, 168);
+            this.btnDelete.Location = new System.Drawing.Point(660, 493);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -157,7 +157,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(689, 110);
+            this.btnAdd.Location = new System.Drawing.Point(883, 493);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 15;
@@ -167,7 +167,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(689, 219);
+            this.btnMain.Location = new System.Drawing.Point(12, 516);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 17;
@@ -188,20 +188,21 @@
             this.colUredaj,
             this.colRazlog,
             this.colDatum});
-            this.dgvRequestApp.Location = new System.Drawing.Point(21, 82);
+            this.dgvRequestApp.Location = new System.Drawing.Point(21, 95);
             this.dgvRequestApp.MultiSelect = false;
             this.dgvRequestApp.Name = "dgvRequestApp";
             this.dgvRequestApp.ReadOnly = true;
             this.dgvRequestApp.RowHeadersWidth = 25;
             this.dgvRequestApp.RowTemplate.Height = 24;
             this.dgvRequestApp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRequestApp.Size = new System.Drawing.Size(316, 164);
+            this.dgvRequestApp.Size = new System.Drawing.Size(937, 267);
             this.dgvRequestApp.TabIndex = 19;
             this.dgvRequestApp.SelectionChanged += new System.EventHandler(this.DgvRequestApp_SelectionChanged);
             // 
             // colZahtjevId
             // 
             this.colZahtjevId.HeaderText = "ID";
+            this.colZahtjevId.MinimumWidth = 6;
             this.colZahtjevId.Name = "colZahtjevId";
             this.colZahtjevId.ReadOnly = true;
             this.colZahtjevId.Visible = false;
@@ -209,39 +210,44 @@
             // colKorisnik
             // 
             this.colKorisnik.HeaderText = "Korisnik";
+            this.colKorisnik.MinimumWidth = 6;
             this.colKorisnik.Name = "colKorisnik";
             this.colKorisnik.ReadOnly = true;
             // 
             // colSoftver
             // 
             this.colSoftver.HeaderText = "Softver";
+            this.colSoftver.MinimumWidth = 6;
             this.colSoftver.Name = "colSoftver";
             this.colSoftver.ReadOnly = true;
             // 
             // colUredaj
             // 
             this.colUredaj.HeaderText = "Uređaj";
+            this.colUredaj.MinimumWidth = 6;
             this.colUredaj.Name = "colUredaj";
             this.colUredaj.ReadOnly = true;
             // 
             // colRazlog
             // 
             this.colRazlog.HeaderText = "Razlog";
+            this.colRazlog.MinimumWidth = 6;
             this.colRazlog.Name = "colRazlog";
             this.colRazlog.ReadOnly = true;
             // 
             // colDatum
             // 
             this.colDatum.HeaderText = "Datum";
+            this.colDatum.MinimumWidth = 6;
             this.colDatum.Name = "colDatum";
             this.colDatum.ReadOnly = true;
             // 
             // pbxLogo
             // 
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(12, 39);
+            this.pbxLogo.Location = new System.Drawing.Point(376, 10);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(335, 37);
+            this.pbxLogo.Size = new System.Drawing.Size(211, 79);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 20;
             this.pbxLogo.TabStop = false;
@@ -251,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 290);
+            this.ClientSize = new System.Drawing.Size(1003, 567);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.dgvRequestApp);
             this.Controls.Add(this.btnMain);
