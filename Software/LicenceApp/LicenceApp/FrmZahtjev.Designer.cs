@@ -29,8 +29,15 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
-            this.lstRequestApp = new System.Windows.Forms.ListBox();
+            this.dgvRequestApp = new System.Windows.Forms.DataGridView();
+            this.colZahtjevId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKorisnik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoftver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUredaj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRazlog = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDatum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequestApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,15 +175,66 @@
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
-            // lstRequestApp
+            // dgvRequestApp
             // 
-            this.lstRequestApp.FormattingEnabled = true;
-            this.lstRequestApp.ItemHeight = 16;
-            this.lstRequestApp.Location = new System.Drawing.Point(21, 82);
-            this.lstRequestApp.Name = "lstRequestApp";
-            this.lstRequestApp.Size = new System.Drawing.Size(316, 164);
-            this.lstRequestApp.TabIndex = 19;
-            this.lstRequestApp.SelectedIndexChanged += new System.EventHandler(this.LstRequestApp_SelectedIndexChanged);
+            this.dgvRequestApp.AllowUserToAddRows = false;
+            this.dgvRequestApp.AllowUserToDeleteRows = false;
+            this.dgvRequestApp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRequestApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRequestApp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colZahtjevId,
+            this.colKorisnik,
+            this.colSoftver,
+            this.colUredaj,
+            this.colRazlog,
+            this.colDatum});
+            this.dgvRequestApp.Location = new System.Drawing.Point(21, 82);
+            this.dgvRequestApp.MultiSelect = false;
+            this.dgvRequestApp.Name = "dgvRequestApp";
+            this.dgvRequestApp.ReadOnly = true;
+            this.dgvRequestApp.RowHeadersWidth = 25;
+            this.dgvRequestApp.RowTemplate.Height = 24;
+            this.dgvRequestApp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRequestApp.Size = new System.Drawing.Size(316, 164);
+            this.dgvRequestApp.TabIndex = 19;
+            this.dgvRequestApp.SelectionChanged += new System.EventHandler(this.DgvRequestApp_SelectionChanged);
+            // 
+            // colZahtjevId
+            // 
+            this.colZahtjevId.HeaderText = "ID";
+            this.colZahtjevId.Name = "colZahtjevId";
+            this.colZahtjevId.ReadOnly = true;
+            this.colZahtjevId.Visible = false;
+            // 
+            // colKorisnik
+            // 
+            this.colKorisnik.HeaderText = "Korisnik";
+            this.colKorisnik.Name = "colKorisnik";
+            this.colKorisnik.ReadOnly = true;
+            // 
+            // colSoftver
+            // 
+            this.colSoftver.HeaderText = "Softver";
+            this.colSoftver.Name = "colSoftver";
+            this.colSoftver.ReadOnly = true;
+            // 
+            // colUredaj
+            // 
+            this.colUredaj.HeaderText = "Uređaj";
+            this.colUredaj.Name = "colUredaj";
+            this.colUredaj.ReadOnly = true;
+            // 
+            // colRazlog
+            // 
+            this.colRazlog.HeaderText = "Razlog";
+            this.colRazlog.Name = "colRazlog";
+            this.colRazlog.ReadOnly = true;
+            // 
+            // colDatum
+            // 
+            this.colDatum.HeaderText = "Datum";
+            this.colDatum.Name = "colDatum";
+            this.colDatum.ReadOnly = true;
             // 
             // pbxLogo
             // 
@@ -195,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 290);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstRequestApp);
+            this.Controls.Add(this.dgvRequestApp);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
@@ -214,6 +272,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zahtjevi";
             this.Load += new System.EventHandler(this.FrmZahtjev_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRequestApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,7 +293,13 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnMain;
-        private System.Windows.Forms.ListBox lstRequestApp;
+        private System.Windows.Forms.DataGridView dgvRequestApp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colZahtjevId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKorisnik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoftver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUredaj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRazlog;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDatum;
         private System.Windows.Forms.PictureBox pbxLogo;
     }
 }

@@ -31,17 +31,17 @@
             // dgvReport
             // 
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReport.Location = new System.Drawing.Point(12, 110);
+            this.dgvReport.Location = new System.Drawing.Point(6, 371);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowHeadersWidth = 51;
             this.dgvReport.RowTemplate.Height = 24;
-            this.dgvReport.Size = new System.Drawing.Size(776, 191);
+            this.dgvReport.Size = new System.Drawing.Size(1006, 215);
             this.dgvReport.TabIndex = 0;
             this.dgvReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReport_CellContentClick);
             // 
             // btnRefreshReport
             // 
-            this.btnRefreshReport.Location = new System.Drawing.Point(511, 350);
+            this.btnRefreshReport.Location = new System.Drawing.Point(922, 97);
             this.btnRefreshReport.Name = "btnRefreshReport";
             this.btnRefreshReport.Size = new System.Drawing.Size(75, 23);
             this.btnRefreshReport.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(713, 320);
+            this.btnMain.Location = new System.Drawing.Point(922, 36);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 3;
@@ -63,17 +63,17 @@
             // 
             this.lblFrmReportTitle.AutoSize = true;
             this.lblFrmReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblFrmReportTitle.Location = new System.Drawing.Point(221, 67);
+            this.lblFrmReportTitle.Location = new System.Drawing.Point(401, 97);
             this.lblFrmReportTitle.Name = "lblFrmReportTitle";
-            this.lblFrmReportTitle.Size = new System.Drawing.Size(304, 29);
+            this.lblFrmReportTitle.Size = new System.Drawing.Size(197, 29);
             this.lblFrmReportTitle.TabIndex = 5;
-            this.lblFrmReportTitle.Text = "Izvještaj zahtjeva za licence";
+            this.lblFrmReportTitle.Text = "Izvještaj zahtjeva ";
             this.lblFrmReportTitle.Click += new System.EventHandler(this.LblFrmReportTitle_Click);
             // 
             // lblTotalRequests
             // 
             this.lblTotalRequests.AutoSize = true;
-            this.lblTotalRequests.Location = new System.Drawing.Point(289, 401);
+            this.lblTotalRequests.Location = new System.Drawing.Point(466, 589);
             this.lblTotalRequests.Name = "lblTotalRequests";
             this.lblTotalRequests.Size = new System.Drawing.Size(120, 16);
             this.lblTotalRequests.TabIndex = 6;
@@ -82,16 +82,16 @@
             // 
             // dtpDateFrom
             // 
-            this.dtpDateFrom.Location = new System.Drawing.Point(274, 320);
+            this.dtpDateFrom.Location = new System.Drawing.Point(89, 57);
             this.dtpDateFrom.Name = "dtpDateFrom";
-            this.dtpDateFrom.Size = new System.Drawing.Size(200, 22);
+            this.dtpDateFrom.Size = new System.Drawing.Size(379, 22);
             this.dtpDateFrom.TabIndex = 7;
             this.dtpDateFrom.ValueChanged += new System.EventHandler(this.DtpDateFrom_ValueChanged);
             // 
             // lblDateTIl
             // 
             this.lblDateTIl.AutoSize = true;
-            this.lblDateTIl.Location = new System.Drawing.Point(237, 353);
+            this.lblDateTIl.Location = new System.Drawing.Point(512, 63);
             this.lblDateTIl.Name = "lblDateTIl";
             this.lblDateTIl.Size = new System.Drawing.Size(28, 16);
             this.lblDateTIl.TabIndex = 8;
@@ -101,7 +101,7 @@
             // lblDateFrom
             // 
             this.lblDateFrom.AutoSize = true;
-            this.lblDateFrom.Location = new System.Drawing.Point(237, 323);
+            this.lblDateFrom.Location = new System.Drawing.Point(52, 62);
             this.lblDateFrom.Name = "lblDateFrom";
             this.lblDateFrom.Size = new System.Drawing.Size(31, 16);
             this.lblDateFrom.TabIndex = 9;
@@ -110,7 +110,7 @@
             // 
             // btnFilterReport
             // 
-            this.btnFilterReport.Location = new System.Drawing.Point(511, 320);
+            this.btnFilterReport.Location = new System.Drawing.Point(922, 68);
             this.btnFilterReport.Name = "btnFilterReport";
             this.btnFilterReport.Size = new System.Drawing.Size(75, 23);
             this.btnFilterReport.TabIndex = 10;
@@ -120,9 +120,9 @@
             // 
             // dtpDateTil
             // 
-            this.dtpDateTil.Location = new System.Drawing.Point(274, 353);
+            this.dtpDateTil.Location = new System.Drawing.Point(546, 58);
             this.dtpDateTil.Name = "dtpDateTil";
-            this.dtpDateTil.Size = new System.Drawing.Size(200, 22);
+            this.dtpDateTil.Size = new System.Drawing.Size(338, 22);
             this.dtpDateTil.TabIndex = 11;
             this.dtpDateTil.ValueChanged += new System.EventHandler(this.DtpDateTil_ValueChanged);
             // 
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1021, 614);
             this.Controls.Add(this.dtpDateTil);
             this.Controls.Add(this.btnFilterReport);
             this.Controls.Add(this.lblDateFrom);

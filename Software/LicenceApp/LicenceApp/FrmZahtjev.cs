@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using LicenceApp.Models;
 using LicenceApp.Repositories;
@@ -46,10 +47,27 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            lstRequestApp.Items.Clear();
-            foreach (var zahtjev in _zahtjevRepository.GetAll())
+            var zahtjevi = _zahtjevRepository.GetAll();
+            var korisnici = _korisnikRepository.GetAll();
+            var softveri = _softverRepository.GetAll();
+            var uredaji = _uredajRepository.GetAll();
+
+            dgvRequestApp.Rows.Clear();
+
+            foreach (var zahtjev in zahtjevi)
             {
-                lstRequestApp.Items.Add(zahtjev);
+                var korisnik = korisnici.FirstOrDefault(k => k.ID_korisnik == zahtjev.ID_korisnik);
+                var softver = softveri.FirstOrDefault(s => s.ID_softver == zahtjev.ID_softver);
+                var uredaj = uredaji.FirstOrDefault(u => u.ID_uredaj == zahtjev.ID_uredaj);
+
+                dgvRequestApp.Rows.Add(
+                    zahtjev.ID_zahtjev,
+                    korisnik != null ? $"{korisnik.Ime} {korisnik.Prezime}" : "",
+                    softver != null ? softver.Naziv : "",
+                    uredaj != null ? uredaj.Naziv_racunala : "",
+                    zahtjev.Razlog_koristenja,
+                    zahtjev.Datum_podnosenja.ToString("dd.MM.yyyy.")
+                );
             }
         }
 
@@ -170,9 +188,16 @@ namespace LicenceApp
             }
         }
 
-        private void LstRequestApp_SelectedIndexChanged(object sender, EventArgs e)
+        private void DgvRequestApp_SelectionChanged(object sender, EventArgs e)
         {
-            _odabraniZahtjev = lstRequestApp.SelectedItem as Zahtjev;
+            if (dgvRequestApp.CurrentRow == null)
+            {
+                _odabraniZahtjev = null;
+                return;
+            }
+
+            int id = (int)dgvRequestApp.CurrentRow.Cells["colZahtjevId"].Value;
+            _odabraniZahtjev = _zahtjevRepository.GetAll().FirstOrDefault(z => z.ID_zahtjev == id);
         }
 
         private void BtnMain_Click(object sender, EventArgs e)
