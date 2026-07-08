@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NG8MV2j3/HE=",
+  "success": true,
+  "projectFilePath": "C:\\Projekti\\rwa26-individualprojects-mslavic23\\Software\\LicenceApp\\LicenceApp.Repositories\\LicenceApp.Repositories.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\megis\\.nuget\\packages\\system.data.sqlclient\\4.9.1\\system.data.sqlclient.4.9.1.nupkg.sha512"
+  ],
+  "logs": []
+}

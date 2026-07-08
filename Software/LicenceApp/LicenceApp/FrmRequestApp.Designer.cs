@@ -137,7 +137,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(677, 493);
+            this.btnEdit.Location = new System.Drawing.Point(818, 493);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 13;
@@ -147,7 +147,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(758, 493);
+            this.btnDelete.Location = new System.Drawing.Point(737, 493);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -258,7 +258,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1021, 614);
+            this.ClientSize = new System.Drawing.Size(1021, 545);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.dgvRequestApp);
             this.Controls.Add(this.btnMain);

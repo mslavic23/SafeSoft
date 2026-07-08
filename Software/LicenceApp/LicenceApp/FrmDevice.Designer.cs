@@ -106,7 +106,7 @@
             // btnMain
             // 
             this.btnMain.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMain.Location = new System.Drawing.Point(24, 415);
+            this.btnMain.Location = new System.Drawing.Point(12, 532);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 11;
@@ -153,7 +153,7 @@
             this.dgvDevices.Name = "dgvDevices";
             this.dgvDevices.RowHeadersWidth = 51;
             this.dgvDevices.RowTemplate.Height = 24;
-            this.dgvDevices.Size = new System.Drawing.Size(355, 246);
+            this.dgvDevices.Size = new System.Drawing.Size(355, 344);
             this.dgvDevices.TabIndex = 17;
             this.dgvDevices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDevices_CellContentClick);
             this.dgvDevices.SelectionChanged += new System.EventHandler(this.DgvDevices_SelectionChanged);

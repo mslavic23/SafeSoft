@@ -1,0 +1,6 @@
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.AssemblyInfoInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.AssemblyInfo.cs
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.csproj.CoreCompileInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.sourcelink.json
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net10.0\LicenceApp.Repositories.csproj.AssemblyReference.cache

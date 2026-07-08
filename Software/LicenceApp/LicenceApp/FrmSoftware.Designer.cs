@@ -125,7 +125,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(914, 529);
+            this.btnMain.Location = new System.Drawing.Point(12, 576);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(77, 26);
             this.btnMain.TabIndex = 13;
@@ -172,7 +172,7 @@
             this.dgvSoftwares.Name = "dgvSoftwares";
             this.dgvSoftwares.RowHeadersWidth = 51;
             this.dgvSoftwares.RowTemplate.Height = 24;
-            this.dgvSoftwares.Size = new System.Drawing.Size(977, 396);
+            this.dgvSoftwares.Size = new System.Drawing.Size(977, 443);
             this.dgvSoftwares.TabIndex = 19;
             this.dgvSoftwares.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSoftwares_CellContentClick);
             this.dgvSoftwares.SelectionChanged += new System.EventHandler(this.DgvSoftwares_SelectionChanged);

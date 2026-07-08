@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DBLayer">
       <HintPath>LicenceApp.DIIs\DBLayer.dll</HintPath>
@@ -39,6 +42,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.9.1\lib\net462\System.Data.SqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,16 +100,6 @@
     <Compile Include="FrmRequestApp.Designer.cs">
       <DependentUpon>FrmRequestApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="LicenceApp.Helpers\HashHelper.cs" />
-    <Compile Include="LicenceApp.Models\User.cs" />
-    <Compile Include="LicenceApp.Models\Software.cs" />
-    <Compile Include="LicenceApp.Models\Device.cs" />
-    <Compile Include="LicenceApp.Models\RequestApp.cs" />
-    <Compile Include="LicenceApp.Repositories\ReportRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\UserRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\SoftwareRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\DeviceRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\RequestAppRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
@@ -137,6 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,6 +160,23 @@
     <Content Include="LicenceApp.Resources\SafeSoft_logo.png" />
     <Content Include="LicenceApp.Resources\user_icon.png" />
     <Content Include="LicenceApp.Resources\user_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LicenceApp.Helpers\LicenceApp.Helpers.csproj">
+      <Project>{9811a9bb-6999-4ff6-9eed-917d072612fb}</Project>
+      <Name>LicenceApp.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenceApp.Models\LicenceApp.Models.csproj">
+      <Project>{5c39b169-5eff-4224-a2ea-0165b57b73a7}</Project>
+      <Name>LicenceApp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenceApp.Repositories\LicenceApp.Repositories.csproj">
+      <Project>{23884d60-bcae-455d-aa2e-f7a01b03a6cf}</Project>
+      <Name>LicenceApp.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

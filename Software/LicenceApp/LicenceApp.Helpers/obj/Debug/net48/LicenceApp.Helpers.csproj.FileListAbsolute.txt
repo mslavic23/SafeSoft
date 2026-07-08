@@ -1,0 +1,10 @@
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\bin\Debug\net48\LicenceApp.Helpers.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\bin\Debug\net48\LicenceApp.Helpers.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.csproj.AssemblyReference.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.AssemblyInfoInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.AssemblyInfo.cs
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.csproj.CoreCompileInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.sourcelink.json
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Helpers\obj\Debug\net48\LicenceApp.Helpers.pdb

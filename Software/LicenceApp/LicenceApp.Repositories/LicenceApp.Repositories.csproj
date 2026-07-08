@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LicenceApp.Helpers\LicenceApp.Helpers.csproj" />
+		<ProjectReference Include="..\LicenceApp.Models\LicenceApp.Models.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="DBLayer">
+			<HintPath>..\LicenceApp\LicenceApp.DIIs\DBLayer.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>

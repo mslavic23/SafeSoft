@@ -153,7 +153,7 @@
             // btnMain
             // 
             this.btnMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnMain.Location = new System.Drawing.Point(12, 401);
+            this.btnMain.Location = new System.Drawing.Point(12, 461);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 14;
@@ -164,7 +164,7 @@
             // pbxLogo
             // 
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(66, 77);
+            this.pbxLogo.Location = new System.Drawing.Point(21, 57);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(974, 119);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -182,7 +182,7 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(473, 162);
+            this.dgvUsers.Size = new System.Drawing.Size(473, 210);
             this.dgvUsers.TabIndex = 17;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsers_CellContentClick);
             this.dgvUsers.SelectionChanged += new System.EventHandler(this.DgvUsers_SelectionChanged);
@@ -190,7 +190,7 @@
             // FrmUser
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(953, 530);
+            this.ClientSize = new System.Drawing.Size(953, 496);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lblUserName);

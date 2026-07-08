@@ -1,0 +1,17 @@
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Repositories.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Repositories.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\System.Data.SqlClient.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\DBLayer.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Helpers.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Models.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Helpers.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\bin\Debug\net48\LicenceApp.Models.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.csproj.AssemblyReference.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.AssemblyInfoInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.AssemblyInfo.cs
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.csproj.CoreCompileInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.sourcelink.json
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceA.BA6CA982.Up2Date
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Repositories\obj\Debug\net48\LicenceApp.Repositories.pdb

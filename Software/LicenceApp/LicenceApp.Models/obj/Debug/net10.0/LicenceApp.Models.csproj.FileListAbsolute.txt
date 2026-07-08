@@ -1,0 +1,13 @@
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\bin\Debug\net10.0\LicenceApp.Models.deps.json
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\bin\Debug\net10.0\LicenceApp.Models.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\bin\Debug\net10.0\LicenceApp.Models.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.AssemblyInfoInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.AssemblyInfo.cs
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.csproj.CoreCompileInputs.cache
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.sourcelink.json
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\refint\LicenceApp.Models.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.pdb
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\ref\LicenceApp.Models.dll
+C:\Projekti\rwa26-individualprojects-mslavic23\Software\LicenceApp\LicenceApp.Models\obj\Debug\net10.0\LicenceApp.Models.csproj.AssemblyReference.cache

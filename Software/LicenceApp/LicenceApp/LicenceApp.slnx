@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="../LicenceApp.Helpers/LicenceApp.Helpers.csproj" Id="9811a9bb-6999-4ff6-9eed-917d072612fb" />
+  <Project Path="../LicenceApp.Models/LicenceApp.Models.csproj" Id="5c39b169-5eff-4224-a2ea-0165b57b73a7" />
+  <Project Path="../LicenceApp.Repositories/LicenceApp.Repositories.csproj" Id="23884d60-bcae-455d-aa2e-f7a01b03a6cf" />
   <Project Path="LicenceApp.csproj" Id="d744beac-590e-45ed-8f8e-7b73375c0743" />
 </Solution>
