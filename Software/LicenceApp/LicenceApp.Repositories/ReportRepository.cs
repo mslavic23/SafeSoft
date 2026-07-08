@@ -8,6 +8,7 @@ namespace LicenceApp.Repositories
     public class ReportLine
     {
         public int Id { get; set; }
+        public int UserId { get; set; }
         public string User { get; set; }
         public string Software { get; set; }
         public string Version { get; set; }
@@ -28,7 +29,7 @@ namespace LicenceApp.Repositories
         private readonly SoftwareRepository _softwareRepository = new SoftwareRepository();
         private readonly DeviceRepository _deviceRepository = new DeviceRepository();
 
-        public List<ReportLine> GetReport(DateTime? from = null, DateTime? to = null)
+        public List<ReportLine> GetReport(DateTime? from = null, DateTime? to = null, int? userId = null)
         {
             var requests = _requestRepository.GetAll();
             var users = _userRepository.GetAll();
@@ -42,6 +43,7 @@ namespace LicenceApp.Repositories
                          select new ReportLine
                          {
                              Id = r.ID_zahtjev,
+                             UserId = u.ID_korisnik,
                              User = u.Ime + " " + u.Prezime,
                              Software = s.Naziv,
                              Version = s.Verzija,
@@ -59,6 +61,8 @@ namespace LicenceApp.Repositories
                 query = query.Where(x => x.Date >= from.Value);
             if (to.HasValue)
                 query = query.Where(x => x.Date <= to.Value);
+            if (userId.HasValue)
+                query = query.Where(x => x.UserId == userId.Value);
 
             return query.ToList();
         }

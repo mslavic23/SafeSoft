@@ -89,7 +89,11 @@ namespace LicenceApp
 
         private void RefreshReport()
         {
-            var items = _reportRepository.GetReport();
+            bool isAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
+
+            var items = isAdmin
+                ? _reportRepository.GetReport()
+                : _reportRepository.GetReport(userId: SessionManager.User.ID_korisnik);
 
             if (items.Count > 0)
             {
@@ -130,6 +134,8 @@ namespace LicenceApp
                 dgvReport.Columns["AvailableSeats"].HeaderText = "Slobodna mjesta";
             if (dgvReport.Columns.Contains("Id"))
                 dgvReport.Columns["Id"].Visible = false;
+            if (dgvReport.Columns.Contains("UserId"))
+                dgvReport.Columns["UserId"].Visible = false;
 
             lblTotalRequests.Text = $"Ukupno zahtjeva: {items.Count}";
 
@@ -175,6 +181,8 @@ namespace LicenceApp
 
         private void BtnFilter_Click(object sender, EventArgs e)
         {
+            bool isAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
+
             DateTime fromDate = dtpDateFrom.Value.Date;
             DateTime toDate = dtpDateTil.Value.Date.AddDays(1).AddTicks(-1);
 
@@ -184,7 +192,10 @@ namespace LicenceApp
                 return;
             }
 
-            var items = _reportRepository.GetReport(fromDate, toDate);
+            var items = isAdmin
+                ? _reportRepository.GetReport(fromDate, toDate)
+                : _reportRepository.GetReport(fromDate, toDate, SessionManager.User.ID_korisnik);
+
             DisplayReport(items);
         }
 

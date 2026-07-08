@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LicenceApp.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+038c909ed106ed49bb735e9c40ab29a35ac19eb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb5d536ca238f655372838261e543c17bf2f8dcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("LicenceApp.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LicenceApp.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
