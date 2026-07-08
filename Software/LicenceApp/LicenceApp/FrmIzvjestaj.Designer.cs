@@ -31,11 +31,11 @@
             // dgvReport
             // 
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReport.Location = new System.Drawing.Point(6, 371);
+            this.dgvReport.Location = new System.Drawing.Point(6, 561);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowHeadersWidth = 51;
             this.dgvReport.RowTemplate.Height = 24;
-            this.dgvReport.Size = new System.Drawing.Size(1006, 215);
+            this.dgvReport.Size = new System.Drawing.Size(1006, 25);
             this.dgvReport.TabIndex = 0;
             this.dgvReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvReport_CellContentClick);
             // 

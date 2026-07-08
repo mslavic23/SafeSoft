@@ -4,19 +4,20 @@ using System.Linq;
 
 namespace LicenceApp.Repositories
 {
-    public class IzvjestajStavka
+    public class ReportLine
     {
-        public int ID { get; set; }
-        public string Korisnik { get; set; }
-        public string Softver { get; set; }
-        public string Verzija { get; set; }
-        public string Uredaj { get; set; }
-        public string Lokacija { get; set; }
-        public string Razlog { get; set; }
-        public DateTime Datum { get; set; }
-        public int UkupnoMjesta { get; set; }
-        public int ZauzetaMjesta { get; set; }
-        public int SlobodnaMjesta { get; set; }
+        public int Id { get; set; }
+        public string User { get; set; }
+        public string Software { get; set; }
+        public string Version { get; set; }
+        public string LicenceType { get; set; }
+        public string Device { get; set; }
+        public string Location { get; set; }
+        public string Reason { get; set; }
+        public DateTime Date { get; set; }
+        public int TotalSeats { get; set; }
+        public int OccupiedSeats { get; set; }
+        public int AvailableSeats { get; set; }
     }
 
     public class IzvjestajRepository
@@ -26,7 +27,7 @@ namespace LicenceApp.Repositories
         private readonly SoftverRepository _softverRepository = new SoftverRepository();
         private readonly UredajRepository _uredajRepository = new UredajRepository();
 
-        public List<IzvjestajStavka> GetReport(DateTime? od = null, DateTime? do_ = null)
+        public List<ReportLine> GetReport(DateTime? od = null, DateTime? do_ = null)
         {
             var zahtjevi = _zahtjevRepository.GetAll();
             var korisnici = _korisnikRepository.GetAll();
@@ -37,25 +38,26 @@ namespace LicenceApp.Repositories
                          join k in korisnici on z.ID_korisnik equals k.ID_korisnik
                          join s in softveri on z.ID_softver equals s.ID_softver
                          join u in uredaji on z.ID_uredaj equals u.ID_uredaj
-                         select new IzvjestajStavka
+                         select new ReportLine
                          {
-                             ID = z.ID_zahtjev,
-                             Korisnik = k.Ime + " " + k.Prezime,
-                             Softver = s.Naziv,
-                             Verzija = s.Verzija,
-                             Uredaj = u.Naziv_racunala,
-                             Lokacija = u.Lokacija,
-                             Razlog = z.Razlog_koristenja,
-                             Datum = z.Datum_podnosenja,
-                             UkupnoMjesta = s.Ukupno_mjesta,
-                             ZauzetaMjesta = zahtjevi.Count(zz => zz.ID_softver == s.ID_softver),
-                             SlobodnaMjesta = s.Ukupno_mjesta - zahtjevi.Count(zz => zz.ID_softver == s.ID_softver)
+                             Id = z.ID_zahtjev,
+                             User = k.Ime + " " + k.Prezime,
+                             Software = s.Naziv,
+                             Version = s.Verzija,
+                             LicenceType = s.Tip_licence,
+                             Device = u.Naziv_racunala,
+                             Location = u.Lokacija,
+                             Reason = z.Razlog_koristenja,
+                             Date = z.Datum_podnosenja,
+                             TotalSeats = s.Ukupno_mjesta,
+                             OccupiedSeats = zahtjevi.Count(zz => zz.ID_softver == s.ID_softver),
+                             AvailableSeats = s.Ukupno_mjesta - zahtjevi.Count(zz => zz.ID_softver == s.ID_softver)
                          }).AsQueryable();
 
             if (od.HasValue)
-                query = query.Where(x => x.Datum >= od.Value);
+                query = query.Where(x => x.Date >= od.Value);
             if (do_.HasValue)
-                query = query.Where(x => x.Datum <= do_.Value);
+                query = query.Where(x => x.Date <= do_.Value);
 
             return query.ToList();
         }
