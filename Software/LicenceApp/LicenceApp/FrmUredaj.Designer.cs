@@ -32,17 +32,17 @@
             // 
             // txtDeviceName
             // 
-            this.txtDeviceName.Location = new System.Drawing.Point(490, 120);
+            this.txtDeviceName.Location = new System.Drawing.Point(490, 228);
             this.txtDeviceName.MaxLength = 20;
             this.txtDeviceName.Name = "txtDeviceName";
-            this.txtDeviceName.Size = new System.Drawing.Size(383, 22);
+            this.txtDeviceName.Size = new System.Drawing.Size(364, 22);
             this.txtDeviceName.TabIndex = 1;
             this.txtDeviceName.TextChanged += new System.EventHandler(this.TxtDeviceName_TextChanged);
             // 
             // lblDeviceName
             // 
             this.lblDeviceName.AutoSize = true;
-            this.lblDeviceName.Location = new System.Drawing.Point(385, 123);
+            this.lblDeviceName.Location = new System.Drawing.Point(385, 234);
             this.lblDeviceName.Name = "lblDeviceName";
             this.lblDeviceName.Size = new System.Drawing.Size(99, 16);
             this.lblDeviceName.TabIndex = 4;
@@ -52,7 +52,7 @@
             // lblDeviceLocation
             // 
             this.lblDeviceLocation.AutoSize = true;
-            this.lblDeviceLocation.Location = new System.Drawing.Point(423, 151);
+            this.lblDeviceLocation.Location = new System.Drawing.Point(423, 264);
             this.lblDeviceLocation.Name = "lblDeviceLocation";
             this.lblDeviceLocation.Size = new System.Drawing.Size(61, 16);
             this.lblDeviceLocation.TabIndex = 5;
@@ -62,7 +62,7 @@
             // lblDeviceType
             // 
             this.lblDeviceType.AutoSize = true;
-            this.lblDeviceType.Location = new System.Drawing.Point(405, 184);
+            this.lblDeviceType.Location = new System.Drawing.Point(405, 289);
             this.lblDeviceType.Name = "lblDeviceType";
             this.lblDeviceType.Size = new System.Drawing.Size(79, 16);
             this.lblDeviceType.TabIndex = 6;
@@ -71,60 +71,66 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(897, 182);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdd.Location = new System.Drawing.Point(897, 290);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Dodaj";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(897, 128);
+            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEdit.Location = new System.Drawing.Point(897, 231);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Uredi";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(897, 157);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDelete.Location = new System.Drawing.Point(897, 261);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Obriši";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(12, 523);
+            this.btnMain.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMain.Location = new System.Drawing.Point(24, 415);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 11;
             this.btnMain.Text = "Izbornik";
-            this.btnMain.UseVisualStyleBackColor = true;
+            this.btnMain.UseVisualStyleBackColor = false;
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
             // lstDevices
             // 
+            this.lstDevices.BackColor = System.Drawing.Color.LightSteelBlue;
             this.lstDevices.FormattingEnabled = true;
             this.lstDevices.ItemHeight = 16;
-            this.lstDevices.Location = new System.Drawing.Point(12, 81);
+            this.lstDevices.Location = new System.Drawing.Point(24, 145);
             this.lstDevices.Name = "lstDevices";
-            this.lstDevices.Size = new System.Drawing.Size(346, 436);
+            this.lstDevices.Size = new System.Drawing.Size(325, 260);
             this.lstDevices.TabIndex = 13;
             this.lstDevices.SelectedIndexChanged += new System.EventHandler(this.LstDevices_SelectedIndexChanged);
             // 
             // pbxLogo
             // 
+            this.pbxLogo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
             this.pbxLogo.Location = new System.Drawing.Point(12, 27);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(237, 48);
+            this.pbxLogo.Size = new System.Drawing.Size(176, 48);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 14;
             this.pbxLogo.TabStop = false;
@@ -133,18 +139,18 @@
             // cmbDeviceLocation
             // 
             this.cmbDeviceLocation.FormattingEnabled = true;
-            this.cmbDeviceLocation.Location = new System.Drawing.Point(490, 148);
+            this.cmbDeviceLocation.Location = new System.Drawing.Point(490, 256);
             this.cmbDeviceLocation.Name = "cmbDeviceLocation";
-            this.cmbDeviceLocation.Size = new System.Drawing.Size(383, 24);
+            this.cmbDeviceLocation.Size = new System.Drawing.Size(364, 24);
             this.cmbDeviceLocation.TabIndex = 15;
             this.cmbDeviceLocation.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceLocation_SelectedIndexChanged);
             // 
             // cmbDeviceType
             // 
             this.cmbDeviceType.FormattingEnabled = true;
-            this.cmbDeviceType.Location = new System.Drawing.Point(490, 181);
+            this.cmbDeviceType.Location = new System.Drawing.Point(490, 286);
             this.cmbDeviceType.Name = "cmbDeviceType";
-            this.cmbDeviceType.Size = new System.Drawing.Size(383, 24);
+            this.cmbDeviceType.Size = new System.Drawing.Size(364, 24);
             this.cmbDeviceType.TabIndex = 16;
             this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceType_SelectedIndexChanged);
             // 
@@ -152,6 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1003, 567);
             this.Controls.Add(this.cmbDeviceType);
             this.Controls.Add(this.cmbDeviceLocation);

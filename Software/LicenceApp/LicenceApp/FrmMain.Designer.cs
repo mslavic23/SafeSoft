@@ -27,52 +27,57 @@
             // 
             // btnSoftwares
             // 
+            this.btnSoftwares.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSoftwares.Location = new System.Drawing.Point(237, 156);
             this.btnSoftwares.Name = "btnSoftwares";
             this.btnSoftwares.Size = new System.Drawing.Size(145, 62);
             this.btnSoftwares.TabIndex = 0;
             this.btnSoftwares.Text = "Softveri";
-            this.btnSoftwares.UseVisualStyleBackColor = true;
+            this.btnSoftwares.UseVisualStyleBackColor = false;
             this.btnSoftwares.Click += new System.EventHandler(this.Button1_Click);
             // 
             // btnRequestApp
             // 
+            this.btnRequestApp.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnRequestApp.Location = new System.Drawing.Point(237, 237);
             this.btnRequestApp.Name = "btnRequestApp";
             this.btnRequestApp.Size = new System.Drawing.Size(145, 65);
             this.btnRequestApp.TabIndex = 1;
             this.btnRequestApp.Text = "Zahtjevi";
-            this.btnRequestApp.UseVisualStyleBackColor = true;
+            this.btnRequestApp.UseVisualStyleBackColor = false;
             this.btnRequestApp.Click += new System.EventHandler(this.Button2_Click);
             // 
             // btnDevices
             // 
+            this.btnDevices.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnDevices.Location = new System.Drawing.Point(416, 156);
             this.btnDevices.Name = "btnDevices";
             this.btnDevices.Size = new System.Drawing.Size(143, 62);
             this.btnDevices.TabIndex = 2;
             this.btnDevices.Text = "Uređaji";
-            this.btnDevices.UseVisualStyleBackColor = true;
+            this.btnDevices.UseVisualStyleBackColor = false;
             this.btnDevices.Click += new System.EventHandler(this.Button3_Click);
             // 
             // btnReport
             // 
+            this.btnReport.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnReport.Location = new System.Drawing.Point(416, 240);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(143, 62);
             this.btnReport.TabIndex = 3;
             this.btnReport.Text = "Izvještaj";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.Button4_Click);
             // 
             // btnUsers
             // 
+            this.btnUsers.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUsers.Location = new System.Drawing.Point(237, 322);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(322, 26);
             this.btnUsers.TabIndex = 5;
             this.btnUsers.Text = "KORISNICI";
-            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // btnLogout
@@ -100,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.btnLogout);

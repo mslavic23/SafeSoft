@@ -30,7 +30,9 @@
             // 
             // dgvReport
             // 
+            this.dgvReport.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReport.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvReport.Location = new System.Drawing.Point(6, 561);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowHeadersWidth = 51;
@@ -130,6 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1021, 614);
             this.Controls.Add(this.dtpDateTil);
             this.Controls.Add(this.btnFilterReport);

@@ -56,7 +56,7 @@
             // lblSoftwareVersion
             // 
             this.lblSoftwareVersion.AutoSize = true;
-            this.lblSoftwareVersion.Location = new System.Drawing.Point(231, 89);
+            this.lblSoftwareVersion.Location = new System.Drawing.Point(231, 86);
             this.lblSoftwareVersion.Name = "lblSoftwareVersion";
             this.lblSoftwareVersion.Size = new System.Drawing.Size(51, 16);
             this.lblSoftwareVersion.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             this.cmbSoftwareVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSoftwareVersion.FormattingEnabled = true;
-            this.cmbSoftwareVersion.Location = new System.Drawing.Point(288, 86);
+            this.cmbSoftwareVersion.Location = new System.Drawing.Point(288, 83);
             this.cmbSoftwareVersion.Name = "cmbSoftwareVersion";
             this.cmbSoftwareVersion.Size = new System.Drawing.Size(90, 24);
             this.cmbSoftwareVersion.TabIndex = 4;
@@ -76,7 +76,7 @@
             // lblLicenceType
             // 
             this.lblLicenceType.AutoSize = true;
-            this.lblLicenceType.Location = new System.Drawing.Point(396, 89);
+            this.lblLicenceType.Location = new System.Drawing.Point(396, 86);
             this.lblLicenceType.Name = "lblLicenceType";
             this.lblLicenceType.Size = new System.Drawing.Size(76, 16);
             this.lblLicenceType.TabIndex = 5;
@@ -86,7 +86,7 @@
             // lblTotalSeats
             // 
             this.lblTotalSeats.AutoSize = true;
-            this.lblTotalSeats.Location = new System.Drawing.Point(627, 89);
+            this.lblTotalSeats.Location = new System.Drawing.Point(617, 86);
             this.lblTotalSeats.Name = "lblTotalSeats";
             this.lblTotalSeats.Size = new System.Drawing.Size(100, 16);
             this.lblTotalSeats.TabIndex = 8;
@@ -95,7 +95,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(833, 85);
+            this.btnAdd.Location = new System.Drawing.Point(822, 83);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 9;
@@ -105,7 +105,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(916, 85);
+            this.btnEdit.Location = new System.Drawing.Point(914, 85);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 10;
@@ -135,10 +135,11 @@
             // 
             // pbxLogo
             // 
+            this.pbxLogo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
             this.pbxLogo.Location = new System.Drawing.Point(12, 12);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(172, 46);
+            this.pbxLogo.Size = new System.Drawing.Size(162, 46);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 16;
             this.pbxLogo.TabStop = false;
@@ -148,7 +149,7 @@
             // 
             this.cmbLicenceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLicenceType.FormattingEnabled = true;
-            this.cmbLicenceType.Location = new System.Drawing.Point(478, 86);
+            this.cmbLicenceType.Location = new System.Drawing.Point(478, 83);
             this.cmbLicenceType.Name = "cmbLicenceType";
             this.cmbLicenceType.Size = new System.Drawing.Size(133, 24);
             this.cmbLicenceType.TabIndex = 17;
@@ -156,7 +157,7 @@
             // 
             // numTotalSeats
             // 
-            this.numTotalSeats.Location = new System.Drawing.Point(733, 86);
+            this.numTotalSeats.Location = new System.Drawing.Point(723, 84);
             this.numTotalSeats.Name = "numTotalSeats";
             this.numTotalSeats.Size = new System.Drawing.Size(83, 22);
             this.numTotalSeats.TabIndex = 18;
@@ -165,6 +166,7 @@
             // dgvSoftwares
             // 
             this.dgvSoftwares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSoftwares.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgvSoftwares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSoftwares.Location = new System.Drawing.Point(12, 127);
             this.dgvSoftwares.Name = "dgvSoftwares";
@@ -179,7 +181,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 567);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1021, 614);
             this.Controls.Add(this.dgvSoftwares);
             this.Controls.Add(this.numTotalSeats);
             this.Controls.Add(this.cmbLicenceType);

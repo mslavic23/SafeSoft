@@ -53,27 +53,27 @@
             // cmbSoftwareName
             // 
             this.cmbSoftwareName.FormattingEnabled = true;
-            this.cmbSoftwareName.Location = new System.Drawing.Point(699, 381);
+            this.cmbSoftwareName.Location = new System.Drawing.Point(726, 384);
             this.cmbSoftwareName.Name = "cmbSoftwareName";
-            this.cmbSoftwareName.Size = new System.Drawing.Size(259, 24);
+            this.cmbSoftwareName.Size = new System.Drawing.Size(266, 24);
             this.cmbSoftwareName.TabIndex = 2;
             this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.CmbSoftwareName_SelectedIndexChanged);
             // 
             // cmbDeviceName
             // 
             this.cmbDeviceName.FormattingEnabled = true;
-            this.cmbDeviceName.Location = new System.Drawing.Point(376, 382);
+            this.cmbDeviceName.Location = new System.Drawing.Point(376, 384);
             this.cmbDeviceName.Name = "cmbDeviceName";
-            this.cmbDeviceName.Size = new System.Drawing.Size(252, 24);
+            this.cmbDeviceName.Size = new System.Drawing.Size(261, 24);
             this.cmbDeviceName.TabIndex = 3;
             this.cmbDeviceName.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceName_SelectedIndexChanged);
             // 
             // txtRequestReason
             // 
-            this.txtRequestReason.Location = new System.Drawing.Point(521, 439);
+            this.txtRequestReason.Location = new System.Drawing.Point(540, 439);
             this.txtRequestReason.MaxLength = 100;
             this.txtRequestReason.Name = "txtRequestReason";
-            this.txtRequestReason.Size = new System.Drawing.Size(437, 22);
+            this.txtRequestReason.Size = new System.Drawing.Size(452, 22);
             this.txtRequestReason.TabIndex = 4;
             this.txtRequestReason.TextChanged += new System.EventHandler(this.TxtRequestReason_TextChanged);
             // 
@@ -88,7 +88,7 @@
             // lbSoftwareName
             // 
             this.lbSoftwareName.AutoSize = true;
-            this.lbSoftwareName.Location = new System.Drawing.Point(641, 384);
+            this.lbSoftwareName.Location = new System.Drawing.Point(668, 387);
             this.lbSoftwareName.Name = "lbSoftwareName";
             this.lbSoftwareName.Size = new System.Drawing.Size(52, 16);
             this.lbSoftwareName.TabIndex = 6;
@@ -118,7 +118,7 @@
             // lblRequestReason
             // 
             this.lblRequestReason.AutoSize = true;
-            this.lblRequestReason.Location = new System.Drawing.Point(401, 445);
+            this.lblRequestReason.Location = new System.Drawing.Point(420, 442);
             this.lblRequestReason.Name = "lblRequestReason";
             this.lblRequestReason.Size = new System.Drawing.Size(114, 16);
             this.lblRequestReason.TabIndex = 10;
@@ -137,7 +137,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(741, 493);
+            this.btnEdit.Location = new System.Drawing.Point(677, 493);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 13;
@@ -147,7 +147,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(660, 493);
+            this.btnDelete.Location = new System.Drawing.Point(758, 493);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -157,7 +157,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(883, 493);
+            this.btnAdd.Location = new System.Drawing.Point(917, 493);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 15;
@@ -167,7 +167,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(12, 516);
+            this.btnMain.Location = new System.Drawing.Point(12, 493);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 17;
@@ -195,7 +195,7 @@
             this.dgvRequestApp.RowHeadersWidth = 25;
             this.dgvRequestApp.RowTemplate.Height = 24;
             this.dgvRequestApp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRequestApp.Size = new System.Drawing.Size(937, 267);
+            this.dgvRequestApp.Size = new System.Drawing.Size(971, 267);
             this.dgvRequestApp.TabIndex = 19;
             this.dgvRequestApp.SelectionChanged += new System.EventHandler(this.DgvRequestApp_SelectionChanged);
             // 
@@ -245,9 +245,9 @@
             // pbxLogo
             // 
             this.pbxLogo.Image = global::LicenceApp.Properties.Resources.SafeSoft_logo;
-            this.pbxLogo.Location = new System.Drawing.Point(376, 10);
+            this.pbxLogo.Location = new System.Drawing.Point(376, 12);
             this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(211, 79);
+            this.pbxLogo.Size = new System.Drawing.Size(211, 67);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxLogo.TabIndex = 20;
             this.pbxLogo.TabStop = false;
@@ -257,7 +257,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 567);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1021, 614);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.dgvRequestApp);
             this.Controls.Add(this.btnMain);
