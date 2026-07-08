@@ -23,11 +23,12 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
-            this.lstDevices = new System.Windows.Forms.ListBox();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.cmbDeviceLocation = new System.Windows.Forms.ComboBox();
             this.cmbDeviceType = new System.Windows.Forms.ComboBox();
+            this.dgvDevices = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDeviceName
@@ -42,7 +43,7 @@
             // lblDeviceName
             // 
             this.lblDeviceName.AutoSize = true;
-            this.lblDeviceName.Location = new System.Drawing.Point(385, 234);
+            this.lblDeviceName.Location = new System.Drawing.Point(385, 231);
             this.lblDeviceName.Name = "lblDeviceName";
             this.lblDeviceName.Size = new System.Drawing.Size(99, 16);
             this.lblDeviceName.TabIndex = 4;
@@ -52,7 +53,7 @@
             // lblDeviceLocation
             // 
             this.lblDeviceLocation.AutoSize = true;
-            this.lblDeviceLocation.Location = new System.Drawing.Point(423, 264);
+            this.lblDeviceLocation.Location = new System.Drawing.Point(423, 261);
             this.lblDeviceLocation.Name = "lblDeviceLocation";
             this.lblDeviceLocation.Size = new System.Drawing.Size(61, 16);
             this.lblDeviceLocation.TabIndex = 5;
@@ -113,17 +114,6 @@
             this.btnMain.UseVisualStyleBackColor = false;
             this.btnMain.Click += new System.EventHandler(this.BtnMain_Click);
             // 
-            // lstDevices
-            // 
-            this.lstDevices.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lstDevices.FormattingEnabled = true;
-            this.lstDevices.ItemHeight = 16;
-            this.lstDevices.Location = new System.Drawing.Point(24, 145);
-            this.lstDevices.Name = "lstDevices";
-            this.lstDevices.Size = new System.Drawing.Size(325, 260);
-            this.lstDevices.TabIndex = 13;
-            this.lstDevices.SelectedIndexChanged += new System.EventHandler(this.LstDevices_SelectedIndexChanged);
-            // 
             // pbxLogo
             // 
             this.pbxLogo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -154,16 +144,30 @@
             this.cmbDeviceType.TabIndex = 16;
             this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceType_SelectedIndexChanged);
             // 
+            // dgvDevices
+            // 
+            this.dgvDevices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDevices.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvDevices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDevices.Location = new System.Drawing.Point(24, 163);
+            this.dgvDevices.Name = "dgvDevices";
+            this.dgvDevices.RowHeadersWidth = 51;
+            this.dgvDevices.RowTemplate.Height = 24;
+            this.dgvDevices.Size = new System.Drawing.Size(355, 246);
+            this.dgvDevices.TabIndex = 17;
+            this.dgvDevices.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvDevices_CellContentClick);
+            this.dgvDevices.SelectionChanged += new System.EventHandler(this.DgvDevices_SelectionChanged);
+            // 
             // FrmDevice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1003, 567);
+            this.Controls.Add(this.dgvDevices);
             this.Controls.Add(this.cmbDeviceType);
             this.Controls.Add(this.cmbDeviceLocation);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstDevices);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
@@ -177,6 +181,7 @@
             this.Text = "Uređaji";
             this.Load += new System.EventHandler(this.FrmDevice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDevices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,9 +195,9 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnMain;
-        private System.Windows.Forms.ListBox lstDevices;
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.ComboBox cmbDeviceLocation;
         private System.Windows.Forms.ComboBox cmbDeviceType;
+        private System.Windows.Forms.DataGridView dgvDevices;
     }
 }

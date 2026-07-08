@@ -32,11 +32,20 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            lstDevices.Items.Clear();
-            foreach (var device in _deviceRepository.GetAll())
-            {
-                lstDevices.Items.Add(device);
-            }
+            var devices = _deviceRepository.GetAll();
+
+            dgvDevices.DataSource = null;
+            dgvDevices.AutoGenerateColumns = true;
+            dgvDevices.DataSource = devices;
+
+            if (dgvDevices.Columns.Contains("Naziv_racunala"))
+                dgvDevices.Columns["Naziv_racunala"].HeaderText = "Naziv računala";
+            if (dgvDevices.Columns.Contains("Lokacija"))
+                dgvDevices.Columns["Lokacija"].HeaderText = "Lokacija";
+            if (dgvDevices.Columns.Contains("Tip_uredaja"))
+                dgvDevices.Columns["Tip_uredaja"].HeaderText = "Tip uređaja";
+            if (dgvDevices.Columns.Contains("ID_uredaj"))
+                dgvDevices.Columns["ID_uredaj"].Visible = false;
         }
 
         private void ClearFields()
@@ -146,9 +155,14 @@ namespace LicenceApp
             }
         }
 
-        private void LstDevices_SelectedIndexChanged(object sender, EventArgs e)
+        private void DgvDevices_SelectionChanged(object sender, EventArgs e)
         {
-            _selectedDevice = lstDevices.SelectedItem as Device;
+            _selectedDevice = dgvDevices.CurrentRow?.DataBoundItem as Device;
+        }
+
+        private void DgvDevices_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void BtnMain_Click(object sender, EventArgs e)

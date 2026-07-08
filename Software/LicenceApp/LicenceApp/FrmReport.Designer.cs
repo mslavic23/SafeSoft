@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp
 {
-    partial class FrmIzvjestaj
+    partial class FrmReport
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -43,7 +43,7 @@
             // 
             // btnRefreshReport
             // 
-            this.btnRefreshReport.Location = new System.Drawing.Point(922, 61);
+            this.btnRefreshReport.Location = new System.Drawing.Point(922, 41);
             this.btnRefreshReport.Name = "btnRefreshReport";
             this.btnRefreshReport.Size = new System.Drawing.Size(75, 23);
             this.btnRefreshReport.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(922, 96);
+            this.btnMain.Location = new System.Drawing.Point(12, 597);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 3;
@@ -75,7 +75,7 @@
             // lblTotalRequests
             // 
             this.lblTotalRequests.AutoSize = true;
-            this.lblTotalRequests.Location = new System.Drawing.Point(466, 589);
+            this.lblTotalRequests.Location = new System.Drawing.Point(461, 604);
             this.lblTotalRequests.Name = "lblTotalRequests";
             this.lblTotalRequests.Size = new System.Drawing.Size(120, 16);
             this.lblTotalRequests.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // btnFilterReport
             // 
-            this.btnFilterReport.Location = new System.Drawing.Point(922, 32);
+            this.btnFilterReport.Location = new System.Drawing.Point(922, 73);
             this.btnFilterReport.Name = "btnFilterReport";
             this.btnFilterReport.Size = new System.Drawing.Size(75, 23);
             this.btnFilterReport.TabIndex = 10;
@@ -128,12 +128,12 @@
             this.dtpDateTil.TabIndex = 11;
             this.dtpDateTil.ValueChanged += new System.EventHandler(this.DtpDateTil_ValueChanged);
             // 
-            // FrmIzvjestaj
+            // FrmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1021, 614);
+            this.ClientSize = new System.Drawing.Size(1021, 629);
             this.Controls.Add(this.dtpDateTil);
             this.Controls.Add(this.btnFilterReport);
             this.Controls.Add(this.lblDateFrom);
@@ -144,7 +144,7 @@
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnRefreshReport);
             this.Controls.Add(this.dgvReport);
-            this.Name = "FrmIzvjestaj";
+            this.Name = "FrmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izvještaji";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();

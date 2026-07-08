@@ -35,8 +35,6 @@ namespace LicenceApp
             {
                 SessionManager.User = user;
 
-                MessageBox.Show("Prijava uspješna! Dobrodošli, " + user.Ime + "!", "Prijava", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 FrmMain frmMain = new FrmMain();
                 frmMain.Show();
                 this.Hide();

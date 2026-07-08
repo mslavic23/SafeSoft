@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmIzvjestaj.cs">
+    <Compile Include="FrmReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmIzvjestaj.Designer.cs">
-      <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDevice.cs">
       <SubType>Form</SubType>
@@ -98,7 +98,7 @@
     <Compile Include="LicenceApp.Models\Software.cs" />
     <Compile Include="LicenceApp.Models\Device.cs" />
     <Compile Include="LicenceApp.Models\RequestApp.cs" />
-    <Compile Include="LicenceApp.Repositories\IzvjestajRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\ReportRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UserRepository.cs" />
     <Compile Include="LicenceApp.Repositories\SoftwareRepository.cs" />
     <Compile Include="LicenceApp.Repositories\DeviceRepository.cs" />
@@ -106,8 +106,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
-    <EmbeddedResource Include="FrmIzvjestaj.resx">
-      <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>

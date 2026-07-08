@@ -12,7 +12,6 @@
 
         private void InitializeComponent()
         {
-            this.lstUsers = new System.Windows.Forms.ListBox();
             this.lblUserPassword = new System.Windows.Forms.Label();
             this.lblUserRole = new System.Windows.Forms.Label();
             this.lblUserEmail = new System.Windows.Forms.Label();
@@ -28,17 +27,10 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnMain = new System.Windows.Forms.Button();
             this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lstUsers
-            // 
-            this.lstUsers.ItemHeight = 16;
-            this.lstUsers.Location = new System.Drawing.Point(12, 231);
-            this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(448, 164);
-            this.lstUsers.TabIndex = 0;
-            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstUsers_SelectedIndexChanged);
             // 
             // lblUserPassword
             // 
@@ -180,12 +172,27 @@
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
+            // dgvUsers
+            // 
+            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsers.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvUsers.Location = new System.Drawing.Point(12, 233);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.RowHeadersWidth = 51;
+            this.dgvUsers.RowTemplate.Height = 24;
+            this.dgvUsers.Size = new System.Drawing.Size(473, 162);
+            this.dgvUsers.TabIndex = 17;
+            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUsers_CellContentClick);
+            this.dgvUsers.SelectionChanged += new System.EventHandler(this.DgvUsers_SelectionChanged);
+            // 
             // FrmUser
             // 
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(953, 530);
+            this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.pbxLogo);
-            this.Controls.Add(this.lstUsers);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserLastName);
@@ -205,12 +212,11 @@
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.FrmUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.ListBox lstUsers;
         private System.Windows.Forms.Label lblUserPassword;
         private System.Windows.Forms.Label lblUserRole;
         private System.Windows.Forms.Label lblUserEmail;
@@ -226,5 +232,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnMain;
         private System.Windows.Forms.PictureBox pbxLogo;
+        private System.Windows.Forms.DataGridView dgvUsers;
     }
 }

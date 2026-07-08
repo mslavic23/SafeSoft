@@ -8,16 +8,16 @@ using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
-    public partial class FrmIzvjestaj : Form
+    public partial class FrmReport : Form
     {
-        private readonly IzvjestajRepository _izvjestajRepository = new IzvjestajRepository();
+        private readonly ReportRepository _reportRepository = new ReportRepository();
 
-        private Chart chartZahtjeviPoMjesecu;
-        private Chart chartTipoviLicenci;
+        private Chart chartRequestsByMonth;
+        private Chart chartLicenceTypes;
 
-        private const int RazmakGrafova = 10;
+        private const int ChartSpacing = 10;
 
-        public FrmIzvjestaj()
+        public FrmReport()
         {
             InitializeComponent();
 
@@ -31,72 +31,80 @@ namespace LicenceApp
 
         private void SetupCharts()
         {
-            const int MaxVisinaGrafova = 150;
+            const int MaxChartHeight = 150;
+            const int MinChartSize = 50;
 
-            int dnoZaglavlja = Math.Max(
+            int headerBottom = Math.Max(
                 Math.Max(dtpDateFrom.Bottom, dtpDateTil.Bottom),
-                Math.Max(lblFrmReportTitle.Bottom, Math.Max(btnMain.Bottom, Math.Max(btnFilterReport.Bottom, btnRefreshReport.Bottom)))
+                Math.Max(lblFrmReportTitle.Bottom, Math.Max(btnFilterReport.Bottom, btnRefreshReport.Bottom))
             );
 
-            int vrhGrafova = dnoZaglavlja + RazmakGrafova;
-            int dnoTablice = dgvReport.Bottom;
+            int chartsTop = headerBottom + ChartSpacing;
+            int tableBottom = dgvReport.Bottom;
 
-            int visinaGrafova = Math.Min(MaxVisinaGrafova, dgvReport.Top - vrhGrafova - RazmakGrafova);
-            int sirinaSvakogGrafa = (dgvReport.Width - RazmakGrafova) / 2;
+            int chartHeight = Math.Max(MinChartSize, Math.Min(MaxChartHeight, dgvReport.Top - chartsTop - ChartSpacing));
+            int chartWidth = Math.Max(MinChartSize, (dgvReport.Width - ChartSpacing) / 2);
 
-            chartZahtjeviPoMjesecu = new Chart
+            chartRequestsByMonth = new Chart
             {
-                Location = new Point(dgvReport.Left, vrhGrafova),
-                Size = new Size(sirinaSvakogGrafa, visinaGrafova)
+                Location = new Point(dgvReport.Left, chartsTop),
+                Size = new Size(chartWidth, chartHeight)
             };
-            chartZahtjeviPoMjesecu.ChartAreas.Add(new ChartArea("Glavno"));
-            chartZahtjeviPoMjesecu.Titles.Add("Zahtjevi po mjesecu");
-            var serijaMjeseci = new Series("ZahtjeviPoMjesecu")
+            chartRequestsByMonth.ChartAreas.Add(new ChartArea("Main"));
+            chartRequestsByMonth.Titles.Add("Zahtjevi po mjesecu");
+            var monthlySeries = new Series("RequestsByMonth")
             {
                 ChartType = SeriesChartType.Line,
-                ChartArea = "Glavno",
+                ChartArea = "Main",
                 BorderWidth = 3,
                 MarkerStyle = MarkerStyle.Circle,
                 MarkerSize = 8
             };
-            chartZahtjeviPoMjesecu.Series.Add(serijaMjeseci);
+            chartRequestsByMonth.Series.Add(monthlySeries);
 
-            chartTipoviLicenci = new Chart
+            chartLicenceTypes = new Chart
             {
-                Location = new Point(chartZahtjeviPoMjesecu.Right + RazmakGrafova, vrhGrafova),
-                Size = new Size(dgvReport.Width - sirinaSvakogGrafa - RazmakGrafova, visinaGrafova)
+                Location = new Point(chartRequestsByMonth.Right + ChartSpacing, chartsTop),
+                Size = new Size(chartWidth, chartHeight)
             };
-            chartTipoviLicenci.ChartAreas.Add(new ChartArea("Glavno"));
-            chartTipoviLicenci.Titles.Add("Vrste licenci prema zahtjevima");
-            chartTipoviLicenci.Legends.Add(new Legend("Legenda"));
-            var serijaLicenci = new Series("TipoviLicenci")
+            chartLicenceTypes.ChartAreas.Add(new ChartArea("Main"));
+            chartLicenceTypes.Titles.Add("Vrste licenci prema zahtjevima");
+            chartLicenceTypes.Legends.Add(new Legend("Legend"));
+            var licenceSeries = new Series("LicenceTypes")
             {
                 ChartType = SeriesChartType.Pie,
-                ChartArea = "Glavno",
-                Legend = "Legenda",
+                ChartArea = "Main",
+                Legend = "Legend",
                 IsValueShownAsLabel = false
             };
-            serijaLicenci["PieLabelStyle"] = "Disabled";
-            chartTipoviLicenci.Series.Add(serijaLicenci);
+            licenceSeries["PieLabelStyle"] = "Disabled";
+            chartLicenceTypes.Series.Add(licenceSeries);
 
-            this.Controls.Add(chartZahtjeviPoMjesecu);
-            this.Controls.Add(chartTipoviLicenci);
+            this.Controls.Add(chartRequestsByMonth);
+            this.Controls.Add(chartLicenceTypes);
 
-            dgvReport.Top = chartZahtjeviPoMjesecu.Bottom + RazmakGrafova;
-            dgvReport.Height = dnoTablice - dgvReport.Top;
+            dgvReport.Top = chartRequestsByMonth.Bottom + ChartSpacing;
+            dgvReport.Height = Math.Max(MinChartSize, tableBottom - dgvReport.Top);
         }
 
         private void RefreshReport()
         {
-            var stavke = _izvjestajRepository.GetReport();
-            DisplayReport(stavke);
+            var items = _reportRepository.GetReport();
+
+            if (items.Count > 0)
+            {
+                dtpDateFrom.Value = items.Min(i => i.Date);
+                dtpDateTil.Value = items.Max(i => i.Date);
+            }
+
+            DisplayReport(items);
         }
 
-        private void DisplayReport(List<ReportLine> stavke)
+        private void DisplayReport(List<ReportLine> items)
         {
             dgvReport.DataSource = null;
             dgvReport.AutoGenerateColumns = true;
-            dgvReport.DataSource = stavke;
+            dgvReport.DataSource = items;
 
             if (dgvReport.Columns.Contains("User"))
                 dgvReport.Columns["User"].HeaderText = "Korisnik";
@@ -123,40 +131,40 @@ namespace LicenceApp
             if (dgvReport.Columns.Contains("Id"))
                 dgvReport.Columns["Id"].Visible = false;
 
-            lblTotalRequests.Text = $"Ukupno zahtjeva: {stavke.Count}";
+            lblTotalRequests.Text = $"Ukupno zahtjeva: {items.Count}";
 
-            UpdateCharts(stavke);
+            UpdateCharts(items);
         }
 
-        private void UpdateCharts(List<ReportLine> stavke)
+        private void UpdateCharts(List<ReportLine> items)
         {
-            var serijaMjeseci = chartZahtjeviPoMjesecu.Series["ZahtjeviPoMjesecu"];
-            serijaMjeseci.Points.Clear();
+            var monthlySeries = chartRequestsByMonth.Series["RequestsByMonth"];
+            monthlySeries.Points.Clear();
 
-            var poMjesecu = stavke
-                .GroupBy(s => new { s.Date.Year, s.Date.Month })
+            var groupedByMonth = items
+                .GroupBy(i => new { i.Date.Year, i.Date.Month })
                 .OrderBy(g => g.Key.Year).ThenBy(g => g.Key.Month)
                 .Select(g => new
                 {
-                    Oznaka = new DateTime(g.Key.Year, g.Key.Month, 1).ToString("MM.yyyy"),
-                    Broj = g.Count()
+                    Label = new DateTime(g.Key.Year, g.Key.Month, 1).ToString("MM.yyyy"),
+                    Count = g.Count()
                 });
 
-            foreach (var stavka in poMjesecu)
+            foreach (var item in groupedByMonth)
             {
-                serijaMjeseci.Points.AddXY(stavka.Oznaka, stavka.Broj);
+                monthlySeries.Points.AddXY(item.Label, item.Count);
             }
 
-            var serijaLicenci = chartTipoviLicenci.Series["TipoviLicenci"];
-            serijaLicenci.Points.Clear();
+            var licenceSeries = chartLicenceTypes.Series["LicenceTypes"];
+            licenceSeries.Points.Clear();
 
-            var poTipuLicence = stavke
-                .GroupBy(s => s.LicenceType)
-                .Select(g => new { Tip = g.Key, Broj = g.Count() });
+            var groupedByLicenceType = items
+                .GroupBy(i => i.LicenceType)
+                .Select(g => new { Type = g.Key, Count = g.Count() });
 
-            foreach (var stavka in poTipuLicence)
+            foreach (var item in groupedByLicenceType)
             {
-                serijaLicenci.Points.AddXY(stavka.Tip, stavka.Broj);
+                licenceSeries.Points.AddXY(item.Type, item.Count);
             }
         }
 
@@ -167,17 +175,17 @@ namespace LicenceApp
 
         private void BtnFilter_Click(object sender, EventArgs e)
         {
-            DateTime od = dtpDateFrom.Value.Date;
-            DateTime doDatuma = dtpDateTil.Value.Date.AddDays(1).AddTicks(-1);
+            DateTime fromDate = dtpDateFrom.Value.Date;
+            DateTime toDate = dtpDateTil.Value.Date.AddDays(1).AddTicks(-1);
 
-            if (od > doDatuma)
+            if (fromDate > toDate)
             {
                 MessageBox.Show("Datum 'Od' ne može biti nakon datuma 'Do'!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var stavke = _izvjestajRepository.GetReport(od, doDatuma);
-            DisplayReport(stavke);
+            var items = _reportRepository.GetReport(fromDate, toDate);
+            DisplayReport(items);
         }
 
         private void DtpDateFrom_ValueChanged(object sender, EventArgs e)

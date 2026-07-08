@@ -33,7 +33,7 @@ namespace LicenceApp
 
         private void Button4_Click(object sender, EventArgs e)
         {
-            FrmIzvjestaj frmIzvjestaj = new FrmIzvjestaj();
+            FrmReport frmIzvjestaj = new FrmReport();
             frmIzvjestaj.Show();
             this.Hide();
         }

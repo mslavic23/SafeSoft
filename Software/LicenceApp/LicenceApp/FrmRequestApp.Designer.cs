@@ -44,18 +44,18 @@
             // cmbUserName
             // 
             this.cmbUserName.FormattingEnabled = true;
-            this.cmbUserName.Location = new System.Drawing.Point(77, 384);
+            this.cmbUserName.Location = new System.Drawing.Point(81, 384);
             this.cmbUserName.Name = "cmbUserName";
-            this.cmbUserName.Size = new System.Drawing.Size(210, 24);
+            this.cmbUserName.Size = new System.Drawing.Size(206, 24);
             this.cmbUserName.TabIndex = 1;
             this.cmbUserName.SelectedIndexChanged += new System.EventHandler(this.CmbUserName_SelectedIndexChanged);
             // 
             // cmbSoftwareName
             // 
             this.cmbSoftwareName.FormattingEnabled = true;
-            this.cmbSoftwareName.Location = new System.Drawing.Point(726, 384);
+            this.cmbSoftwareName.Location = new System.Drawing.Point(717, 384);
             this.cmbSoftwareName.Name = "cmbSoftwareName";
-            this.cmbSoftwareName.Size = new System.Drawing.Size(266, 24);
+            this.cmbSoftwareName.Size = new System.Drawing.Size(275, 24);
             this.cmbSoftwareName.TabIndex = 2;
             this.cmbSoftwareName.SelectedIndexChanged += new System.EventHandler(this.CmbSoftwareName_SelectedIndexChanged);
             // 
@@ -79,7 +79,7 @@
             // 
             // dtpRequestDate
             // 
-            this.dtpRequestDate.Location = new System.Drawing.Point(148, 440);
+            this.dtpRequestDate.Location = new System.Drawing.Point(157, 437);
             this.dtpRequestDate.Name = "dtpRequestDate";
             this.dtpRequestDate.Size = new System.Drawing.Size(222, 22);
             this.dtpRequestDate.TabIndex = 5;
@@ -88,7 +88,7 @@
             // lbSoftwareName
             // 
             this.lbSoftwareName.AutoSize = true;
-            this.lbSoftwareName.Location = new System.Drawing.Point(668, 387);
+            this.lbSoftwareName.Location = new System.Drawing.Point(659, 387);
             this.lbSoftwareName.Name = "lbSoftwareName";
             this.lbSoftwareName.Size = new System.Drawing.Size(52, 16);
             this.lbSoftwareName.TabIndex = 6;
@@ -128,7 +128,7 @@
             // lblRequestDate
             // 
             this.lblRequestDate.AutoSize = true;
-            this.lblRequestDate.Location = new System.Drawing.Point(18, 445);
+            this.lblRequestDate.Location = new System.Drawing.Point(18, 440);
             this.lblRequestDate.Name = "lblRequestDate";
             this.lblRequestDate.Size = new System.Drawing.Size(124, 16);
             this.lblRequestDate.TabIndex = 11;

@@ -26,11 +26,24 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            lstUsers.Items.Clear();
-            foreach (var user in _userRepository.GetAll())
-            {
-                lstUsers.Items.Add(user);
-            }
+            var users = _userRepository.GetAll();
+
+            dgvUsers.DataSource = null;
+            dgvUsers.AutoGenerateColumns = true;
+            dgvUsers.DataSource = users;
+
+            if (dgvUsers.Columns.Contains("Ime"))
+                dgvUsers.Columns["Ime"].HeaderText = "Ime";
+            if (dgvUsers.Columns.Contains("Prezime"))
+                dgvUsers.Columns["Prezime"].HeaderText = "Prezime";
+            if (dgvUsers.Columns.Contains("Email"))
+                dgvUsers.Columns["Email"].HeaderText = "Email";
+            if (dgvUsers.Columns.Contains("Uloga"))
+                dgvUsers.Columns["Uloga"].HeaderText = "Uloga";
+            if (dgvUsers.Columns.Contains("LozinkaHash"))
+                dgvUsers.Columns["LozinkaHash"].Visible = false;
+            if (dgvUsers.Columns.Contains("ID_korisnik"))
+                dgvUsers.Columns["ID_korisnik"].Visible = false;
         }
 
         private void ClearFields()
@@ -152,9 +165,14 @@ namespace LicenceApp
             }
         }
 
-        private void LstUsers_SelectedIndexChanged(object sender, EventArgs e)
+        private void DgvUsers_SelectionChanged(object sender, EventArgs e)
         {
-            _selectedUser = lstUsers.SelectedItem as User;
+            _selectedUser = dgvUsers.CurrentRow?.DataBoundItem as User;
+        }
+
+        private void DgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void BtnMain_Click(object sender, EventArgs e)
