@@ -5,38 +5,38 @@ using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
-    public partial class FrmSoftver : Form
+    public partial class FrmSoftware : Form
     {
-        private readonly SoftverRepository _softverRepository = new SoftverRepository();
-        private Softver _odabraniSoftver;
+        private readonly SoftwareRepository _softwareRepository = new SoftwareRepository();
+        private Software _selectedSoftware;
 
-        private const string TipPerSeat = "per-seat";
-        private const string TipMjesecnaPretplata = "mjesečna-pretplata";
-        private const string TipGodisnjaPretplata = "godišnja-pretplata";
-        private const int PerSeatMjesta = 50;
-        private const int PrvaGodina = 2000;
-        private const int ZadnjaGodina = 2026;
+        private const string LicenceTypePerSeat = "per-seat";
+        private const string LicenceTypeMonthly = "mjesečna-pretplata";
+        private const string LicenceTypeYearly = "godišnja-pretplata";
+        private const int PerSeatCount = 50;
+        private const int FirstYear = 2000;
+        private const int LastYear = 2026;
 
-        public FrmSoftver()
+        public FrmSoftware()
         {
             InitializeComponent();
         }
 
-        private void FrmSoftver_Load(object sender, EventArgs e)
+        private void FrmSoftware_Load(object sender, EventArgs e)
         {
             numTotalSeats.Minimum = 1;
             numTotalSeats.Maximum = 100000;
 
             cmbLicenceType.Items.Clear();
-            cmbLicenceType.Items.Add(TipPerSeat);
-            cmbLicenceType.Items.Add(TipMjesecnaPretplata);
-            cmbLicenceType.Items.Add(TipGodisnjaPretplata);
+            cmbLicenceType.Items.Add(LicenceTypePerSeat);
+            cmbLicenceType.Items.Add(LicenceTypeMonthly);
+            cmbLicenceType.Items.Add(LicenceTypeYearly);
             cmbLicenceType.SelectedIndex = 0;
 
             cmbSoftwareVersion.Items.Clear();
-            for (int godina = ZadnjaGodina; godina >= PrvaGodina; godina--)
+            for (int year = LastYear; year >= FirstYear; year--)
             {
-                cmbSoftwareVersion.Items.Add(godina.ToString());
+                cmbSoftwareVersion.Items.Add(year.ToString());
             }
             cmbSoftwareVersion.SelectedIndex = 0;
 
@@ -45,11 +45,11 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            var softveri = _softverRepository.GetAll();
+            var softwares = _softwareRepository.GetAll();
 
             dgvSoftwares.DataSource = null;
             dgvSoftwares.AutoGenerateColumns = true;
-            dgvSoftwares.DataSource = softveri;
+            dgvSoftwares.DataSource = softwares;
 
             if (dgvSoftwares.Columns.Contains("Naziv"))
                 dgvSoftwares.Columns["Naziv"].HeaderText = "Naziv";
@@ -68,18 +68,17 @@ namespace LicenceApp
             txtSoftwareName.Text = "";
             cmbSoftwareVersion.SelectedIndex = 0;
             cmbLicenceType.SelectedIndex = 0;
-            numTotalSeats.Value = PerSeatMjesta;
+            numTotalSeats.Value = PerSeatCount;
         }
 
         private void CmbLicenceType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string tipLicence = cmbLicenceType.SelectedItem as string;
-            if (tipLicence == null)
+            if (!(cmbLicenceType.SelectedItem is string licenceType))
                 return;
 
-            if (tipLicence == TipPerSeat)
+            if (licenceType == LicenceTypePerSeat)
             {
-                numTotalSeats.Value = PerSeatMjesta;
+                numTotalSeats.Value = PerSeatCount;
                 numTotalSeats.Enabled = false;
             }
             else
@@ -101,29 +100,26 @@ namespace LicenceApp
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string naziv = txtSoftwareName.Text;
-            string verzija = cmbSoftwareVersion.SelectedItem as string;
-            string tipLicence = cmbLicenceType.SelectedItem as string;
+            string name = txtSoftwareName.Text;
 
-            if (string.IsNullOrEmpty(naziv) || verzija == null || tipLicence == null)
+            if (!(cmbSoftwareVersion.SelectedItem is string version) || !(cmbLicenceType.SelectedItem is string licenceType) || string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Molimo popunite naziv i odaberite verziju i tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Softver softver = new Softver
+            Software software = new Software
             {
-                Naziv = naziv,
-                Verzija = verzija,
-                Tip_licence = tipLicence,
+                Naziv = name,
+                Verzija = version,
+                Tip_licence = licenceType,
                 Ukupno_mjesta = (int)numTotalSeats.Value
             };
 
-            bool uspjeh = _softverRepository.Add(softver);
+            bool success = _softwareRepository.Add(software);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Softver uspješno dodan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
             }
@@ -135,39 +131,37 @@ namespace LicenceApp
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (_odabraniSoftver == null)
+            if (_selectedSoftware == null)
             {
                 MessageBox.Show("Odaberite softver s liste za uređivanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string naziv = txtSoftwareName.Text;
-            string verzija = cmbSoftwareVersion.SelectedItem as string;
-            string tipLicence = cmbLicenceType.SelectedItem as string;
+            string name = txtSoftwareName.Text;
 
-            if (string.IsNullOrEmpty(naziv) || verzija == null || tipLicence == null)
+            if (!(cmbSoftwareVersion.SelectedItem is string version) || !(cmbLicenceType.SelectedItem is string licenceType) || string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Molimo popunite naziv i odaberite verziju i tip licence!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Softver softver = new Softver
+            Software software = new Software
             {
-                ID_softver = _odabraniSoftver.ID_softver,
-                Naziv = naziv,
-                Verzija = verzija,
-                Tip_licence = tipLicence,
+                ID_softver = _selectedSoftware.ID_softver,
+                Naziv = name,
+                Verzija = version,
+                Tip_licence = licenceType,
                 Ukupno_mjesta = (int)numTotalSeats.Value
             };
 
-            bool uspjeh = _softverRepository.Update(softver);
+            bool success = _softwareRepository.Update(software);
 
-            if (uspjeh)
+            if (success)
             {
                 MessageBox.Show("Softver uspješno ažuriran!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniSoftver = null;
+                _selectedSoftware = null;
             }
             else
             {
@@ -177,29 +171,28 @@ namespace LicenceApp
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (_odabraniSoftver == null)
+            if (_selectedSoftware == null)
             {
                 MessageBox.Show("Odaberite softver s liste za brisanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult potvrda = MessageBox.Show(
-                $"Jeste li sigurni da želite obrisati softver {_odabraniSoftver.Naziv}?",
+            DialogResult confirmation = MessageBox.Show(
+                $"Jeste li sigurni da želite obrisati softver {_selectedSoftware.Naziv}?",
                 "Potvrda brisanja",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (potvrda != DialogResult.Yes)
+            if (confirmation != DialogResult.Yes)
                 return;
 
-            bool uspjeh = _softverRepository.Delete(_odabraniSoftver.ID_softver);
+            bool success = _softwareRepository.Delete(_selectedSoftware.ID_softver);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Softver uspješno obrisan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniSoftver = null;
+                _selectedSoftware = null;
             }
             else
             {
@@ -209,7 +202,7 @@ namespace LicenceApp
 
         private void DgvSoftwares_SelectionChanged(object sender, EventArgs e)
         {
-            _odabraniSoftver = dgvSoftwares.CurrentRow?.DataBoundItem as Softver;
+            _selectedSoftware = dgvSoftwares.CurrentRow?.DataBoundItem as Software;
         }
 
         private void DgvSoftwares_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -255,3 +248,12 @@ namespace LicenceApp
         }
     }
 }
+
+
+
+
+
+
+
+
+

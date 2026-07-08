@@ -81,11 +81,11 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSoftver.cs">
+    <Compile Include="FrmSoftware.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSoftver.Designer.cs">
-      <DependentUpon>FrmSoftver.cs</DependentUpon>
+    <Compile Include="FrmSoftware.Designer.cs">
+      <DependentUpon>FrmSoftware.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmZahtjev.cs">
       <SubType>Form</SubType>
@@ -95,12 +95,12 @@
     </Compile>
     <Compile Include="LicenceApp.Helpers\HashHelper.cs" />
     <Compile Include="LicenceApp.Models\User.cs" />
-    <Compile Include="LicenceApp.Models\Softver.cs" />
+    <Compile Include="LicenceApp.Models\Software.cs" />
     <Compile Include="LicenceApp.Models\Uredaj.cs" />
     <Compile Include="LicenceApp.Models\Zahtjev.cs" />
     <Compile Include="LicenceApp.Repositories\IzvjestajRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UserRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\SoftverRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\SoftwareRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UredajRepository.cs" />
     <Compile Include="LicenceApp.Repositories\ZahtjevRepository.cs" />
     <Compile Include="Program.cs" />
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSoftver.resx">
-      <DependentUpon>FrmSoftver.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSoftware.resx">
+      <DependentUpon>FrmSoftware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUredaj.resx">
       <DependentUpon>FrmUredaj.cs</DependentUpon>

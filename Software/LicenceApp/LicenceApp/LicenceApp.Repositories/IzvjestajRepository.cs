@@ -24,7 +24,7 @@ namespace LicenceApp.Repositories
     {
         private readonly ZahtjevRepository _zahtjevRepository = new ZahtjevRepository();
         private readonly UserRepository _korisnikRepository = new UserRepository();
-        private readonly SoftverRepository _softverRepository = new SoftverRepository();
+        private readonly SoftwareRepository _softverRepository = new SoftwareRepository();
         private readonly UredajRepository _uredajRepository = new UredajRepository();
 
         public List<ReportLine> GetReport(DateTime? od = null, DateTime? do_ = null)

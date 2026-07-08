@@ -5,11 +5,11 @@ using LicenceApp.Models;
 
 namespace LicenceApp.Repositories
 {
-    public class SoftverRepository
+    public class SoftwareRepository
     {
-        public List<Softver> GetAll()
+        public List<Software> GetAll()
         {
-            List<Softver> softveri = new List<Softver>();
+            List<Software> softveri = new List<Software>();
 
             DB.OpenConnection();
             string query = "SELECT ID_softver, Naziv, Verzija, Tip_licence, Ukupno_mjesta FROM Softver";
@@ -17,7 +17,7 @@ namespace LicenceApp.Repositories
 
             while (reader.Read())
             {
-                Softver softver = new Softver
+                Software softver = new Software
                 {
                     ID_softver = (int)reader["ID_softver"],
                     Naziv = reader["Naziv"].ToString(),
@@ -31,7 +31,7 @@ namespace LicenceApp.Repositories
             return softveri;
         }
 
-        public bool Add(Softver softver)
+        public bool Add(Software softver)
         {
             DB.OpenConnection();
             string query = $"INSERT INTO Softver (Naziv, Verzija, Tip_licence, Ukupno_mjesta) VALUES ('{softver.Naziv}', '{softver.Verzija}', '{softver.Tip_licence}', {softver.Ukupno_mjesta})";
@@ -40,7 +40,7 @@ namespace LicenceApp.Repositories
             return affectedRows > 0;
         }
 
-        public bool Update(Softver softver)
+        public bool Update(Software softver)
         {
             DB.OpenConnection();
             string query = $"UPDATE Softver SET Naziv = '{softver.Naziv}', Verzija = '{softver.Verzija}', Tip_licence = '{softver.Tip_licence}', Ukupno_mjesta = {softver.Ukupno_mjesta} WHERE ID_softver = {softver.ID_softver}";

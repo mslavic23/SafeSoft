@@ -10,7 +10,7 @@ namespace LicenceApp
     {
         private readonly ZahtjevRepository _zahtjevRepository = new ZahtjevRepository();
         private readonly UserRepository _korisnikRepository = new UserRepository();
-        private readonly SoftverRepository _softverRepository = new SoftverRepository();
+        private readonly SoftwareRepository _softverRepository = new SoftwareRepository();
         private readonly UredajRepository _uredajRepository = new UredajRepository();
 
         private Zahtjev _odabraniZahtjev;
@@ -82,7 +82,7 @@ namespace LicenceApp
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Softver softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
+            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Software softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
             {
                 MessageBox.Show("Molimo odaberite korisnika, softver, uređaj i unesite razlog korištenja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -125,7 +125,7 @@ namespace LicenceApp
                 return;
             }
 
-            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Softver softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
+            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Software softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
             {
                 MessageBox.Show("Molimo odaberite korisnika, softver, uređaj i unesite razlog korištenja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

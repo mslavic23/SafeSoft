@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp.Models
 {
-    public class Softver
+    public class Software
     {
         public int ID_softver { get; set; }
         public string Naziv { get; set; }
@@ -10,7 +10,7 @@
 
         public override string ToString()
         {
-            return $"{Naziv} (v{Verzija}) - {Tip_licence} - {Ukupno_mjesta} mjesta";
+            return $"{Naziv} {Verzija} - {Tip_licence} - {Ukupno_mjesta} mjesta";
         }
     }
 }

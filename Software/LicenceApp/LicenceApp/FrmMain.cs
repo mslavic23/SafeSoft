@@ -12,7 +12,7 @@ namespace LicenceApp
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            FrmSoftver frmSoftver = new FrmSoftver();
+            FrmSoftware frmSoftver = new FrmSoftware();
             frmSoftver.Show();
             this.Hide();
         }
@@ -47,7 +47,7 @@ namespace LicenceApp
 
         private void BtnOdjava_Click(object sender, EventArgs e)
         {
-            SessionManager.Korisnik = null;
+            SessionManager.User = null;
 
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.Show();
@@ -56,7 +56,7 @@ namespace LicenceApp
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            bool jeAdmin = SessionManager.Korisnik != null && SessionManager.Korisnik.Uloga == "Administrator";
+            bool jeAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
 
             if (!jeAdmin)
             {

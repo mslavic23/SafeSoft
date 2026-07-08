@@ -48,9 +48,8 @@ namespace LicenceApp
             string lastName = txtUserLastName.Text;
             string email = txtUserEmail.Text;
             string password = txtUserPassword.Text;
-            string role = cmbUserRole.SelectedItem as string;
 
-            if (role == null || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            if (!(cmbUserRole.SelectedItem is string role) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Molimo popunite sva polja i odaberite ulogu!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -90,9 +89,8 @@ namespace LicenceApp
             string lastName = txtUserLastName.Text;
             string email = txtUserEmail.Text;
             string password = txtUserPassword.Text;
-            string role = cmbUserRole.SelectedItem as string;
 
-            if (role == null || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
+            if (!(cmbUserRole.SelectedItem is string role) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email))
             {
                 MessageBox.Show("Molimo popunite Ime, Prezime, Email i odaberite ulogu!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -221,5 +219,4 @@ namespace LicenceApp
 
         }
     }
-}  }
 }

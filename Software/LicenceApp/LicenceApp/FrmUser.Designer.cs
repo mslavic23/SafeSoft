@@ -38,7 +38,7 @@
             this.lstUsers.Name = "lstUsers";
             this.lstUsers.Size = new System.Drawing.Size(494, 164);
             this.lstUsers.TabIndex = 0;
-            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstKorisnici_SelectedIndexChanged);
+            this.lstUsers.SelectedIndexChanged += new System.EventHandler(this.LstUsers_SelectedIndexChanged);
             // 
             // lblUserPassword
             // 
@@ -180,7 +180,7 @@
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
-            // FrmKorisnik
+            // FrmUser
             // 
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1003, 567);
@@ -200,10 +200,10 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnMain);
-            this.Name = "FrmKorisnik";
+            this.Name = "FrmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
-            this.Load += new System.EventHandler(this.FrmKorisnik_Load);
+            this.Load += new System.EventHandler(this.FrmUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
