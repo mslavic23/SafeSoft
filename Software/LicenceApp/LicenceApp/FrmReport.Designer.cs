@@ -65,11 +65,11 @@
             // 
             this.lblFrmReportTitle.AutoSize = true;
             this.lblFrmReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblFrmReportTitle.Location = new System.Drawing.Point(403, 25);
+            this.lblFrmReportTitle.Location = new System.Drawing.Point(401, 21);
             this.lblFrmReportTitle.Name = "lblFrmReportTitle";
-            this.lblFrmReportTitle.Size = new System.Drawing.Size(197, 29);
+            this.lblFrmReportTitle.Size = new System.Drawing.Size(191, 29);
             this.lblFrmReportTitle.TabIndex = 5;
-            this.lblFrmReportTitle.Text = "Izvještaj zahtjeva ";
+            this.lblFrmReportTitle.Text = "Izvještaj zahtjeva";
             this.lblFrmReportTitle.Click += new System.EventHandler(this.LblFrmReportTitle_Click);
             // 
             // lblTotalRequests

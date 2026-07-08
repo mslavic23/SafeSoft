@@ -22,10 +22,20 @@ namespace LicenceApp
 
         private void FrmRequestApp_Load(object sender, EventArgs e)
         {
+            bool isAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
+
             cmbUserName.Items.Clear();
-            foreach (var user in _userRepository.GetAll())
+            if (isAdmin)
             {
-                cmbUserName.Items.Add(user);
+                foreach (var user in _userRepository.GetAll())
+                {
+                    cmbUserName.Items.Add(user);
+                }
+            }
+            else
+            {
+                cmbUserName.Items.Add(SessionManager.User);
+                cmbUserName.SelectedIndex = 0;
             }
 
             cmbSoftwareName.Items.Clear();
@@ -47,7 +57,12 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            var requests = _requestRepository.GetAll();
+            bool isAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
+
+            var requests = isAdmin
+                ? _requestRepository.GetAll()
+                : _requestRepository.GetByUser(SessionManager.User.ID_korisnik);
+
             var users = _userRepository.GetAll();
             var softwares = _softwareRepository.GetAll();
             var devices = _deviceRepository.GetAll();
@@ -73,7 +88,11 @@ namespace LicenceApp
 
         private void ClearFields()
         {
-            cmbUserName.SelectedIndex = -1;
+            bool isAdmin = SessionManager.User != null && SessionManager.User.Uloga == "Administrator";
+
+            if (isAdmin)
+                cmbUserName.SelectedIndex = -1;
+
             cmbSoftwareName.SelectedIndex = -1;
             cmbDeviceName.SelectedIndex = -1;
             txtRequestReason.Text = "";
