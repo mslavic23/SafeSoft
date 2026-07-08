@@ -5,11 +5,11 @@ using LicenceApp.Models;
 
 namespace LicenceApp.Repositories
 {
-    public class UredajRepository
+    public class DeviceRepository
     {
-        public List<Uredaj> GetAll()
+        public List<Device> GetAll()
         {
-            List<Uredaj> uredaji = new List<Uredaj>();
+            List<Device> devices = new List<Device>();
 
             DB.OpenConnection();
             string query = "SELECT ID_uredaj, Naziv_racunala, Lokacija, Tip_uredaja FROM Uredaj";
@@ -17,32 +17,32 @@ namespace LicenceApp.Repositories
 
             while (reader.Read())
             {
-                Uredaj uredaj = new Uredaj
+                Device device = new Device
                 {
                     ID_uredaj = (int)reader["ID_uredaj"],
                     Naziv_racunala = reader["Naziv_racunala"].ToString(),
                     Lokacija = reader["Lokacija"].ToString(),
                     Tip_uredaja = reader["Tip_uredaja"].ToString()
                 };
-                uredaji.Add(uredaj);
+                devices.Add(device);
             }
             DB.CloseConnection();
-            return uredaji;
+            return devices;
         }
 
-        public bool Add(Uredaj uredaj)
+        public bool Add(Device device)
         {
             DB.OpenConnection();
-            string query = $"INSERT INTO Uredaj (Naziv_racunala, Lokacija, Tip_uredaja) VALUES ('{uredaj.Naziv_racunala}', '{uredaj.Lokacija}', '{uredaj.Tip_uredaja}')";
+            string query = $"INSERT INTO Uredaj (Naziv_racunala, Lokacija, Tip_uredaja) VALUES ('{device.Naziv_racunala}', '{device.Lokacija}', '{device.Tip_uredaja}')";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
         }
 
-        public bool Update(Uredaj uredaj)
+        public bool Update(Device device)
         {
             DB.OpenConnection();
-            string query = $"UPDATE Uredaj SET Naziv_racunala = '{uredaj.Naziv_racunala}', Lokacija = '{uredaj.Lokacija}', Tip_uredaja = '{uredaj.Tip_uredaja}' WHERE ID_uredaj = {uredaj.ID_uredaj}";
+            string query = $"UPDATE Uredaj SET Naziv_racunala = '{device.Naziv_racunala}', Lokacija = '{device.Lokacija}', Tip_uredaja = '{device.Tip_uredaja}' WHERE ID_uredaj = {device.ID_uredaj}";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;

@@ -6,38 +6,38 @@ using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
-    public partial class FrmZahtjev : Form
+    public partial class FrmRequestApp : Form
     {
-        private readonly ZahtjevRepository _zahtjevRepository = new ZahtjevRepository();
-        private readonly UserRepository _korisnikRepository = new UserRepository();
-        private readonly SoftwareRepository _softverRepository = new SoftwareRepository();
-        private readonly UredajRepository _uredajRepository = new UredajRepository();
+        private readonly RequestAppRepository _requestRepository = new RequestAppRepository();
+        private readonly UserRepository _userRepository = new UserRepository();
+        private readonly SoftwareRepository _softwareRepository = new SoftwareRepository();
+        private readonly DeviceRepository _deviceRepository = new DeviceRepository();
 
-        private Zahtjev _odabraniZahtjev;
+        private RequestApp _selectedRequest;
 
-        public FrmZahtjev()
+        public FrmRequestApp()
         {
             InitializeComponent();
         }
 
-        private void FrmZahtjev_Load(object sender, EventArgs e)
+        private void FrmRequestApp_Load(object sender, EventArgs e)
         {
             cmbUserName.Items.Clear();
-            foreach (var korisnik in _korisnikRepository.GetAll())
+            foreach (var user in _userRepository.GetAll())
             {
-                cmbUserName.Items.Add(korisnik);
+                cmbUserName.Items.Add(user);
             }
 
             cmbSoftwareName.Items.Clear();
-            foreach (var softver in _softverRepository.GetAll())
+            foreach (var software in _softwareRepository.GetAll())
             {
-                cmbSoftwareName.Items.Add(softver);
+                cmbSoftwareName.Items.Add(software);
             }
 
             cmbDeviceName.Items.Clear();
-            foreach (var uredaj in _uredajRepository.GetAll())
+            foreach (var device in _deviceRepository.GetAll())
             {
-                cmbDeviceName.Items.Add(uredaj);
+                cmbDeviceName.Items.Add(device);
             }
 
             dtpRequestDate.Value = DateTime.Now;
@@ -47,26 +47,26 @@ namespace LicenceApp
 
         private void RefreshList()
         {
-            var zahtjevi = _zahtjevRepository.GetAll();
-            var korisnici = _korisnikRepository.GetAll();
-            var softveri = _softverRepository.GetAll();
-            var uredaji = _uredajRepository.GetAll();
+            var requests = _requestRepository.GetAll();
+            var users = _userRepository.GetAll();
+            var softwares = _softwareRepository.GetAll();
+            var devices = _deviceRepository.GetAll();
 
             dgvRequestApp.Rows.Clear();
 
-            foreach (var zahtjev in zahtjevi)
+            foreach (var request in requests)
             {
-                var korisnik = korisnici.FirstOrDefault(k => k.ID_korisnik == zahtjev.ID_korisnik);
-                var softver = softveri.FirstOrDefault(s => s.ID_softver == zahtjev.ID_softver);
-                var uredaj = uredaji.FirstOrDefault(u => u.ID_uredaj == zahtjev.ID_uredaj);
+                var user = users.FirstOrDefault(u => u.ID_korisnik == request.ID_korisnik);
+                var software = softwares.FirstOrDefault(s => s.ID_softver == request.ID_softver);
+                var device = devices.FirstOrDefault(d => d.ID_uredaj == request.ID_uredaj);
 
                 dgvRequestApp.Rows.Add(
-                    zahtjev.ID_zahtjev,
-                    korisnik != null ? $"{korisnik.Ime} {korisnik.Prezime}" : "",
-                    softver != null ? softver.Naziv : "",
-                    uredaj != null ? uredaj.Naziv_racunala : "",
-                    zahtjev.Razlog_koristenja,
-                    zahtjev.Datum_podnosenja.ToString("dd.MM.yyyy.")
+                    request.ID_zahtjev,
+                    user != null ? $"{user.Ime} {user.Prezime}" : "",
+                    software != null ? software.Naziv : "",
+                    device != null ? device.Naziv_racunala : "",
+                    request.Razlog_koristenja,
+                    request.Datum_podnosenja.ToString("dd.MM.yyyy.")
                 );
             }
         }
@@ -82,32 +82,35 @@ namespace LicenceApp
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Software softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
+            User user = cmbUserName.SelectedItem as User;
+            Software software = cmbSoftwareName.SelectedItem as Software;
+            Device device = cmbDeviceName.SelectedItem as Device;
+
+            if (user == null || software == null || device == null || string.IsNullOrEmpty(txtRequestReason.Text))
             {
                 MessageBox.Show("Molimo odaberite korisnika, softver, uređaj i unesite razlog korištenja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!_zahtjevRepository.HasAvailableSeats(softver.ID_softver))
+            if (!_requestRepository.HasAvailableSeats(software.ID_softver))
             {
                 MessageBox.Show("Nema slobodnih mjesta za odabrani softver!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Zahtjev zahtjev = new Zahtjev
+            RequestApp request = new RequestApp
             {
-                ID_korisnik = korisnik.ID_korisnik,
-                ID_softver = softver.ID_softver,
-                ID_uredaj = uredaj.ID_uredaj,
+                ID_korisnik = user.ID_korisnik,
+                ID_softver = software.ID_softver,
+                ID_uredaj = device.ID_uredaj,
                 Razlog_koristenja = txtRequestReason.Text,
                 Datum_podnosenja = dtpRequestDate.Value
             };
 
-            bool uspjeh = _zahtjevRepository.Add(zahtjev);
+            bool success = _requestRepository.Add(request);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Zahtjev uspješno dodan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
             }
@@ -119,36 +122,40 @@ namespace LicenceApp
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (_odabraniZahtjev == null)
+            if (_selectedRequest == null)
             {
                 MessageBox.Show("Odaberite zahtjev s liste za uređivanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!(cmbUserName.SelectedItem is User korisnik) || !(cmbSoftwareName.SelectedItem is Software softver) || !(cmbDeviceName.SelectedItem is Uredaj uredaj) || string.IsNullOrEmpty(txtRequestReason.Text))
+            User user = cmbUserName.SelectedItem as User;
+            Software software = cmbSoftwareName.SelectedItem as Software;
+            Device device = cmbDeviceName.SelectedItem as Device;
+
+            if (user == null || software == null || device == null || string.IsNullOrEmpty(txtRequestReason.Text))
             {
                 MessageBox.Show("Molimo odaberite korisnika, softver, uređaj i unesite razlog korištenja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Zahtjev zahtjev = new Zahtjev
+            RequestApp request = new RequestApp
             {
-                ID_zahtjev = _odabraniZahtjev.ID_zahtjev,
-                ID_korisnik = korisnik.ID_korisnik,
-                ID_softver = softver.ID_softver,
-                ID_uredaj = uredaj.ID_uredaj,
+                ID_zahtjev = _selectedRequest.ID_zahtjev,
+                ID_korisnik = user.ID_korisnik,
+                ID_softver = software.ID_softver,
+                ID_uredaj = device.ID_uredaj,
                 Razlog_koristenja = txtRequestReason.Text,
                 Datum_podnosenja = dtpRequestDate.Value
             };
 
-            bool uspjeh = _zahtjevRepository.Update(zahtjev);
+            bool success = _requestRepository.Update(request);
 
-            if (uspjeh)
+            if (success)
             {
                 MessageBox.Show("Zahtjev uspješno ažuriran!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniZahtjev = null;
+                _selectedRequest = null;
             }
             else
             {
@@ -158,29 +165,28 @@ namespace LicenceApp
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (_odabraniZahtjev == null)
+            if (_selectedRequest == null)
             {
                 MessageBox.Show("Odaberite zahtjev s liste za brisanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult potvrda = MessageBox.Show(
-                $"Jeste li sigurni da želite obrisati {_odabraniZahtjev}?",
+            DialogResult confirmation = MessageBox.Show(
+                "Jeste li sigurni da želite obrisati odabrani zahtjev?",
                 "Potvrda brisanja",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (potvrda != DialogResult.Yes)
+            if (confirmation != DialogResult.Yes)
                 return;
 
-            bool uspjeh = _zahtjevRepository.Delete(_odabraniZahtjev.ID_zahtjev);
+            bool success = _requestRepository.Delete(_selectedRequest.ID_zahtjev);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Zahtjev uspješno obrisan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniZahtjev = null;
+                _selectedRequest = null;
             }
             else
             {
@@ -192,12 +198,12 @@ namespace LicenceApp
         {
             if (dgvRequestApp.CurrentRow == null)
             {
-                _odabraniZahtjev = null;
+                _selectedRequest = null;
                 return;
             }
 
             int id = (int)dgvRequestApp.CurrentRow.Cells["colZahtjevId"].Value;
-            _odabraniZahtjev = _zahtjevRepository.GetAll().FirstOrDefault(z => z.ID_zahtjev == id);
+            _selectedRequest = _requestRepository.GetAll().FirstOrDefault(r => r.ID_zahtjev == id);
         }
 
         private void BtnMain_Click(object sender, EventArgs e)

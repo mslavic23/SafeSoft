@@ -57,11 +57,11 @@
     <Compile Include="FrmIzvjestaj.Designer.cs">
       <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUredaj.cs">
+    <Compile Include="FrmDevice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUredaj.Designer.cs">
-      <DependentUpon>FrmUredaj.cs</DependentUpon>
+    <Compile Include="FrmDevice.Designer.cs">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
@@ -87,22 +87,22 @@
     <Compile Include="FrmSoftware.Designer.cs">
       <DependentUpon>FrmSoftware.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmZahtjev.cs">
+    <Compile Include="FrmRequestApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmZahtjev.Designer.cs">
-      <DependentUpon>FrmZahtjev.cs</DependentUpon>
+    <Compile Include="FrmRequestApp.Designer.cs">
+      <DependentUpon>FrmRequestApp.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenceApp.Helpers\HashHelper.cs" />
     <Compile Include="LicenceApp.Models\User.cs" />
     <Compile Include="LicenceApp.Models\Software.cs" />
-    <Compile Include="LicenceApp.Models\Uredaj.cs" />
-    <Compile Include="LicenceApp.Models\Zahtjev.cs" />
+    <Compile Include="LicenceApp.Models\Device.cs" />
+    <Compile Include="LicenceApp.Models\RequestApp.cs" />
     <Compile Include="LicenceApp.Repositories\IzvjestajRepository.cs" />
     <Compile Include="LicenceApp.Repositories\UserRepository.cs" />
     <Compile Include="LicenceApp.Repositories\SoftwareRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\UredajRepository.cs" />
-    <Compile Include="LicenceApp.Repositories\ZahtjevRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\DeviceRepository.cs" />
+    <Compile Include="LicenceApp.Repositories\RequestAppRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManager.cs" />
@@ -121,11 +121,11 @@
     <EmbeddedResource Include="FrmSoftware.resx">
       <DependentUpon>FrmSoftware.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUredaj.resx">
-      <DependentUpon>FrmUredaj.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDevice.resx">
+      <DependentUpon>FrmDevice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmZahtjev.resx">
-      <DependentUpon>FrmZahtjev.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRequestApp.resx">
+      <DependentUpon>FrmRequestApp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

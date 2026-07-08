@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp
 {
-    partial class FrmUredaj
+    partial class FrmDevice
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -154,7 +154,7 @@
             this.cmbDeviceType.TabIndex = 16;
             this.cmbDeviceType.SelectedIndexChanged += new System.EventHandler(this.CmbDeviceType_SelectedIndexChanged);
             // 
-            // FrmUredaj
+            // FrmDevice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,10 +172,10 @@
             this.Controls.Add(this.lblDeviceLocation);
             this.Controls.Add(this.lblDeviceName);
             this.Controls.Add(this.txtDeviceName);
-            this.Name = "FrmUredaj";
+            this.Name = "FrmDevice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uređaji";
-            this.Load += new System.EventHandler(this.FrmUredaj_Load);
+            this.Load += new System.EventHandler(this.FrmDevice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,5 +195,4 @@
         private System.Windows.Forms.ComboBox cmbDeviceLocation;
         private System.Windows.Forms.ComboBox cmbDeviceType;
     }
-
 }

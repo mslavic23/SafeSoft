@@ -5,17 +5,17 @@ using LicenceApp.Repositories;
 
 namespace LicenceApp
 {
-    public partial class FrmUredaj : Form
+    public partial class FrmDevice : Form
     {
-        private readonly UredajRepository _uredajRepository = new UredajRepository();
-        private Uredaj _odabraniUredaj;
+        private readonly DeviceRepository _deviceRepository = new DeviceRepository();
+        private Device _selectedDevice;
 
-        public FrmUredaj()
+        public FrmDevice()
         {
             InitializeComponent();
         }
 
-        private void FrmUredaj_Load(object sender, EventArgs e)
+        private void FrmDevice_Load(object sender, EventArgs e)
         {
             cmbDeviceLocation.Items.Clear();
             cmbDeviceLocation.Items.Add("ured");
@@ -33,9 +33,9 @@ namespace LicenceApp
         private void RefreshList()
         {
             lstDevices.Items.Clear();
-            foreach (var uredaj in _uredajRepository.GetAll())
+            foreach (var device in _deviceRepository.GetAll())
             {
-                lstDevices.Items.Add(uredaj);
+                lstDevices.Items.Add(device);
             }
         }
 
@@ -48,26 +48,25 @@ namespace LicenceApp
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string naziv = txtDeviceName.Text;
+            string name = txtDeviceName.Text;
 
-            if (!(cmbDeviceLocation.SelectedItem is string lokacija) || !(cmbDeviceType.SelectedItem is string tip) || string.IsNullOrEmpty(naziv))
+            if (!(cmbDeviceLocation.SelectedItem is string location) || !(cmbDeviceType.SelectedItem is string type) || string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Molimo popunite naziv i odaberite lokaciju i tip uređaja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Uredaj uredaj = new Uredaj
+            Device device = new Device
             {
-                Naziv_racunala = naziv,
-                Lokacija = lokacija,
-                Tip_uredaja = tip
+                Naziv_racunala = name,
+                Lokacija = location,
+                Tip_uredaja = type
             };
 
-            bool uspjeh = _uredajRepository.Add(uredaj);
+            bool success = _deviceRepository.Add(device);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Uređaj uspješno dodan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
             }
@@ -79,36 +78,36 @@ namespace LicenceApp
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if (_odabraniUredaj == null)
+            if (_selectedDevice == null)
             {
                 MessageBox.Show("Odaberite uređaj s liste za uređivanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string naziv = txtDeviceName.Text;
+            string name = txtDeviceName.Text;
 
-            if (!(cmbDeviceLocation.SelectedItem is string lokacija) || !(cmbDeviceType.SelectedItem is string tip) || string.IsNullOrEmpty(naziv))
+            if (!(cmbDeviceLocation.SelectedItem is string location) || !(cmbDeviceType.SelectedItem is string type) || string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Molimo popunite naziv i odaberite lokaciju i tip uređaja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            Uredaj uredaj = new Uredaj
+            Device device = new Device
             {
-                ID_uredaj = _odabraniUredaj.ID_uredaj,
-                Naziv_racunala = naziv,
-                Lokacija = lokacija,
-                Tip_uredaja = tip
+                ID_uredaj = _selectedDevice.ID_uredaj,
+                Naziv_racunala = name,
+                Lokacija = location,
+                Tip_uredaja = type
             };
 
-            bool uspjeh = _uredajRepository.Update(uredaj);
+            bool success = _deviceRepository.Update(device);
 
-            if (uspjeh)
+            if (success)
             {
                 MessageBox.Show("Uređaj uspješno ažuriran!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniUredaj = null;
+                _selectedDevice = null;
             }
             else
             {
@@ -118,29 +117,28 @@ namespace LicenceApp
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (_odabraniUredaj == null)
+            if (_selectedDevice == null)
             {
                 MessageBox.Show("Odaberite uređaj s liste za brisanje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult potvrda = MessageBox.Show(
-                $"Jeste li sigurni da želite obrisati uređaj {_odabraniUredaj.Naziv_racunala}?",
+            DialogResult confirmation = MessageBox.Show(
+                $"Jeste li sigurni da želite obrisati uređaj {_selectedDevice.Naziv_racunala}?",
                 "Potvrda brisanja",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (potvrda != DialogResult.Yes)
+            if (confirmation != DialogResult.Yes)
                 return;
 
-            bool uspjeh = _uredajRepository.Delete(_odabraniUredaj.ID_uredaj);
+            bool success = _deviceRepository.Delete(_selectedDevice.ID_uredaj);
 
-            if (uspjeh)
+            if (success)
             {
-                MessageBox.Show("Uređaj uspješno obrisan!", "Uspjeh", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearFields();
                 RefreshList();
-                _odabraniUredaj = null;
+                _selectedDevice = null;
             }
             else
             {
@@ -150,7 +148,7 @@ namespace LicenceApp
 
         private void LstDevices_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _odabraniUredaj = lstDevices.SelectedItem as Uredaj;
+            _selectedDevice = lstDevices.SelectedItem as Device;
         }
 
         private void BtnMain_Click(object sender, EventArgs e)

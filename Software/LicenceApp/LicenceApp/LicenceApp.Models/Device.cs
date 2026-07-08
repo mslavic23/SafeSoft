@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp.Models
 {
-    public class Uredaj
+    public class Device
     {
         public int ID_uredaj { get; set; }
         public string Naziv_racunala { get; set; }

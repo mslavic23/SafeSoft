@@ -19,14 +19,14 @@ namespace LicenceApp
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            FrmZahtjev frmZahtjev = new FrmZahtjev();
+            FrmRequestApp frmZahtjev = new FrmRequestApp();
             frmZahtjev.Show();
             this.Hide();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            FrmUredaj frmUredaj = new FrmUredaj();
+            FrmDevice frmUredaj = new FrmDevice();
             frmUredaj.Show();
             this.Hide();
         }

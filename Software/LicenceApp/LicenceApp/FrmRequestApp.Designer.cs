@@ -1,6 +1,6 @@
 ﻿namespace LicenceApp
 {
-    partial class FrmZahtjev
+    partial class FrmRequestApp
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -253,7 +253,7 @@
             this.pbxLogo.TabStop = false;
             this.pbxLogo.Click += new System.EventHandler(this.PbxLogo_Click);
             // 
-            // FrmZahtjev
+            // FrmRequestApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,10 +275,10 @@
             this.Controls.Add(this.cmbDeviceName);
             this.Controls.Add(this.cmbSoftwareName);
             this.Controls.Add(this.cmbUserName);
-            this.Name = "FrmZahtjev";
+            this.Name = "FrmRequestApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zahtjevi";
-            this.Load += new System.EventHandler(this.FrmZahtjev_Load);
+            this.Load += new System.EventHandler(this.FrmRequestApp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequestApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);

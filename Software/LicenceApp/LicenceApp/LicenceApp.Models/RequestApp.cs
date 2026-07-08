@@ -2,7 +2,7 @@
 
 namespace LicenceApp.Models
 {
-    public class Zahtjev
+    public class RequestApp
     {
         public int ID_zahtjev { get; set; }
         public int ID_korisnik { get; set; }

@@ -6,11 +6,11 @@ using LicenceApp.Models;
 
 namespace LicenceApp.Repositories
 {
-    public class ZahtjevRepository
+    public class RequestAppRepository
     {
-        public List<Zahtjev> GetAll()
+        public List<RequestApp> GetAll()
         {
-            List<Zahtjev> zahtjevi = new List<Zahtjev>();
+            List<RequestApp> requests = new List<RequestApp>();
 
             DB.OpenConnection();
             string query = "SELECT ID_zahtjev, ID_korisnik, ID_softver, ID_uredaj, Razlog_koristenja, Datum_podnosenja FROM Zahtjev";
@@ -18,7 +18,7 @@ namespace LicenceApp.Repositories
 
             while (reader.Read())
             {
-                Zahtjev zahtjev = new Zahtjev
+                RequestApp request = new RequestApp
                 {
                     ID_zahtjev = (int)reader["ID_zahtjev"],
                     ID_korisnik = (int)reader["ID_korisnik"],
@@ -27,23 +27,23 @@ namespace LicenceApp.Repositories
                     Razlog_koristenja = reader["Razlog_koristenja"].ToString(),
                     Datum_podnosenja = (DateTime)reader["Datum_podnosenja"]
                 };
-                zahtjevi.Add(zahtjev);
+                requests.Add(request);
             }
             DB.CloseConnection();
-            return zahtjevi;
+            return requests;
         }
 
-        public List<Zahtjev> GetByUser(int idKorisnik)
+        public List<RequestApp> GetByUser(int userId)
         {
-            List<Zahtjev> zahtjevi = new List<Zahtjev>();
+            List<RequestApp> requests = new List<RequestApp>();
 
             DB.OpenConnection();
-            string query = $"SELECT ID_zahtjev, ID_korisnik, ID_softver, ID_uredaj, Razlog_koristenja, Datum_podnosenja FROM Zahtjev WHERE ID_korisnik = {idKorisnik}";
+            string query = $"SELECT ID_zahtjev, ID_korisnik, ID_softver, ID_uredaj, Razlog_koristenja, Datum_podnosenja FROM Zahtjev WHERE ID_korisnik = {userId}";
             SqlDataReader reader = DB.GetDataReader(query);
 
             while (reader.Read())
             {
-                Zahtjev zahtjev = new Zahtjev
+                RequestApp request = new RequestApp
                 {
                     ID_zahtjev = (int)reader["ID_zahtjev"],
                     ID_korisnik = (int)reader["ID_korisnik"],
@@ -52,49 +52,49 @@ namespace LicenceApp.Repositories
                     Razlog_koristenja = reader["Razlog_koristenja"].ToString(),
                     Datum_podnosenja = (DateTime)reader["Datum_podnosenja"]
                 };
-                zahtjevi.Add(zahtjev);
+                requests.Add(request);
             }
             DB.CloseConnection();
-            return zahtjevi;
+            return requests;
         }
 
-        public bool HasAvailableSeats(int idSoftver)
+        public bool HasAvailableSeats(int softwareId)
         {
             DB.OpenConnection();
 
-            string queryUkupno = $"SELECT Ukupno_mjesta FROM Softver WHERE ID_softver = {idSoftver}";
-            object rezultatUkupno = DB.GetScalar(queryUkupno);
+            string totalQuery = $"SELECT Ukupno_mjesta FROM Softver WHERE ID_softver = {softwareId}";
+            object totalResult = DB.GetScalar(totalQuery);
 
-            if (rezultatUkupno == null || rezultatUkupno == DBNull.Value)
+            if (totalResult == null || totalResult == DBNull.Value)
             {
                 DB.CloseConnection();
                 return false;
             }
 
-            int ukupnoMjesta = (int)rezultatUkupno;
+            int totalSeats = (int)totalResult;
 
-            string queryZauzeto = $"SELECT COUNT(*) FROM Zahtjev WHERE ID_softver = {idSoftver}";
-            int zauzeto = (int)DB.GetScalar(queryZauzeto);
+            string occupiedQuery = $"SELECT COUNT(*) FROM Zahtjev WHERE ID_softver = {softwareId}";
+            int occupiedSeats = (int)DB.GetScalar(occupiedQuery);
 
             DB.CloseConnection();
-            return zauzeto < ukupnoMjesta;
+            return occupiedSeats < totalSeats;
         }
 
-        public bool Add(Zahtjev zahtjev)
+        public bool Add(RequestApp request)
         {
             DB.OpenConnection();
-            string datum = zahtjev.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
-            string query = $"INSERT INTO Zahtjev (ID_korisnik, ID_softver, ID_uredaj, Razlog_koristenja, Datum_podnosenja) VALUES ({zahtjev.ID_korisnik}, {zahtjev.ID_softver}, {zahtjev.ID_uredaj}, '{zahtjev.Razlog_koristenja}', '{datum}')";
+            string date = request.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = $"INSERT INTO Zahtjev (ID_korisnik, ID_softver, ID_uredaj, Razlog_koristenja, Datum_podnosenja) VALUES ({request.ID_korisnik}, {request.ID_softver}, {request.ID_uredaj}, '{request.Razlog_koristenja}', '{date}')";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
         }
 
-        public bool Update(Zahtjev zahtjev)
+        public bool Update(RequestApp request)
         {
             DB.OpenConnection();
-            string datum = zahtjev.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
-            string query = $"UPDATE Zahtjev SET ID_korisnik = {zahtjev.ID_korisnik}, ID_softver = {zahtjev.ID_softver}, ID_uredaj = {zahtjev.ID_uredaj}, Razlog_koristenja = '{zahtjev.Razlog_koristenja}', Datum_podnosenja = '{datum}' WHERE ID_zahtjev = {zahtjev.ID_zahtjev}";
+            string date = request.Datum_podnosenja.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = $"UPDATE Zahtjev SET ID_korisnik = {request.ID_korisnik}, ID_softver = {request.ID_softver}, ID_uredaj = {request.ID_uredaj}, Razlog_koristenja = '{request.Razlog_koristenja}', Datum_podnosenja = '{date}' WHERE ID_zahtjev = {request.ID_zahtjev}";
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
             return affectedRows > 0;
