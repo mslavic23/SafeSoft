@@ -68,6 +68,12 @@ namespace LicenceApp
                 return;
             }
 
+            if (_userRepository.EmailExists(email))
+            {
+                MessageBox.Show("Korisnik s tim emailom već postoji!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             User user = new User
             {
                 Ime = firstName,

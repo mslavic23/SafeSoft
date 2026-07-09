@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using DBLayer;
-using System.Data.SqlClient;
-using LicenceApp.Models;
+﻿using DBLayer;
 using LicenceApp.Helpers;
+using LicenceApp.Models;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Runtime.ConstrainedExecution;
 
 namespace LicenceApp.Repositories
 {
@@ -18,6 +19,7 @@ namespace LicenceApp.Repositories
 
             while (reader.Read())
             {
+
                 User user = new User
                 {
                     ID_korisnik = (int)reader["ID_korisnik"],
@@ -31,6 +33,15 @@ namespace LicenceApp.Repositories
             }
             DB.CloseConnection();
             return users;
+        }
+
+        public bool EmailExists(string email)
+        {
+            DB.OpenConnection();
+            string query = $"SELECT COUNT(*) FROM Korisnik WHERE Email = '{email}'";
+            int count = (int)DB.GetScalar(query);
+            DB.CloseConnection();
+            return count > 0;
         }
 
         public User Login(string email, string password)
